@@ -1,0 +1,7 @@
+{
+  "name": "douglaswhite-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
