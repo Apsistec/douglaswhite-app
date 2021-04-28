@@ -24,3 +24,47 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=BioRhyme+Expanded&family=Rock+Salt&family=Prompt&display=swap');
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Ion Toolbar */
+// ion-toolbar, ion-tab-bar{
+//   --background: var(--ion-color-medium);
+// }
+/* Genearl Text for Paragraph Readability */
+.heading{
+  font-family: 'BioRhyme Expanded', cursive;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--ion-color-secondary-shade);
+}
+.sub-heading{
+  color: var(--ion-color-tertiary);
+  font-family: 'Prompt', cursive;
+  // font-size: 17px;
+  // font-weight: 700;
+  text-transform: capitalize;
+}
+.text{
+  font-family: 'Prompt', cursive;
+  font-size: 16px;
+}
+/* Ratings/Testimonials */
+.display{
+  font-family: 'Rock Salt', cursive;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+
