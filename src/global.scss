@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,46 +25,133 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Exo+2&family=Itim&family=Rock+Salt&family=Prompt&family=Ewert&family=Patrick+Hand&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=BioRhyme+Expanded&family=Rock+Salt&family=Prompt&display=swap');
+/* Adobe Fonts */
+@import url("https://use.typekit.net/zaq2hoe.css");
 
+/* Fonts */
+/* Text for Paragraph Readability */
+p {
+  font-family: "Patrick Hand", cursive;
+  font-size: 22px;
+}
+
+/* Error change color of words in label */
+ion-item.item-has-focus.ion-invalid.ion-dirty{
+  --border-color: var(--ion-color-danger) !important;
+  --border-width: 2px;
+  --border-style: solid;
+  --border-radius: 15px;
+}
+ion-item.item-has-focus.ion-valid{
+  --border-color: var(--ion-color-success) !important;
+  --border-width: 2px;
+  --border-style: solid;
+  --border-radius: 15px;
+}
+
+/* Main Hero Heading */
+.display {
+  h1,
+  h2 {
+    font-family: "Rock Salt", cursive;
+    text-transform: capitalize;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+
+/* Toolbar Title */
+.heading {
+  color: var(--ion-color-tertiary);
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 46px;
+  font-weight: 500;
+}
+
+/* Card Header Titles */
+.title {
+  font-family: "Rock Salt", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+/* Card Header Sub-Titles */
+.sub-heading {
+  font-family: siruca, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: var(--ion-color-tertiary);
+}
+
+/* Hero ng-particles on About/ landing-page */
 #tsparticles {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 95%;
   top: 0;
   left: 0;
   z-index: -1;
 }
 
 /* Ion Toolbar */
-// ion-toolbar, ion-tab-bar{
-//   --background: var(--ion-color-medium);
-// }
-/* Genearl Text for Paragraph Readability */
-.heading{
-  font-family: 'BioRhyme Expanded', cursive;
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--ion-color-secondary-shade);
+.header-icon {
+  margin-left: 5px;
 }
-.sub-heading{
-  color: var(--ion-color-tertiary);
-  font-family: 'Prompt', cursive;
-  // font-size: 17px;
-  // font-weight: 700;
-  text-transform: capitalize;
-}
-.text{
-  font-family: 'Prompt', cursive;
-  font-size: 16px;
-}
-/* Ratings/Testimonials */
-.display{
-  font-family: 'Rock Salt', cursive;
-  font-size: 32px;
-  text-transform: capitalize;
+ion-icon {
+  font-size: 46px;
 }
 
+/* All Cards */
+ion-card {
+  border-radius: 15px;
+  border: 3px solid var(--ion-color-tertiary);
+}
 
+/* Git in Touch Button/ Call to Action */
+.git {
+  --border-radius: 15px;
+  --color: var(--ion-color-warning);
+  --border-width: 3px;
+  --border-style: solid;
+  --border-color: var(--ion-color-light);
+  --background: linear-gradient(
+      to bottom right,
+      rgba(94, 7, 145, 0.822),
+      rgba(225, 0, 255, 0.87),
+      rgba(57, 50, 61, 0.8)
+    ),
+    linear-gradient(
+      to bottom left,
+      rgba(111, 0, 255, 0.8),
+      rgba(174, 0, 255, 0.8),
+      rgba(111, 0, 255, 0.8)
+    );
+}
+
+/* PDF resume page */
+pdf-viewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(5px 5px 5px #222222);
+}
+textarea {
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}

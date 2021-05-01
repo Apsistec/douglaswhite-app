@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { AboutPageRoutingModule } from './about-routing.module';
 import { AboutPage } from './about.page';
-import { ToggleComponent } from '../toggle/toggle.component';
+import { FlaskBakComponent } from '../flask-bak/flask-bak.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { ToggleComponent } from '../toggle/toggle.component';
     CommonModule,
     FormsModule,
     AboutPageRoutingModule,
-    NgParticlesModule
+    NgParticlesModule,
+    SharedModule
   ],
-  declarations: [AboutPage, ToggleComponent]
+  declarations: [AboutPage, FlaskBakComponent]
 })
 export class AboutPageModule {}

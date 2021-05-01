@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: () => import('../contact/contact.module').then(m => m.ContactPageModule)
       },
       {
+        path: 'portfolio',
+        loadChildren: () => import('../portfolio/portfolio.module').then(m => m.PortfolioPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/about',
         pathMatch: 'full'

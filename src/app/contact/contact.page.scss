@@ -1,0 +1,24 @@
+.textarea{
+  --border-radius: 15px;
+}
+
+.items{
+  --background: grey;
+  --border-radius: 15px;
+  padding: 5px;
+}
+
+ion-textarea, ion-input{
+  --color: black !important;
+  --background: grey !important;
+  --background-activated: grey !important;
+  --color-activated: black !important;
+}
+
+ion-card{
+  max-width:500px;
+}
+.content{
+  display:grid;
+  place-items: center;
+}

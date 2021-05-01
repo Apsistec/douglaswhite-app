@@ -1,15 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="heading" color="tertiary"> About Me </ion-title>
+    <ion-buttons slot="start">
+      <ion-icon
+        src="../../../assets/douglaswhitelogo.svg"
+        class="header-icon"
+      ></ion-icon>
+    </ion-buttons>
+    <ion-title size="small" class="heading ion-text-lowercase" color="tertiary">
+      DouglasWhite.app
+    </ion-title>
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title class="heading" size="large" color="tertiary">About</ion-title>
+      <ion-title
+        size="large"
+        class="heading ion-text-uppercase"
+        color="tertiary"
+      >
+        DouglasWhite.app
+      </ion-title>
     </ion-toolbar>
   </ion-header>
+
   <div class="hero">
     <ng-particles
       [id]="id"
@@ -17,70 +32,76 @@
       (particlesLoaded)="particlesLoaded($event)"
     >
     </ng-particles>
-      <h1 class="display">Douglas White</h1>
-      <ion-icon src="../../assets/dwlogoback.svg" class="icon"></ion-icon>
-      <h2 class="display">Web Application Developer</h2>
+    <div class="display">
+      <h1>Douglas White</h1>
+      <app-flask-bak class="display-icon"></app-flask-bak>
+      <h2>Web Application Developer</h2>
+    </div>
   </div>
-  <ion-grid class="about">
-    <ion-row class="ion-justify-content-center">
-      <ion-col>
-        <ion-card color="secondary" class="about-card-header ion-text-center">
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-padding ion-justify-content-center">
+      <ion-col class="ion-text-center">
+        <ion-card class="card-header ion-text-center">
           <ion-card-header>
-            <ion-card-title class="heading"> About Douglas </ion-card-title>
+            <ion-card-title class="title"> About Douglas </ion-card-title>
             <ion-card-subtitle class="sub-heading">
-              A brief look into My IT career
+              IT Career Background
             </ion-card-subtitle>
           </ion-card-header>
         </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-justify-content-center">
-      <ion-col class="ion-align-self-stretch">
-        <ion-card color="medium" class="about-card">
+    <ion-row class="ion-padding-horizontal">
+      <ion-col size="auto" class="ion-align-self-center">
+        <img height="300" src="../../assets/me.jpg" class="my-image" />
+      </ion-col>
+      <ion-col class="ion-align-self-center">
+        <ion-card class="card">
           <ion-card-content>
             <p class="text">
-              Douglas White is a <b>Web Application Developer</b> who utilizes
-              JavaScript web frameworks and libraries to design and develop apps
-              that look great on all mobile devices and platforms by utilizing
-              base themes that adapt to each platform. He produces fully
-              featured solutions for clients that enables rapid prototype design
-              while still offering complex features. Using these modern web
-              frameworks also texts to better market penetration and less churn
-              due in part to auto scaling infrastructure. Caching data on a
-              global content delivery network improves app responsiveness and
-              reduces operational expenses. Furthermore, the apps can be shipped
-              to the app stores and as a progressive web app, all from a single
-              code base.
+              Douglas White is a Web Application Developer who uses
+              JavaScript libraries to design and develop web apps that look
+              great on all mobile devices and desktop platforms by utilizing
+              themes that adapt to each platform. He effeciently produces fully
+              featured solutions for clients using NodeJS front-end frameworks
+              that enable complex features and rapid prototype design. Utilizing
+              a tried and true suite of tools and services, his apps are capable
+              of deeper market penetration with less churn, in part due to the
+              auto scaling capability of backend infrastructure. Caching data on
+              a global content delivery network improves his apps'
+              responsiveness and reduces operational expenses. Furthermore, his
+              apps can be shipped to the app stores and as a progressive web
+              app, all from a single code base.
             </p>
           </ion-card-content>
         </ion-card>
-        <ion-card color="medium" class="about-card">
+        <ion-card class="card">
           <ion-card-content>
             <p class="text">
               Just over 3 years ago, he was presented with a position that
               provided him a chance to learn JavaScript. So, he jumped at the
-              opportunity and has never looked back. Douglas is developing apps
-              using <b>Ionic</b> and <b>Angular</b> Frameworks,
-              <b>Google Cloud Platform</b>, and <b>Firebase</b>. He is also
-              forever committed to learning, and has specifically begun working
-              with <b>SVG</b>, <b>D3</b>, <b>TensorFlow</b> and
-              <b>Actions on Google</b> to bring animations, data visualizations,
-              machine learning and voice interactions under his belt.
+              opportunity and has never looked back. Douglas develops web apps
+              using Ionic & Angular web frameworks, Google Cloud Platform and
+              Firebase. He has a lifelong commitment to continuing education in
+              his field, and has specifically been working with SVG, D3,
+              TensorFlow and Actions on Google in order to bring animations,
+              data visualizations, machine learning and voice interactions under
+              his belt.
             </p>
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col class="ion-align-self-stretch">
-        <ion-card color="medium" class="about-card">
+      <ion-col class="ion-align-self-center">
+        <ion-card class="card">
           <ion-card-content>
             <p class="text">
-              Douglas has worked in the IT industry for over 15 years, starting
-              as a
-              <b>network technician</b>, followed by positions working with
-              business leaders as a <b>software sales representative</b> and as
-              a <b>IT services consultant</b>. He understands how to communicate
-              with business leaders, he knows how important their expectations
-              are, and ultimately he knows how to deliver to them. His intrinsic
+              Douglas began working in the IT industry at an ISP as a network
+              technician over fifteen years ago. His career path led him to more
+              advanced positions where he eventually was working with C-level
+              business leaders as a software sales representative and as a IT
+              services consultant. He understands how to communicate with
+              business leaders, he knows how important their expectations are,
+              and ultimately he knows how to deliver to them. His intrinsic
               interest in the sciences along with an ingrained desire to
               understand how things work have allowed him to keep at the
               forefront of the IT industry. He is a self-starter and fully
@@ -90,37 +111,20 @@
               truly make an impact in their market, and he has every intention
               to continue in that success.
             </p>
-            <br />
-            <p class="text">
-              He holds a B.S. Biology from Texas Tech University in Lubbock,
-              Texas.
-            </p>
           </ion-card-content>
         </ion-card>
-        <ion-card color="medium" class="about-card">
+        <ion-card class="card">
           <ion-card-content>
             <p class="text">
-              Currently,
-              <b
-                >Douglas White is considering new projects and/or full time
-                work</b
-              >. He is available for conversation, and he welcomes the chance to
-              meet you to discuss his background and any opportunities in more
-              detail. He is currently residing in Lubbock, and will consider
-              <b>local</b> or <b>remote</b> positions and will entertain
-              <b>relocating to metropolitan areas of Texas</b>.
+              Currently, Douglas White is considering new projects and/or full
+              time work. He is available for conversation, and he welcomes the
+              chance to meet you to discuss his background and any opportunities
+              in more detail. He is currently residing in Lubbock, and will
+              consider local or remote positions and will entertain relocating
+              to metropolitan areas of Texas.
             </p>
           </ion-card-content>
         </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-button size="large" routerLink="/tabs/contact" color="secondary"
-            >Get in Touch</ion-button
-          >
-        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

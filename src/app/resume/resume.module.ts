@@ -5,13 +5,17 @@ import { IonicModule } from '@ionic/angular';
 
 import { ResumePageRoutingModule } from './resume-routing.module';
 import { ResumePage } from './resume.page';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ResumePageRoutingModule
+    ResumePageRoutingModule,
+    NgxExtendedPdfViewerModule,
+    SharedModule
   ],
   declarations: [ResumePage]
 })

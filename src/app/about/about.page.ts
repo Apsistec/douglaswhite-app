@@ -1,5 +1,5 @@
 /* eslint-disable id-blacklist */
-import { Container, Main } from 'ng-particles';
+import { Container } from 'ng-particles';
 
 /* eslint-disable @typescript-eslint/naming-convention */
 import { Component, OnInit } from '@angular/core';
@@ -16,7 +16,6 @@ export class AboutPage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  particlesLoaded(container: Container): void {
-    console.log('container: ', container);
+  particlesLoaded(_container: Container): void {
   }
 }

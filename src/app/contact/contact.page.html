@@ -1,16 +1,144 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="heading" color="tertiary">
-      Contact Me
-    </ion-title>
+    <ion-title class="heading" color="tertiary"> Contact Douglas </ion-title>
+    <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title class="heading" color="tertiary" size="large">Contact Douglas</ion-title>
+      <ion-title class="heading" color="tertiary" size="large"
+        >Contact</ion-title
+      >
     </ion-toolbar>
   </ion-header>
-
-</ion-content>
+  <div class="content">
+    <ion-card color="medium" class="ion-text-center">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title class="title"> Contact Douglas </ion-card-title>
+        <ion-card-subtitle><ion-text class="sub-heading">
+          Email your contact and opportunity info
+        </ion-text>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="ion-padding-top">
+      <form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
+          <ion-item class="items">
+            <ion-label
+            position="stacked"
+            >Email</ion-label
+            >
+            <ion-input
+            debounce="600"
+            autofocus="true"
+            type="email"
+            inputmode="email"
+            enterkeyhint="next"
+            formControlName="email"
+            name="email"
+            autocomplete="email"
+            >
+          </ion-input>
+        </ion-item>
+        <ng-container
+        *ngIf="!emailFormControl.email.valid && emailFormControl.email.dirty"
+        >
+        <ion-text
+        *ngIf="emailFormControl.email.errors.required"
+        color="danger"
+        >
+        Email required</ion-text
+        ><br />
+        <ion-text
+        *ngIf="emailFormControl.email.errors.email"
+        color="danger"
+        >
+        Email not valid</ion-text
+        >
+      </ng-container>
+        <ion-item class="items">
+          <ion-label
+          position="stacked"
+          >Name</ion-label
+          >
+          <ion-input
+          debounce="600"
+          type="text"
+          inputmode="text"
+          autocomplete="name"
+          maxlength="30"
+          minlength="3"
+          formControlName="name"
+          name="name"
+          autocomplete="name"
+          autocapitalize="words"
+          enterkeyhint="next"
+          minlength="3"
+          maxlength="27"
+          required
+          >
+        </ion-input>
+      </ion-item>
+      <ng-container
+      *ngIf="!emailFormControl.name.valid && emailFormControl.name.dirty"
+      >
+      <ion-text
+      *ngIf="emailFormControl.name.errors.required"
+      color="danger"
+      >
+      Name required</ion-text
+      ><br />
+      <ion-text *ngIf="emailFormControl.name.errors.maxlength" color="danger">
+        Name too long</ion-text
+        ><br />
+        <ion-text *ngIf="emailFormControl.name.errors.minlength" color="danger">
+          Name too short
+                </ion-text>
+              </ng-container>
+              <ion-item class="items">
+                <ion-label
+                position="stacked"
+                >Message</ion-label
+                >
+                <ion-textarea
+                debounce="600"
+                class="textarea"
+                inputmode="text"
+                maxlength="3000"
+                minlength="10"
+                auto-grow="true"
+                type="text"
+                required
+                spellcheck="true"
+                wrap="soft"
+                name="message"
+                formControlName="message"
+                enterkeyhint="send"
+                autocapitalize="on"
+                >
+              </ion-textarea>
+            </ion-item>
+            <ng-container *ngIf="!emailFormControl.message.valid && emailFormControl.message.dirty">
+              <ion-text *ngIf="emailFormControl.message.errors.required" color="danger">
+                Message required</ion-text
+                ><br />
+                <ion-text *ngIf="emailFormControl.message.errors.maxlength" color="danger">
+                  Message too long</ion-text
+                  ><br />
+                  <ion-text *ngIf="emailFormControl.message.errors.minlength" color="danger">
+                    Message too short
+                  </ion-text>
+                </ng-container>
+                <hr />
+                <ion-button
+                [disabled]="!emailForm.valid"
+                type="submit"
+                size="large"
+                color="secondary"
+                >Submit</ion-button
+                >
+              </form>
+            </ion-card-content>
+          </ion-card>
+        </div>
+        </ion-content>

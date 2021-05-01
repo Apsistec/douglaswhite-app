@@ -1,7 +1,12 @@
 
 ion-tab-button{
-  --color-selected: var(--ion-color-tertiary);
-  // --color: white;
+  --color-selected: var(--ion-color-tertiary-tint);
+  --color: white;
 }
 
-
+ion-tab-button:hover{
+  ion-label,
+  ion-icon{
+    color: var(--ion-color-tertiary-shade);
+  }
+}

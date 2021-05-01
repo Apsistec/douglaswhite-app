@@ -1,19 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title class="heading"  color="tertiary">
-      My Resume
+      Douglas' Resume
     </ion-title>
+    <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
-
-<iframe width="100%" height="100%"
-  src="../../assets/04_26_2021_resume_douglas_white.pdf"><iframe>
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title class="heading" size="large" color="tertiary">Douglas' Resume</ion-title>
+      <ion-title class="heading" size="large" color="tertiary">Resume</ion-title>
     </ion-toolbar>
   </ion-header>
-  <!-- <div style="height:130vh; width: 100vw;"> -->
+  <div>
+    <ngx-extended-pdf-viewer
+    [src]="'../../assets/04262021_Douglas_White_Resume.pdf'"
+    [filenameForDownload]="'04262021_Douglas_White_Resume'"
+    [pageViewMode]="'single'"
+    [height]="'90vh'"
+    [zoom]="'auto'"
+    [enablePinchOnMobile]="true"
+    [useBrowserLocale]="true"  [textLayer]="true"
+    [showHandToolButton]="true">
+    [backgroundColor]="#000000"
+  </ngx-extended-pdf-viewer>
+</div>
   </ion-content>
-  <!-- </div> -->

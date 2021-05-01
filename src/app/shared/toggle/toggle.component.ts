@@ -14,7 +14,6 @@ export class ToggleComponent implements OnInit {
 
   ngOnInit() {
     this.darkSetting = window.matchMedia('(prefers-color-scheme: dark)');
-    console.log('setting: ', this.darkSetting.matches);
     if (!!this.darkSetting.matches) {
       return true;
     }
