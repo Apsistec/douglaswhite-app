@@ -37,7 +37,10 @@
               },
               "src/manifest.webmanifest"
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -56,7 +59,6 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "es5BrowserSupport": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -174,7 +176,7 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "defaultCollection": "@angular-eslint/schematics"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

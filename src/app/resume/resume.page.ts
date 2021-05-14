@@ -1,5 +1,6 @@
+
+
 import { Component } from '@angular/core';
-import { pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
 
 @Component({
   selector: 'app-resume',

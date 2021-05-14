@@ -1,8 +1,8 @@
 {
   "name": "douglaswhite-app",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "version": "1.0.0",
+  "author": "Douglas White <email@douglaswhite.app>",
+  "homepage": "https://douglaswhite.app/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -25,6 +25,10 @@
     "@capacitor/core": "2.4.7",
     "@capacitor/ios": "^2.4.7",
     "@ionic/angular": "^5.5.2",
+    "@ionic/cli": "^6.15.0",
+    "@types/applicationinsights-js": "^1.0.9",
+    "applicationinsights-js": "^1.0.21",
+    "classlist.js": "^1.1.20150312",
     "cordova-res": "^0.15.3",
     "element-resize-detector": "^1.2.2",
     "firebase": "^8.4.3",
@@ -33,14 +37,16 @@
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "tsparticles": "^1.26.3",
-    "zone.js": "~0.10.2"
+    "web-animations-js": "^2.3.2",
+    "zone.js": "^0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.4",
-    "@angular-eslint/builder": "2.0.2",
-    "@angular-eslint/eslint-plugin": "2.0.2",
-    "@angular-eslint/eslint-plugin-template": "2.0.2",
-    "@angular-eslint/template-parser": "2.0.2",
+    "@angular-devkit/build-angular": "^0.1102.13",
+    "@angular-eslint/builder": "4.2.0",
+    "@angular-eslint/eslint-plugin": "4.2.0",
+    "@angular-eslint/eslint-plugin-template": "4.2.0",
+    "@angular-eslint/schematics": "4.2.0",
+    "@angular-eslint/template-parser": "4.2.0",
     "@angular/cli": "~11.2.4",
     "@angular/compiler": "~11.2.0",
     "@angular/compiler-cli": "~11.2.0",
@@ -58,7 +64,7 @@
     "eslint-plugin-prefer-arrow": "1.2.2",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.2.0",
+    "karma": "^6.3.2",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-coverage-istanbul-reporter": "~3.0.2",
@@ -68,5 +74,10 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.0.2"
   },
-  "description": "An Ionic project"
+  "description": "Douglas White's Ionic project portraying his web application developer portfolio",
+  "browserslist": [
+    "last 2 versions",
+    "not ie <= 10",
+    "not ie_mob <= 10"
+  ]
 }

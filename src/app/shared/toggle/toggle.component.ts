@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IonToggle } from '@ionic/angular';
 
 @Component({
   selector: 'app-toggle',
@@ -13,16 +12,12 @@ export class ToggleComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.darkSetting = window.matchMedia('(prefers-color-scheme: dark)');
-    if (!!this.darkSetting.matches) {
-      return true;
-    }
-    return false;
+
   }
 
   toggle() {
     document.body.classList.toggle('dark');
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    this.dark = !this.dark;
+    // this.dark = !this.dark;
   }
 }
