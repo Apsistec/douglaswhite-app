@@ -39,13 +39,13 @@ p {
 }
 
 /* Error change color of words in label */
-ion-item.item-has-focus.ion-invalid.ion-dirty{
+ion-item.item-has-focus.ion-invalid.ion-dirty {
   --border-color: var(--ion-color-danger) !important;
   --border-width: 2px;
   --border-style: solid;
   --border-radius: 15px;
 }
-ion-item.item-has-focus.ion-valid{
+ion-item.item-has-focus.ion-valid {
   --border-color: var(--ion-color-success) !important;
   --border-width: 2px;
   --border-style: solid;
@@ -110,6 +110,7 @@ ion-item.item-has-focus.ion-valid{
 .header-icon {
   margin-left: 5px;
 }
+
 ion-icon {
   font-size: 46px;
 }
@@ -148,10 +149,38 @@ pdf-viewer {
   justify-content: center;
   filter: drop-shadow(5px 5px 5px #222222);
 }
+
 textarea {
   margin-top: 15px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+}
+
+.sign-off {
+  font-family: scriptorama-tradeshow-jf, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size:12px;
+}
+
+.particles{
+  height: 100%;
+  margin-top: 30px;
   width: 100%;
 }

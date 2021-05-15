@@ -6,7 +6,7 @@
 /* Light colors (default) */
 :root {
 
-  ion-card-header {
+  .card-header {
     background: linear-gradient(
         to bottom left,
         rgba(121, 170, 111, 0.8),
@@ -102,20 +102,21 @@
 */
 // @media (prefers-color-scheme: dark) {
   body.dark{
-
-    ion-card-header {
-      background: linear-gradient(
+    .card-header {
+      background:
+       linear-gradient(
           to bottom left,
-          rgba(111, 0, 255, 0.8),
-          rgba(174, 0, 255, 0.8),
-          rgba(111, 0, 255, 0.8)
+          rgba(0, 0, 0, 0.57),
+          rgba(148, 119, 153, 0.47),
+          rgba(0, 0, 0, 0.4)
         ),
-        linear-gradient(
-          to bottom right,
-          rgba(94, 7, 145, 0.822),
-          rgba(225, 0, 255, 0.87),
-          rgba(57, 50, 61, 0.8)
-        );
+      linear-gradient(
+        to bottom right,
+            rgba(53, 0, 88, 0.9264),
+            rgba(93, 0, 255, 0.8245),
+            rgba(93, 0, 255, 0.8945),
+            rgba(81, 0, 148, 0.957)
+          );
     }
 
     ion-toolbar, ion-tab-bar {

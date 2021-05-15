@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { SharedModule } from '../shared/shared.module';
 import { ContactPageRoutingModule } from './contact-routing.module';
 import { ContactPage } from './contact.page';
+import { NgParticlesModule } from 'ng-particles';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ContactPage } from './contact.page';
     ReactiveFormsModule,
     RouterModule.forChild([{ path: '', component: ContactPage }]),
     ContactPageRoutingModule,
-    SharedModule
+    SharedModule,
+    NgParticlesModule
   ],
   declarations: [ContactPage]
 })

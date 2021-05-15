@@ -4,14 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ToggleComponent } from './toggle/toggle.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [ToggleComponent],
+  declarations: [ToggleComponent, FooterComponent],
   imports: [
     IonicModule,
     FormsModule,
     CommonModule
   ],
-  exports: [ ToggleComponent ]
+  exports: [ ToggleComponent, FooterComponent ]
 })
 export class SharedModule { }

@@ -1,6 +1,6 @@
 .hero {
   text-align: center;
-  height: 90vh;
+  min-height:90vh;
   width: 100%;
   display: grid;
   place-content: center;
@@ -31,5 +31,39 @@ ion-card-header {
   }
 }
 
-p {
+.footer {
+  position: relative;
+  background-color: var(--ion-color-medium);
+  min-height: 20vh;
+  padding: 15px;
+}
+
+.link-icon{
+  position: absolute;
+  top: 50%;
+  margin: 10px;
+}
+
+.twitter {
+  color: #1d9bf0;
+}
+
+.github{
+  color: snow;
+}
+
+.stack {
+  color: snow;
+}
+
+.linkedin {
+  margin-right: 5px;
+  color: blue;
+}
+
+.logo {
+  position: absolute;
+  right: 50px;
+  font-size: 64px;
+  bottom: 0;
 }

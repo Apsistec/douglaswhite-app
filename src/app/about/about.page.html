@@ -1,8 +1,9 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-icon
-        src="../../../assets/douglaswhitelogo.svg" routerLink="/tabs/about"
+        src="../../../assets/douglaswhitelogo.svg"
+        routerLink="/tabs/about"
         class="header-icon"
       ></ion-icon>
     </ion-buttons>
@@ -12,7 +13,7 @@
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
+<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title
@@ -26,12 +27,15 @@
   </ion-header>
 
   <div class="hero">
-    <ng-particles
+    <div id="tsparticles" class="particles"></div>
+
+    <!-- <ng-particles
       [id]="id"
       [url]="particlesURL"
       (particlesLoaded)="particlesLoaded($event)"
+      class="particles"
     >
-    </ng-particles>
+    </ng-particles> -->
     <div class="display">
       <h1>Douglas White</h1>
       <app-flask-bak class="display-icon"></app-flask-bak>
@@ -51,30 +55,53 @@
         </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-padding-horizontal">
+    <ion-row class="ion-padding ion-margin-vertical">
       <ion-col size="auto" class="ion-align-self-center">
-        <img height="300" width="300" src="../../assets/me.jpg" class="my-image" />
+        <img
+          height="300"
+          width="300"
+          src="../../assets/me.jpg"
+          class="my-image"
+        />
       </ion-col>
       <ion-col class="ion-align-self-center">
         <ion-card class="card">
           <ion-card-content>
             <p class="text">
-              Douglas White is a Web Application Developer who uses
-              JavaScript libraries to design and develop web apps that look
-              great on all mobile devices and desktop platforms by utilizing
-              themes that adapt to each platform. He efficiently produces fully
+              Douglas White is a Web Application Developer who uses JavaScript
+              libraries to design and develop web apps that look great on all
+              mobile, desktop, and even larger devices utilizing themes that
+              adapt to each platform. He efficiently develops complex, fully
               featured solutions for clients using NodeJS front-end frameworks
-              that enable complex features and rapid prototype design. Utilizing
-              a tried and true suite of tools and services, his apps are capable
-              of deeper market penetration with less churn, in part due to the
-              auto scaling capability of backend infrastructure. Caching data on
-              a global content delivery network improves his apps'
-              responsiveness and reduces operational expenses. Furthermore, his
-              apps can be shipped to the app stores and as a progressive web
-              app, all from a single code base.
+              that enable complex features and rapid prototype design.
+              Ultimately, the suite of tools and servies Douglas has chosen the
+              suite of tools and services to build apps because they provide a
+              means to shipp apps to both app stores and as a progressive web
+              app(PWA), all from one codebase.
+            </p>
+            <p class="text">
+              Once deployed, Douglas combines the user analytics with a highly
+              specialized suite of services which provides an effective means of
+              improving outcomes. The combination of services offers user
+              tracking across devices, A/B testing automation, and automated
+              user segment customizations which helps guide the user along each
+              stage of the the customer journey. Funnel analysis ultimately
+              provides the neans for quicker market penetration with less churn.
+              By using Google's cloud based Infrastructure as a Service(IaaS),
+              Google Cloud Platform(GCP) DevOps, Douglas keeps operational costs
+              radically reduced. Features such as auto-scaling all backend
+              resources, edge caching of user data across a global content
+              delivery network, and serverless functions all improve app
+              responsiveness while greatly reducing operational expenses.
+              Douglas is a team player and thus he is quite comfortable working
+              in an Agile environment using Scrum and/or team coding along with
+              continuous integration, continuous deployment(CI/CD) to improve
+              coding effeciences when working with a team of developers.
             </p>
           </ion-card-content>
         </ion-card>
+      </ion-col>
+      <ion-col class="ion-align-self-center">
         <ion-card class="card">
           <ion-card-content>
             <p class="text">
@@ -90,8 +117,6 @@
             </p>
           </ion-card-content>
         </ion-card>
-      </ion-col>
-      <ion-col class="ion-align-self-center">
         <ion-card class="card">
           <ion-card-content>
             <p class="text">
@@ -127,5 +152,16 @@
         </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid><ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button
+      id="up"
+      [hidden]="!scrolledDown"
+      class="up"
+      size="small"
+      (click)="scrollToTop()"
+    >
+      <ion-icon size="small" name="chevron-up-sharp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
