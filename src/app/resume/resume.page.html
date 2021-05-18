@@ -6,8 +6,8 @@
         class="header-icon"
       ></ion-icon>
     </ion-buttons>
-    <ion-title class="heading"  color="tertiary">
-   Resume
+    <ion-title size="small" class="heading ion-text-lowercase" color="tertiary">
+      DouglasWhite.app
     </ion-title>
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
@@ -15,8 +15,10 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title class="heading" size="large" color="tertiary">Resume</ion-title>
-    </ion-toolbar>
+    <ion-title size="small" class="heading ion-text-lowercase" color="tertiary">
+      DouglasWhite.app
+    </ion-title>
+      </ion-toolbar>
   </ion-header>
   <div>
     <ngx-extended-pdf-viewer
@@ -30,5 +32,5 @@
     [showHandToolButton]="true">
   </ngx-extended-pdf-viewer>
 </div>
-  </ion-content>
 <app-footer></app-footer>
+  </ion-content>

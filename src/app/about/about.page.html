@@ -26,26 +26,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="hero">
-    <div id="tsparticles" class="particles"></div>
-
-    <!-- <ng-particles
-      [id]="id"
-      [url]="particlesURL"
-      (particlesLoaded)="particlesLoaded($event)"
-      class="particles"
-    >
-    </ng-particles> -->
+  <ng-particles [id]="id" [url]="particlesURL"> </ng-particles>
+  <div class="main">
     <div class="display">
       <h1>Douglas White</h1>
       <app-flask-bak class="display-icon"></app-flask-bak>
       <h2>Web Application Developer</h2>
     </div>
   </div>
-  <ion-grid class="ion-no-padding">
-    <ion-row class="ion-padding ion-justify-content-center">
+  <ion-grid class="ion-padding">
+    <ion-row class="ion-justify-content-center">
       <ion-col class="ion-text-center">
-        <ion-card class="card-header ion-text-center">
+        <ion-card class="contact-card ion-text-center">
           <ion-card-header>
             <ion-card-title class="title"> About Douglas </ion-card-title>
             <ion-card-subtitle class="sub-heading">
@@ -66,7 +58,7 @@
       </ion-col>
       <ion-col class="ion-align-self-center">
         <ion-card class="card">
-          <ion-card-content>
+          <ion-card-content class="story">
             <p class="text">
               Douglas White is a Web Application Developer who uses JavaScript
               libraries to design and develop web apps that look great on all
@@ -79,6 +71,10 @@
               means to shipp apps to both app stores and as a progressive web
               app(PWA), all from one codebase.
             </p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="card">
+          <ion-card-content class="story">
             <p class="text">
               Once deployed, Douglas combines the user analytics with a highly
               specialized suite of services which provides an effective means of
@@ -103,7 +99,7 @@
       </ion-col>
       <ion-col class="ion-align-self-center">
         <ion-card class="card">
-          <ion-card-content>
+          <ion-card-content class="story">
             <p class="text">
               Just over 3 years ago, he was presented with a position that
               provided him a chance to learn JavaScript. So, he jumped at the
@@ -118,7 +114,7 @@
           </ion-card-content>
         </ion-card>
         <ion-card class="card">
-          <ion-card-content>
+          <ion-card-content class="story">
             <p class="text">
               Douglas began working in the IT industry at an ISP as a network
               technician over fifteen years ago. His career path led him to more
@@ -139,7 +135,7 @@
           </ion-card-content>
         </ion-card>
         <ion-card class="card">
-          <ion-card-content>
+          <ion-card-content class="story">
             <p class="text">
               Currently, Douglas White is considering new projects and/or full
               time work. He is available for conversation, and he welcomes the
@@ -152,7 +148,8 @@
         </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid><ion-fab slot="fixed" horizontal="end" vertical="bottom">
+  </ion-grid>
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
     <ion-fab-button
       id="up"
       [hidden]="!scrolledDown"
@@ -163,5 +160,5 @@
       <ion-icon size="small" name="chevron-up-sharp"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
+  <app-footer class="footer"></app-footer>
 </ion-content>

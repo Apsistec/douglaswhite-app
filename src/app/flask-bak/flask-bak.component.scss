@@ -1,36 +1,74 @@
-#path1627, #path1475 {
-  animation: 2s ease-in-out 2s infinite boil;
+#white_shade {
+  animation: 1.41s linear 0.65s infinite boil;
 }
 
 @keyframes boil {
-  0%{
-
-    // transform: skew(-3deg);
-    transform: translate(0px, 20px);
+  0% {
+    transform: translate(3px, 85px);
     z-index: 10;
   }
-  100%{
-    transform: skew(-2deg);
-    transform: translate(3px, -5px);
-    // transform: skew(3deg);
+  100% {
+    transform: translate(0, -10px);
+    z-index: 10;
+  }
+}
+
+#white_shade_two {
+  animation: 1.67s linear 0.96s infinite boiled;
+}
+
+@keyframes boiled {
+  0% {
+    transform: translate(-60px, 85px);
+    z-index: 10;
+  }
+  100% {
+    transform: translate(10px, -45px);
     z-index: 7;
   }
-
 }
+
 #main_bubble {
-  animation: 1.5s ease-in-out 1s infinite boils;
+  animation: 1.83s linear 0.43s infinite boils;
 }
 
 @keyframes boils {
-  from{
-
-    // transform: skew(-3deg);
-    transform: translate(0px, 0px);
+  from {
+    transform: translate(-24px, 85px);
     z-index: 9;
   }
-  to{
-    // transform: skew(3deg);
+  to {
     z-index: 9;
-    transform: translate(3px, 15px);
+    transform: translate(19px, -28px);
+  }
 }
+
+#second_bubble {
+  animation: 1.76s linear 1.2s infinite boiling;
+}
+
+@keyframes boiling {
+  0% {
+    transform: translate(15px, 85px);
+    z-index: 5;
+  }
+  100% {
+    transform: translate(-2px, -12px);
+    z-index: 9;
+  }
+}
+
+#third_bubble {
+  animation: 1.97s linear 0.12s infinite boilings;
+}
+
+@keyframes boilings {
+  0% {
+    transform: translate(-17px, 78px);
+    z-index: 9;
+  }
+  100% {
+    transform: translate(15px, -38px);
+    z-index: 2;
+  }
 }

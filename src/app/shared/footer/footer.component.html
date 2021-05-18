@@ -1,61 +1,75 @@
-<div class="footer" [hidden]="">
-  <ion-buttons>
-    <ion-button
-      color="primary"
-      href="https://github.com/Apsistec"
-      target="_blank"
-      routerDirection="forward"
-    >
-      <ion-icon slot="icon-only" class="github link-icon" name="logo-github">
-      </ion-icon>
-    </ion-button>
-    <ion-button
-      color="primary"
-      href="https://twitter.com/ApsisTech"
-      target="_blank"
-      routerDirection="forward"
-    >
-      <ion-icon
-        slot="icon-only"
-        class="twitter link-icon"
-        name="logo-twitter"
+<!-- <ion-footer > -->
+  <ion-toolbar class="footer" >
+    <ion-buttons>
+      <ion-button
+        color="primary"
+        href="https://github.com/Apsistec"
+        target="_blank"
+        routerDirection="forward"
+        size="large"
       >
-      </ion-icon>
-    </ion-button>
-    <ion-button
-      color="primary"
-      href="https://www.linkedin.com/in/apsistec/"
-      target="_blank"
-      routerDirection="forward"
-    >
-      <ion-icon
-        slot="icon-only"
-        class="linkedin link-icon"
-        name="logo-linkedin"
+        <ion-icon
+          size="large"
+          slot="icon-only"
+          class="github link-icon"
+          name="logo-github"
+        >
+        </ion-icon>
+      </ion-button>
+      <ion-button
+        color="primary"
+        href="https://twitter.com/ApsisTech"
+        target="_blank"
+        routerDirection="forward"
+        size="large"
       >
-      </ion-icon>
-    </ion-button>
-    <ion-button
-      color="primary"
-      href="https://www.linkedin.com/in/apsistec/"
-      target="_blank"
-      routerDirection="forward"
-    >
-      <ion-icon
-        slot="icon-only"
-        class="stack link-icon"
-        name="logo-stackoverflow"
+        <ion-icon
+          size="large"
+          slot="icon-only"
+          class="twitter link-icon"
+          name="logo-twitter"
+        >
+        </ion-icon>
+      </ion-button>
+      <ion-button
+        color="primary"
+        href="https://www.linkedin.com/in/apsistec/"
+        target="_blank"
+        routerDirection="forward"
+        size="large"
       >
-      </ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-text class="sign-off">Thank you for stopping by...</ion-text>
-  <ion-text color="warning" class="copyright"> &#9426;{{ yearDate | date: 'yyyy' }} www.douglaswhite.app
-  </ion-text>
-  <ion-icon
-    src="../../../assets/douglaswhitelogo.svg"
-    class="logo"
-    routerLink="/tabs/about"
-  ></ion-icon>
-</div>
-
+        <ion-icon
+          size="large"
+          slot="icon-only"
+          class="linkedin link-icon"
+          name="logo-linkedin"
+        >
+        </ion-icon>
+      </ion-button>
+      <ion-button
+        color="primary"
+        href="https://www.linkedin.com/in/apsistec/"
+        target="_blank"
+        routerDirection="forward"
+        size="large"
+      >
+        <ion-icon
+          size="large"
+          slot="icon-only"
+          class="stack link-icon"
+          name="logo-stackoverflow"
+        >
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-text class="sign-off">Thank you for stopping by...</ion-text>
+    <ion-text color="warning" class="copyright">
+      &#9426;{{ yearDate | date: "yyyy" }} www.douglaswhite.app
+    </ion-text>
+    <ion-icon
+      src="../../../assets/douglaswhitelogo.svg"
+      class="logo"
+      routerLink="/tabs/about"
+    ></ion-icon>
+  </ion-toolbar>
+<!-- </ion-footer> -->

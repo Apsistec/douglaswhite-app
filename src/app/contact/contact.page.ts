@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Container, Main, tsParticles } from 'ng-particles';
 
 @Component({
   selector: 'app-contact',
@@ -15,18 +16,8 @@ export class ContactPage implements OnInit, AfterViewInit {
   formError = false;
   emailForm: FormGroup;
   id: any = 'tsparticles';
-
-  constructor(private fb: FormBuilder, private fun: AngularFireFunctions) {}
-
-  ngOnInit() {
-    this.emailForm = this.fb.group({
-      name: ['', [Validators.required,  Validators.minLength(3), Validators.maxLength(27)]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10000)]],
-    });
-
-
-    this.id.load("tsparticles", {
+  particlesOptions: any = {
+     autoPlay: true,
       background: {
         image:
           "url(https://img4.goodfon.com/original/1920x1080/d/b1/abstract-dark-blue-polygonal-background-abstraktsiia-geometr.jpg?d=1)"
@@ -85,25 +76,118 @@ export class ContactPage implements OnInit, AfterViewInit {
           },
           attract: {
             enable: true,
-            distance: 250,
             rotateX: 600,
             rotateY: 1200
           }
         },
         stroke: {
-          width: 10,
+          width: 5,
           opacity: 1
         }
-      },
-      interactivity: {
-        detectsOn: "canvas",
-        events: {
-          resize: true
-        }
-      },
-      detectRetina: true
+      }
+      // ,
+      // interactivity: {
+      //   detectsOn: "window",
+      //   events: {
+      //     resize: true
+      //   }
+      // }
+      }
+
+  constructor(private fb: FormBuilder, private fun: AngularFireFunctions) {}
+
+  ngOnInit() {
+    this.emailForm = this.fb.group({
+      name: ['', [Validators.required,  Validators.minLength(3), Validators.maxLength(27)]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10000)]],
     });
 
+  //   tsParticles.load("tsparticles", {
+  //     autoPlay: true,
+  //     background: {
+  //       image:
+  //         "url(https://img4.goodfon.com/original/1920x1080/d/b1/abstract-dark-blue-polygonal-background-abstraktsiia-geometr.jpg?d=1)"
+  //     },
+  //     backgroundMask: {
+  //       enable: true
+  //     },
+  //     fpsLimit: 60,
+  //     emitters: {
+  //       direction: "random",
+  //       size: {
+  //         width: 100,
+  //         height: 100
+  //       },
+  //       position: {
+  //         x: 50,
+  //         y: 50
+  //       },
+  //       rate: {
+  //         delay: 0.25,
+  //         quantity: 2
+  //       }
+  //     },
+  //     particles: {
+  //       number: {
+  //         value: 0
+  //       },
+  //       color: {
+  //         value: ["#fff"]
+  //       },
+  //       shape: {
+  //         type: "circle"
+  //       },
+  //       opacity: {
+  //         value: 0.5
+  //       },
+  //       size: {
+  //         value: 200,
+  //         anim: {
+  //           enable: true,
+  //           speed: 50,
+  //           size_min: 2,
+  //           sync: true,
+  //           startValue: "min",
+  //           destroy: "max"
+  //         }
+  //       },
+  //       move: {
+  //         enable: true,
+  //         speed: 5,
+  //         direction: "none",
+  //         random: false,
+  //         straight: false,
+  //         outModes: {
+  //           default: "destroy"
+  //         },
+  //         attract: {
+  //           enable: true,
+  //           rotateX: 600,
+  //           rotateY: 1200
+  //         }
+  //       },
+  //       stroke: {
+  //         width: 10,
+  //         opacity: 1
+  //       }
+  //     },
+  //     interactivity: {
+  //       detectsOn: "window",
+  //       events: {
+  //         resize: true
+  //       }
+  //     },
+  //     detectRetina: true
+  //   });
+
+  }
+
+  particlesLoaded(_container: Container): void {}
+
+  particlesInit(main: Main): void {
+
+    // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
   }
 
   ngAfterViewInit() {

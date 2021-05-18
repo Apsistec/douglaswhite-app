@@ -1,12 +1,17 @@
 
 ion-tab-button{
-  --color-selected: var(--ion-color-tertiary-tint);
-  --color: white;
+  --color: var(--ion-color-light);
+  --background-focused: var(--ion-color-medium);
+  --background-selected: var(--ion-color-medium);
+  --color-selected: var(--ion-color-tertiary);
+  --color-focused: var(--ion-color-tertiary);
+  --ripple-color: var(--ion-color-secondary);
+  margin-bottom: 5px;
 }
 
-ion-tab-button:hover{
-  ion-label,
-  ion-icon{
-    color: var(--ion-color-tertiary-shade);
-  }
-}
+// ion-tab-button:hover{
+//   ion-label,
+//   ion-icon{
+//     color: var(--ion-color-tertiary-shade);
+//   }
+// }
