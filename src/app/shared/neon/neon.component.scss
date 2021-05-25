@@ -1,0 +1,132 @@
+div {
+  width: fit-content;
+  --animation-time: 1s;
+  --text-color: var(--ion-color-tertiary);
+  --border-color: var(--ion-color-primary);
+  --text-shadow: 0 0 2px var(--text-color),
+  0 0 5px var(--text-color),
+  0 0 8px #fff, 0 0 7px var(--text-color);
+
+  --box-shadow: inset 0 0 5px var(--border-color), 0 0 8px var(--border-color),
+  0 0 11px var(--border-color), 0 0 14px var(--border-color);
+
+  background-color: var(--ion-color-dark);
+  border: 3px solid rgba(51, 50, 54, 0.56);
+  border-radius: 20px;
+  padding: 8px;
+  margin: 0 15px;
+  // transform: rotate(-2deg);
+  animation: turnOnBorder 0.24s forwards step-end,
+  flickerBorder calc(var(--animation-time) * 16) infinite step-end 7s;
+}
+
+p {
+  font-family: "Libre Barcode 128 Text";
+  margin: 0;
+  color: var(--text-color);
+  font-size: 2.5rem;
+}
+
+p span {
+  opacity: 0.33;
+  animation: turnOn forwards step-end;
+}
+
+p span:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+p span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+p span:nth-child(3) {
+  animation-delay: 0.4s;
+    animation: turnOn .2s forwards step-end,
+    flicker 10s infinite step-end 4s;
+}
+
+p span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+p span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+p span:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+p span:nth-child(7) {
+  animation: turnOn 1.2s forwards step-end,
+    flicker 0.65s infinite step-end 2s;
+}
+
+p span:nth-child(8) {
+  animation-delay: 0.3s;
+}
+
+p span:nth-child(9) {
+  animation-delay: 0.2s;
+}
+
+p span:nth-child(10) {
+  animation-delay: 0.4s;
+}
+
+p span:nth-child(11) {
+  animation-delay: 0.3s;
+}
+
+p span:nth-child(12) {
+  animation-delay: 0.2s;
+}
+
+p span:nth-child(13) {
+  animation-delay: 0.4s;
+}
+
+p span:last-child {
+  animation: turnOn 0.27s forwards step-end,
+    flicker var(--animation-time) infinite step-end 1s;
+}
+
+@keyframes turnOnBorder {
+  100% {
+    border: 4px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    opacity: 1;
+  }
+}
+
+@keyframes turnOn {
+  100% {
+    text-shadow: var(--text-shadow);
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    text-shadow: var(--text-shadow);
+  }
+  99% {
+    text-shadow: none;
+    opacity: 0.1;
+  }
+}
+
+@keyframes flickerBorder {
+  0% {
+    box-shadow: var(--box-shadow);
+  }
+  99% {
+    box-shadow: none;
+  }
+}
+
+span {
+  // text-transform: uppercase;
+  text-transform: lowercase;
+}

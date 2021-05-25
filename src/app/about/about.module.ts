@@ -9,6 +9,7 @@ import { FlaskBakComponent } from '../flask-bak/flask-bak.component';
 import { SharedModule } from '../shared/shared.module';
 import { AboutPageRoutingModule } from './about-routing.module';
 import { AboutPage } from './about.page';
+import { ArchwizardModule } from 'angular-archwizard';
 
 @NgModule({
   imports: [
@@ -17,8 +18,10 @@ import { AboutPage } from './about.page';
     FormsModule,
     AboutPageRoutingModule,
     NgParticlesModule,
-    SharedModule
+    SharedModule,
+    ArchwizardModule,
   ],
-  declarations: [AboutPage, FlaskBakComponent]
+  declarations: [AboutPage, FlaskBakComponent],
+
 })
 export class AboutPageModule {}

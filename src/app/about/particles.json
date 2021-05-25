@@ -1,25 +1,24 @@
 {
+  "fpsLimit": 60,
+  "autoPlay": true,
   "particles": {
+    "color": {
+      "value": "#444555"
+    },
     "number": {
-      "value": 80,
+      "value": 100,
       "density": {
         "enable": true,
-        "value_area": 800
+        "area": 800
       }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle"
     },
     "opacity": {
       "value": 0.6,
       "random": true,
-      "anim": {
+      "animation": {
         "enable": true,
         "speed": 0.6,
-        "opacity_min": 0.1,
+        "minimumValue": 0.1,
         "sync": false
       }
     },
@@ -33,9 +32,6 @@
         "sync": false
       }
     },
-    "line_linked": {
-      "enable": false
-    },
     "move": {
       "enable": true,
       "speed": 6,
@@ -47,7 +43,7 @@
     }
   },
   "interactivity": {
-    "detect_on": "window",
+    "detect_on": "canvas",
     "events": {
       "onhover": {
         "enable": true,
@@ -62,17 +58,18 @@
       }
     }
   },
-  "fpsLimit": 60,
-  "autoPlay": true,
   "background": {
-    "enable": true,
-    "color": "#652B80",
-    "opacity": 1
+    "color": {
+      "value": "#00FF0A",
+      "opacity": 1
+    }
   },
   "backgroundMask": {
-    "enable": true,
+    "enable": false,
     "cover": {
-      "color": "#B93771",
+      "color": {
+        "value": "#041DFF"
+      },
       "opacity": 1
     }
   }

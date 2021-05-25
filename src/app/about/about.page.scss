@@ -1,9 +1,68 @@
-.display{
+/* Main section of each page */
+
+.main {
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+/* Centerpiece in main */
+.display {
   z-index: 30;
 }
 
-.my-image {
+.myImage {
   border-radius: 15px;
-  border: 3px solid var(--ion-color-tertiary);
+  border: 3px solid var(--ion-color-primary);
   padding: 5px;
+}
+
+.stepperIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-group {
+  bottom: 0;
+  float: left;
+}
+
+.custom-line-css aw-wizard-navigation-bar.horizontal li::after {
+  height: 4px !important;
+}
+.custom-line-css aw-wizard-navigation-bar {
+  ul.steps-indicator {
+    li {
+      a {
+        div.label {
+          color: #ffffff !important;
+        }
+
+      }
+    }
+    li.current {
+      a {
+        div.step-indicator {
+          background-color:var(--ion-color-primary) !important;
+        }
+
+        div.label {
+          border-bottom: 1px solid #ffffff !important;
+        }
+
+      }
+    }
+  }
+}
+
+aw-wizard.custom-line-css {
+  aw-wizard-navigation-bar.horizontal ul.steps-indicator {
+    li.done:not(.editing):not(:last-child):after {
+      background-color: green !important;
+    }
+  }
 }

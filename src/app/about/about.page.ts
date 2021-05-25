@@ -1,26 +1,29 @@
-/* eslint-disable id-blacklist */
-import { Container, Main } from 'ng-particles';
-
-/* eslint-disable @typescript-eslint/naming-convention */
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  OnInit,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
 import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-about',
   templateUrl: 'about.page.html',
   styleUrls: ['about.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class AboutPage implements OnInit {
+export class AboutPage implements OnInit, AfterViewInit {
+  particlesUrl: any = './particles.json';
   id: any = 'tsparticles';
-  particlesURL: any = '../../assets/particles.json';
-  hideToolbar: true;
+
   scrolledDown = false;
   @ViewChild(IonContent, { static: false }) content: IonContent;
-  yearDate: any = Date.now();
-
   constructor() {}
-
   ngOnInit() {}
+  ngAfterViewInit() {
+
+  }
 
   scrollToTop() {
     this.content.scrollToTop(750);

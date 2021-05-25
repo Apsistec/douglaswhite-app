@@ -1,32 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-icon
-        src="../../../assets/douglaswhitelogo.svg"
-        routerLink="/tabs/about"
-        class="header-icon"
-      ></ion-icon>
-    </ion-buttons>
-    <ion-title size="small" class="heading ion-text-lowercase" color="tertiary">
-      DouglasWhite.app
-    </ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <app-neon class="neon" ></app-neon>
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
-<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title
-        size="large"
-        class="heading ion-text-uppercase"
-        color="tertiary"
-      >
-        DouglasWhite.app
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content
+  class="content"
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)"
+>
+<ng-particles [id]="id" [url]="particlesUrl"></ng-particles>
 
-  <ng-particles [id]="id" [url]="particlesURL"> </ng-particles>
   <div class="main">
     <div class="display">
       <h1>Douglas White</h1>
@@ -41,111 +25,261 @@
           <ion-card-header>
             <ion-card-title class="title"> About Douglas </ion-card-title>
             <ion-card-subtitle class="sub-heading">
-              IT Career Background
+              IT Career & Background
             </ion-card-subtitle>
           </ion-card-header>
         </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-padding ion-margin-vertical">
-      <ion-col size="auto" class="ion-align-self-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-col
+        size-sm="12"
+        size-md="12"
+        size-lg="4"
+        class="ion-align-self-center ion-text-center"
+      >
         <img
           height="300"
           width="300"
           src="../../assets/me.jpg"
-          class="my-image"
+          class="myImage"
         />
       </ion-col>
-      <ion-col class="ion-align-self-center">
-        <ion-card class="card">
-          <ion-card-content class="story">
-            <p class="text">
-              Douglas White is a Web Application Developer who uses JavaScript
-              libraries to design and develop web apps that look great on all
-              mobile, desktop, and even larger devices utilizing themes that
-              adapt to each platform. He efficiently develops complex, fully
-              featured solutions for clients using NodeJS front-end frameworks
-              that enable complex features and rapid prototype design.
-              Ultimately, the suite of tools and servies Douglas has chosen the
-              suite of tools and services to build apps because they provide a
-              means to shipp apps to both app stores and as a progressive web
-              app(PWA), all from one codebase.
-            </p>
-          </ion-card-content>
-        </ion-card>
-        <ion-card class="card">
-          <ion-card-content class="story">
-            <p class="text">
-              Once deployed, Douglas combines the user analytics with a highly
-              specialized suite of services which provides an effective means of
-              improving outcomes. The combination of services offers user
-              tracking across devices, A/B testing automation, and automated
-              user segment customizations which helps guide the user along each
-              stage of the the customer journey. Funnel analysis ultimately
-              provides the neans for quicker market penetration with less churn.
-              By using Google's cloud based Infrastructure as a Service(IaaS),
-              Google Cloud Platform(GCP) DevOps, Douglas keeps operational costs
-              radically reduced. Features such as auto-scaling all backend
-              resources, edge caching of user data across a global content
-              delivery network, and serverless functions all improve app
-              responsiveness while greatly reducing operational expenses.
-              Douglas is a team player and thus he is quite comfortable working
-              in an Agile environment using Scrum and/or team coding along with
-              continuous integration, continuous deployment(CI/CD) to improve
-              coding effeciences when working with a team of developers.
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="ion-align-self-center">
-        <ion-card class="card">
-          <ion-card-content class="story">
-            <p class="text">
-              Just over 3 years ago, he was presented with a position that
-              provided him a chance to learn JavaScript. So, he jumped at the
-              opportunity and has never looked back. Douglas develops web apps
-              using Ionic & Angular web frameworks, Google Cloud Platform and
-              Firebase. He has a lifelong commitment to continuing education in
-              his field, and has specifically been working with SVG, D3,
-              TensorFlow and Actions on Google in order to bring animations,
-              data visualizations, machine learning and voice interactions under
-              his belt.
-            </p>
-          </ion-card-content>
-        </ion-card>
-        <ion-card class="card">
-          <ion-card-content class="story">
-            <p class="text">
-              Douglas began working in the IT industry at an ISP as a network
-              technician over fifteen years ago. His career path led him to more
-              advanced positions where he eventually was working with C-level
-              business leaders as a software sales representative and as a IT
-              services consultant. He understands how to communicate with
-              business leaders, he knows how important their expectations are,
-              and ultimately he knows how to deliver to them. His intrinsic
-              interest in the sciences along with an ingrained desire to
-              understand how things work have allowed him to keep at the
-              forefront of the IT industry. He is a self-starter and fully
-              autonomous; but he does enjoy the the company of peers and works
-              well in any team. Douglas enjoys that feeling of success achieved
-              upon implementing a complex solution that enables a client to
-              truly make an impact in their market, and he has every intention
-              to continue in that success.
-            </p>
-          </ion-card-content>
-        </ion-card>
-        <ion-card class="card">
-          <ion-card-content class="story">
-            <p class="text">
-              Currently, Douglas White is considering new projects and/or full
-              time work. He is available for conversation, and he welcomes the
-              chance to meet you to discuss his background and any opportunities
-              in more detail. He is currently residing in Lubbock, and will
-              consider local or remote positions and will entertain relocating
-              to metropolitan areas of Texas.
-            </p>
-          </ion-card-content>
-        </ion-card>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col
+        size-sm="12"
+        size-md="12"
+        size-lg="8"
+        class="ion-align-self-center"
+      >
+        <aw-wizard
+          navBarLocation="top"
+          navBarLayout="large-filled-symbols"
+          navigateForward="allow"
+          #wizard
+          class="custom-line-css"
+        >
+          <aw-wizard-step [stepTitle]="'Intro'" [awOptionalStep]="true">
+            <ng-template awWizardStepSymbol>
+              <ion-icon
+                class="stepperIcon"
+                size="large"
+                name="person-sharp"
+                color="secondary"
+              ></ion-icon>
+            </ng-template>
+            <ion-card class="normalCard ion-padding">
+              <p class="text">
+                Douglas White is a Web Application Developer who like a chemist
+                mixes together components from a set of known materials in
+                unique and novel ways seeking to create highly effective
+                products. He is versed in using JavaScript libraries to design
+                and develop web apps that look great on mobile, desktop, and
+                even larger devices by utilizing themes which adapt to each
+                platform. He is effecient at developing complex, fully featured
+                solutions for clients using NodeJS front-end frameworks that
+                enable rapid prototype review. Ultimately, the suite of tools
+                and servies Douglas currently uses provide the fastest means to
+                ship apps to both app stores and as a progressive web app(PWA),
+                but he is not averse to learning and developing with any coding
+                language.
+              </p>
+              <p class="test">
+                Douglas White is a Web Application Developer who like a chemist
+                mixes together components from a set of known materials in
+                unique and novel ways seeking to create highly effective
+                products. He is versed in using JavaScript libraries to design
+                and develop web apps that look great on mobile, desktop, and
+                even larger devices by utilizing themes which adapt to each
+                platform. He is effecient at developing complex, fully featured
+                solutions for clients using NodeJS front-end frameworks that
+                enable rapid prototype review. Ultimately, the suite of tools
+                and servies Douglas currently uses provide the fastest means to
+                ship apps to both app stores and as a progressive web app(PWA),
+                but he is not averse to learning and developing with any coding
+                language.
+              </p>
+              <div class="btn-group">
+                <ion-button
+                  color="secondary"
+                  shape="round"
+                  type="button"
+                  class="btn btn-secondary"
+                  awNextStep
+                >
+                  Continue
+                </ion-button>
+              </div>
+            </ion-card>
+          </aw-wizard-step>
+          <aw-wizard-step [stepTitle]="'Skills'">
+            <ng-template awWizardStepSymbol>
+              <ion-icon
+                class="stepperIcon"
+                size="large"
+                name="library-sharp"
+                color="secondary"
+              ></ion-icon>
+            </ng-template>
+
+            <ion-card class="normalCard ion-padding">
+              <p class="text">
+                Once an app is deployed, Douglas combines user analytics with
+                other tools and services to establish a concise approach for
+                effectively improving outcomes. This combination of services
+                offers user tracking across devices, A/B testing automation, and
+                automated user segment customizations which helps guide the user
+                along each stage of the the customer journey. Additionally,
+                analytic funnel analysis provides a means for more rapid market
+                penetration with less churn. Using Google's cloud based
+                Infrastructure as a Service(IaaS) a.k.a. Google Cloud
+                Platform(GCP), Douglas uses his evolved knowledge of DevOps to
+                keep operational costs radically reduced. Features such as
+                auto-scaling all backend resources, edge caching of user data
+                across a global content delivery network (CDN), and serverless
+                functions all improve app responsiveness while greatly reducing
+                operational expenses. Douglas has experience working in an
+                autonomous environment although he is a team player. Thus he is
+                quite comfortable working alone or in an Agile environment where
+                utilizing Scrum and/or team coding along with continuous
+                integration, continuous deployment(CI/CD) can greatly improve
+                coding effeciences.
+              </p>
+
+              <div class="btn-group">
+                <ion-button
+                  color="secondary"
+                  shape="round"
+                  type="button"
+                  class="btn btn-secondary"
+                  awNextStep
+                >
+                  Continue
+                </ion-button>
+                <ion-button
+                  color="light"
+                  shape="round"
+                  fill="outline"
+                  type="button"
+                  class="btn btn-secondary"
+                  awPreviousStep
+                >
+                  Back
+                </ion-button>
+              </div>
+            </ion-card>
+          </aw-wizard-step>
+          <aw-wizard-step [stepTitle]="'Background'">
+            <ng-template awWizardStepSymbol>
+              <ion-icon
+                class="stepperIcon"
+                size="large"
+                name="time-sharp"
+                color="secondary"
+              ></ion-icon>
+            </ng-template>
+
+            <ion-card class="normalCard ion-padding">
+              <p class="text">
+                Douglas began working in the IT industry at an ISP as a network
+                technician over fifteen years ago. His career path led him to
+                more advanced positions where he eventually found himself
+                working with C-level business leaders as a software sales
+                representative and as a IT services consultant. Thus, he
+                understands how to communicate with business leaders, he knows
+                how important their expectations are, and he knows how to
+                deliver on those expectations. His intrinsic interest in the
+                sciences along with an ingrained desire to understand how things
+                work have allowed him to keep at the forefront of the IT
+                industry. He is a self-starter, but he does enjoy the company of
+                peers and he works well on any team. Douglas is results driven
+                and he truly enjoys the feeling of success achieved upon
+                implementing a complex solution that enables a client to make an
+                impact in their market. He also has every intention to continue
+                in that success.
+              </p>
+
+              <div class="btn-group">
+                <ion-button
+                  color="secondary"
+                  shape="round"
+                  type="button"
+                  class="btn btn-secondary"
+                  awNextStep
+                >
+                  Continue
+                </ion-button>
+                <ion-button
+                  color="light"
+                  shape="round"
+                  fill="outline"
+                  type="button"
+                  class="btn btn-secondary"
+                  awPreviousStep
+                >
+                  Back
+                </ion-button>
+              </div>
+            </ion-card>
+          </aw-wizard-step>
+          <aw-wizard-step [stepTitle]="'Vision'">
+            <ng-template awWizardStepSymbol>
+              <ion-icon
+                class="stepperIcon"
+                size="large"
+                name="trail-sign-sharp"
+                color="secondary"
+              ></ion-icon>
+            </ng-template>
+
+            <ion-card class="normalCard ion-padding">
+              <p class="text">
+                Just over 3 years ago, Douglas was presented with a position
+                that provided him the opportunity to learn JavaScript, a long
+                held desire. So, he jumped at the chance and has never looked
+                back. He enjoys developing web apps using Ionic & Angular web
+                frameworks, Google Cloud Platform and Firebase. He has a
+                lifelong commitment to continuing education in his field, and he
+                has specifically been working with SVG, D3, TensorFlow and
+                Actions on Google in order to bring animations, data
+                visualizations, machine learning and voice interactions under
+                his belt.
+              </p>
+              <p class="text">
+                Currently, Douglas White is considering new projects and/or full
+                time work. He is available for conversation in person or by
+                virtual meeting. He welcomes the chance to discuss your current
+                or upcoming project and his potential role in helping you
+                achieve results. He currently resides in Lubbock, TX and will
+                consider local or remote positions, and he will also readily
+                entertain relocating to metropolitan areas of Texas.
+              </p>
+
+              <div class="btn-group">
+                <ion-button
+                  color="secondary"
+                  shape="round"
+                  type="button"
+                  class="btn btn-secondary"
+                  awResetWizard
+                >
+                  Done
+                </ion-button>
+                <ion-button
+                  color="light"
+                  shape="round"
+                  fill="outline"
+                  type="button"
+                  class="btn btn-secondary"
+                  awPreviousStep
+                >
+                  Back
+                </ion-button>
+              </div>
+            </ion-card>
+          </aw-wizard-step>
+        </aw-wizard>
       </ion-col>
     </ion-row>
   </ion-grid>

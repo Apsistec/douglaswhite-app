@@ -1,75 +1,74 @@
-<!-- <ion-footer > -->
-  <ion-toolbar class="footer" >
-    <ion-buttons>
+<ion-footer  class="ion-padding-top ion-margin-top">
+  <ion-toolbar class="footer-toolbar">
+    <ion-buttons  class="link-icon">
       <ion-button
+
         color="primary"
         href="https://github.com/Apsistec"
         target="_blank"
-        routerDirection="forward"
         size="large"
       >
         <ion-icon
           size="large"
           slot="icon-only"
-          class="github link-icon"
+          class="github"
           name="logo-github"
         >
         </ion-icon>
       </ion-button>
       <ion-button
+
         color="primary"
         href="https://twitter.com/ApsisTech"
         target="_blank"
-        routerDirection="forward"
         size="large"
       >
         <ion-icon
           size="large"
           slot="icon-only"
-          class="twitter link-icon"
+          class="twitter"
           name="logo-twitter"
         >
         </ion-icon>
       </ion-button>
       <ion-button
+
         color="primary"
         href="https://www.linkedin.com/in/apsistec/"
         target="_blank"
-        routerDirection="forward"
         size="large"
       >
         <ion-icon
           size="large"
           slot="icon-only"
-          class="linkedin link-icon"
+          class="linkedin"
           name="logo-linkedin"
         >
         </ion-icon>
       </ion-button>
       <ion-button
+
         color="primary"
-        href="https://www.linkedin.com/in/apsistec/"
+        href="https://stackoverflow.com/users/10599330/doug-white?tab=profile"
         target="_blank"
-        routerDirection="forward"
         size="large"
       >
         <ion-icon
           size="large"
           slot="icon-only"
-          class="stack link-icon"
+          class="stack"
           name="logo-stackoverflow"
         >
         </ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-text class="sign-off">Thank you for stopping by...</ion-text>
-    <ion-text color="warning" class="copyright">
-      &#9426;{{ yearDate | date: "yyyy" }} www.douglaswhite.app
+    <ion-text class="copyright" color="warning">
+      &#9426;{{ yearDate | date:"yyyy" }} www.douglaswhite.app
     </ion-text>
     <ion-icon
-      src="../../../assets/douglaswhitelogo.svg"
+      src="../../../assets/logo.svg"
       class="logo"
       routerLink="/tabs/about"
     ></ion-icon>
   </ion-toolbar>
-<!-- </ion-footer> -->
+</ion-footer>

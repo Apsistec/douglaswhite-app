@@ -1,36 +1,32 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
     <ion-buttons slot="start">
       <ion-icon
-        src="../../../assets/douglaswhitelogo.svg" routerLink="/tabs/about"
+        src="../../../assets/logo.svg" routerLink="/tabs/about"
         class="header-icon"
       ></ion-icon>
     </ion-buttons>
-    <ion-title size="small" class="heading ion-text-lowercase" color="tertiary">
+    <ion-title size="small" class="heading ion-text-uppercase" >
       DouglasWhite.app
     </ion-title>
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-    <ion-title size="small" class="heading ion-text-lowercase" color="tertiary">
-      DouglasWhite.app
-    </ion-title>
-      </ion-toolbar>
-  </ion-header>
-  <div>
+<ion-content class="content">
     <ngx-extended-pdf-viewer
-    [src]="'../../assets/04262021_Douglas_White_Resume.pdf'"
-    [filenameForDownload]="'04262021_Douglas_White_Resume'"
-    [pageViewMode]="'single'"
-    [height]="'90vh'"
+    src="../../assets/04262021_Douglas_White_Resume.pdf"
+    filenameForDownload="04262021_Douglas_White_Resume"
+    height="100vh"
     [zoom]="'auto'"
-    [enablePinchOnMobile]="true"
-    [useBrowserLocale]="true"  [textLayer]="true"
-    [showHandToolButton]="true">
+    backgroundColor="#313131"
+    [showPropertiesButton]="false"
+    [showOpenFileButton]="false"
+    [showPagingButtons]="false"
+    [showBookmarkButton]="false"
+    [showSecondaryToolbarButton]="false"
+    [showSidebarButton]="false"
+
+    >
   </ngx-extended-pdf-viewer>
-</div>
 <app-footer></app-footer>
   </ion-content>
