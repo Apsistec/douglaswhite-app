@@ -10,14 +10,15 @@ const API_KEY = functions.config().sendgrid.key;
 const TEMPLATE_ID = functions.config().sendgrid.template;
 sgMail.setApiKey(API_KEY);
 
-export const genericEmail = functions.https.onCall(async (data, context) => {
+export const genericEmail = functions.https.onCall(async (data) => {
   const msg = {
-    to: context.auth.token.email,
+    to: "doug@apsistec.app",
     from: data.email,
     templateId: TEMPLATE_ID,
     dynamic_template_data: {
       subject: "Job Opportunity",
       name: data.name,
+      email: data.email,
       message: data.message,
     },
   };

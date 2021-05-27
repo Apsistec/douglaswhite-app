@@ -25,25 +25,23 @@
     "@capacitor/android": "^2.4.7",
     "@capacitor/core": "2.4.7",
     "@capacitor/ios": "^2.4.7",
+    "@ionic-native/core": "^5.33.0",
+    "@ionic-native/splash-screen": "^5.33.0",
+    "@ionic-native/status-bar": "^5.33.0",
     "@ionic/angular": "^5.5.2",
     "@ionic/cli": "^6.15.0",
     "@ngneat/until-destroy": "^8.0.4",
-    "@types/applicationinsights-js": "^1.0.9",
     "angular-archwizard": "^7.0.0",
-    "applicationinsights-js": "^1.0.21",
-    "classlist.js": "^1.1.20150312",
     "cordova-res": "^0.15.3",
-    "element-resize-detector": "^1.2.2",
     "firebase": "^8.4.3",
     "ng-particles": "^2.10.0",
     "ngx-extended-pdf-viewer": "^9.0.0-alpha.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "typescript": "^4.1.5",
-    "web-animations-js": "^2.3.2"
+    "tsparticles": "^1.27.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^12.0.0",
+    "@angular-devkit/build-angular": "^0.1102.13",
     "@angular-eslint/builder": "4.2.0",
     "@angular-eslint/eslint-plugin": "4.2.0",
     "@angular-eslint/eslint-plugin-template": "4.2.0",
@@ -74,11 +72,12 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
+    "typescript": "^4.1.5",
     "zone.js": "^0.10.3"
   },
   "description": "Douglas White's Ionic project portraying his web application developer portfolio",
   "browserslist": [
-    "last 2 versions",
-    "not dead"
+    "> 1%",
+    "last 2 versions"
   ]
 }

@@ -14,7 +14,7 @@ import { IonContent } from '@ionic/angular';
   encapsulation: ViewEncapsulation.None
 })
 export class AboutPage implements OnInit, AfterViewInit {
-  particlesUrl: any = './particles.json';
+  particlesUrl: any = '../../assets/particles.json';
   id: any = 'tsparticles';
 
   scrolledDown = false;

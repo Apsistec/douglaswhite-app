@@ -1,19 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="toolbar">
-    <ion-buttons slot="start">
-      <ion-icon
-        src="../../../assets/logo.svg" routerLink="/tabs/about"
-        class="header-icon"
-      ></ion-icon>
-    </ion-buttons>
-    <ion-title size="small" class="heading ion-text-uppercase" >
-      DouglasWhite.app
-    </ion-title>
+    <app-neon class="neon"></app-neon>
+
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
 <ion-content class="content">
-    <ngx-extended-pdf-viewer
+  <ngx-extended-pdf-viewer
     src="../../assets/04262021_Douglas_White_Resume.pdf"
     filenameForDownload="04262021_Douglas_White_Resume"
     height="100vh"
@@ -25,8 +18,7 @@
     [showBookmarkButton]="false"
     [showSecondaryToolbarButton]="false"
     [showSidebarButton]="false"
-
-    >
+  >
   </ngx-extended-pdf-viewer>
-<app-footer></app-footer>
-  </ion-content>
+  <app-footer class="footer"></app-footer>
+</ion-content>

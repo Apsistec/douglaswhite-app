@@ -5,6 +5,8 @@
 
 /* Light colors (default) */
 :root {
+
+
   .normalCard {
     --background: var(--ion-color-medium-shade);
     p {
@@ -29,12 +31,12 @@
   --ion-toolbar-background: #6b6e7b;
   --ion-toolbar-background-rgb: 107, 110, 123;
 
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary: #041DFF;
+  --ion-color-primary-rgb: 4,29,255;
   --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #041ae0;
+  --ion-color-primary-tint: #1d34ff;
 
   --ion-color-secondary: #00ff0a;
   --ion-color-secondary-rgb: 0, 255, 10;
@@ -121,12 +123,12 @@ body.dark {
   --ion-text-color: #ffffff;
   --ion-text-color-rgb: 255, 255, 255;
 
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+   --ion-color-primary: #041DFF;
+  --ion-color-primary-rgb: 4,29,255;
   --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #041ae0;
+  --ion-color-primary-tint: #1d34ff;
 
   --ion-color-tertiary: #00ff0a;
   --ion-color-tertiary-rgb: 0, 255, 10;

@@ -26,7 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Exo+2&family=Itim&family=Rock+Salt&family=Prompt&family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Exo&family=Itim&family=Rock+Salt&family=Prompt&display=swap");
 
 /* Adobe Fonts */
 @import url("https://use.typekit.net/zaq2hoe.css");
@@ -34,16 +34,10 @@
 /* Fonts */
 /* Text for Paragraph Readability */
 .text {
-  font-family: Exo, sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-}
-.test {
   font-family: Itim, cursive;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.2em;
 }
-
 
 /* Main Hero display centerpiece Heading */
 .display {
@@ -60,14 +54,6 @@
     font-size: 1.5em;
     font-weight: 700;
   }
-}
-
-/* ion-header Title */
-
-.heading {
-  font-family: "Libre Barcode 128 Text", cursive;
-  font-size: 32px;
-  font-weight: 400;
 }
 
 /* Card Header Titles */
@@ -120,18 +106,11 @@ p.help.is-danger {
 }
 
 /* Header Toolbar Icon*/
-.toolbar{
-  height: fit-content;
-  padding: 14px 5px;
-}
-.neon{
-  padding-inline: 10px;
-  padding-block: 5px;
-}
 .header-icon {
   margin-left: 5px;
   font-size: 46px;
 }
+
 
 /* All Cards */
 ion-card {
@@ -194,3 +173,18 @@ ion-card {
 
 /* Ng-archwizard stepper r */
 @import "../node_modules/angular-archwizard/styles/archwizard.scss";
+
+/* Toast CSS */
+.successT {
+  --background: var(--ion-color-dark);
+  --border-color: var(--ion-color-secondary);
+  --border-style: solid;
+  --border-width: 2px;
+  --color: white;
+}
+
+/* Footer to keep footer at bottom */
+.footer{
+  position: relative;
+  bottom: 0;
+}

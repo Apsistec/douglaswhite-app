@@ -3,12 +3,11 @@
 
 <head>
   <meta charset="utf-8"/>
-  <title>Douglas White App</title>
+  <title>Doug's Portfolio App</title>
 
   <base href="/"/>
 
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-  <meta name="color-scheme" content="light dark"/>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta name="format-detection" content="telephone=no"/>
   <meta name="msapplication-tap-highlight" content="no"/>
@@ -18,15 +17,48 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1976d2">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta name="theme-color" content="#041DFF">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
 
-<body>
-  <app-root></app-root>
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
-</body>
 
+
+      <link rel="manifest" href="manifest.webmanifest" />
+    <!-- PWA Meta -->
+    <meta name="application-name" content="Douglas White Portfolio App" />
+    <meta name="description" content="A web app developer's portfolio for Douglas White." />
+    <meta name="color-scheme" content="dark light" />
+    <!-- add to homescreen for web  -->
+    <meta name="web-app-capable" content="yes" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- add to homescreen for md -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="light dark" />
+    <meta name="apple-mobile-web-app-title" content="Douglas White Portfolio App" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://douglaswhite.app/" />
+    <meta property="og:title" content="Douglas White Portfolio App" />
+    <meta property="og:image" content="assets/icons/icon-512x512" />
+    <meta property="og:description" content="A web app developer's portfolio for Douglas White." />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://douglaswhite.app" />
+    <meta property="twitter:title" content="Douglas White Portfolio App" />
+    <meta property="twitter:image" content="assets/icons/icon-512x512.png" />
+    <meta property="twitter:description" content="A web app developer's portfolio for Douglas White." />
+  </head>
+  <body class="mat-typography">
+    <app-root></app-root>
+    <noscript
+      >Please enable JavaScript or try another browser such as <a href="https://www.brave.com">Brave Browser</a>to
+      actually use this application.
+    </noscript>
+  </body>
 </html>

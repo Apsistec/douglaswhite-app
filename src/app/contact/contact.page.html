@@ -1,15 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="toolbar">
-    <ion-buttons slot="start">
-      <ion-icon
-        src="../../../assets/logo.svg"
-        routerLink="/tabs/about"
-        class="header-icon"
-      ></ion-icon>
-    </ion-buttons>
-    <ion-title size="small" class="heading ion-text-uppercase">
-      DouglasWhite.app
-    </ion-title>
+    <app-neon class="neon" ></app-neon>
+
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
@@ -30,6 +22,7 @@
       </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content class="ion-no-margin">
+     <pre> {{ results }} </pre>
       <form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
         <ion-item class="items ion-margin-vertical" lines="none" >
 
