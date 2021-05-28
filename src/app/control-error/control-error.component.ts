@@ -1,9 +1,15 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+} from '@angular/core';
 
 @Component({
   templateUrl: 'control-error.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./control-error.component.scss']
+  styleUrls: ['./control-error.component.scss'],
 })
 export class ControlErrorComponent implements OnInit {
   _text;
@@ -15,11 +21,9 @@ export class ControlErrorComponent implements OnInit {
       this._hide = !value;
       this.cdr.detectChanges();
     }
-  };
-
-  constructor(private cdr: ChangeDetectorRef) { }
-
-  ngOnInit() {
   }
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngOnInit() {}
 }

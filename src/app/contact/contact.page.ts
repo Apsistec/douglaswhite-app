@@ -1,80 +1,105 @@
-import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { JsonPipe, KeyValuePipe } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { PopoverController, ToastController } from '@ionic/angular';
-import { ErrorPopoverComponent } from '../shared/error-popover/error-popover.component';
+import { Router } from '@angular/router';
+import { LoadingController, ToastController } from '@ionic/angular';
+import { pipe } from 'rxjs';
+
+interface Result {
+  header: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-contact',
   templateUrl: 'contact.page.html',
   styleUrls: ['contact.page.scss'],
 })
-export class ContactPage implements OnInit, AfterViewInit {
+export class ContactPage implements OnInit {
   emailForm: FormGroup;
   name;
   email;
   message;
-  formError = false;
-  results;
+  isLoading = false;
+  res: Result;
 
   constructor(
     private toast: ToastController,
     private fb: FormBuilder,
     private fun: AngularFireFunctions,
-    private popover: PopoverController
-    ) {}
+    private loadingController: LoadingController,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.emailForm = this.fb.group({
-      name: ['', [Validators.required,  Validators.minLength(3), Validators.maxLength(27)]],
+      name: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(27),
+        ],
+      ],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(3000)]],
+      message: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(1000),
+        ],
+      ],
     });
   }
 
-  ngAfterViewInit() {
-    if (!this.emailForm.controls.valid && !this.emailForm.pristine) {
-      this.formError = true;
-    }
-    this.formError = false;
+  get emailFormControl() {
+    return this.emailForm.controls;
   }
 
-    get emailFormControl() {
-      return this.emailForm.controls;
-    }
-
-  async errorPopover(ev){
-    console.log("event: ", ev);
-    const popover = await this.popover.create({
-      component: ErrorPopoverComponent,
-      cssClass: 'my-custom-class',
-      showBackdrop: false,
-      event: ev,
-      translucent: true
-    });
-    await popover.present();
+  async loadSpinner() {
+    const load = await this.loadingController
+      .create({
+        spinner: 'circles',
+        duration: 1600,
+      })
+      .then((a) => {
+        a.present().then(() => {
+          if (!this.isLoading) {
+            a.dismiss();
+          }
+        });
+      });
   }
 
-  async sendEmail() {
-    this.name= this.emailFormControl.name;
-    this.email= this.emailFormControl.email;
-    this.message= this.emailFormControl.message;
+  sendEmail() {
+    this.isLoading;
+    this.loadSpinner();
+    this.name = this.emailFormControl.name.value;
+    this.email = this.emailFormControl.email.value;
+    this.message = this.emailFormControl.message.value;
 
     const callable = this.fun.httpsCallable('genericEmail');
-    this.results = await callable({ name: this.name, email: this.email, message: this.message }).subscribe();
-    this.emailForm.reset();
-    if (this.results && this.results !== null){
-     const toaster = await this.toast.create({
-      header: 'Message Sent',
-      message: 'Thank you! Douglas White will be in touch asap!',
-      cssClass: 'successT',
-      position: 'top',
-      keyboardClose: true,
-      duration: 4000
+    callable({
+      name: this.name,
+      email: this.email,
+      message: this.message,
+    }).subscribe((res) => {
+      this.res = res;
+      console.log('res: ', this.res);
+      this.isLoading = false;
+      this.router.navigate(['/tabs/about']).then(async () => {
+        const toaster = await this.toast.create({
+          header: this.res.header,
+          message: this.res.message,
+          cssClass: 'successT',
+          position: 'top',
+          keyboardClose: true,
+          duration: 10000,
+        });
+        toaster.present();
+      });
     });
-    toaster.present();
-    }
   }
-
-
 }

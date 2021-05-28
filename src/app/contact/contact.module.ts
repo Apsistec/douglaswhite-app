@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { SharedModule } from '../shared/shared.module';
@@ -18,7 +17,7 @@ import { FormSubmitDirective } from '../directives/form-submit.directive';
     IonicModule,
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forChild([{ path: '', component: ContactPage }]),
+    FormsModule,
     ContactPageRoutingModule,
     SharedModule,
     NgParticlesModule,
@@ -27,7 +26,10 @@ import { FormSubmitDirective } from '../directives/form-submit.directive';
 
   declarations: [
     ContactPage,
-    ControlErrorsDirective, FormSubmitDirective, ControlErrorContainerDirective, ControlErrorComponent
-  ]
+    ControlErrorsDirective,
+    FormSubmitDirective,
+    ControlErrorContainerDirective,
+    ControlErrorComponent,
+  ],
 })
 export class ContactPageModule {}

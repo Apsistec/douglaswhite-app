@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="ion-padding-horizontal">
-    <app-neon class="neon" ></app-neon>
+    <app-neon routerLink="/tabs/about" class="neon"></app-neon>
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +9,7 @@
   [scrollEvents]="true"
   (ionScroll)="onScroll($event)"
 >
-<ng-particles [id]="id" [url]="particlesUrl"></ng-particles>
+  <ng-particles [id]="id" [url]="particlesUrl"></ng-particles>
 
   <div class="main">
     <div class="display">
@@ -71,19 +71,16 @@
             </ng-template>
             <ion-card class="normalCard ion-padding">
               <p class="text">
-                Douglas White is a Web Application Developer who like a chemist
-                mixes together components from a set of known materials in
-                unique and novel ways seeking to create highly effective
-                products. He is versed in using JavaScript libraries to design
-                and develop web apps that look great on mobile, desktop, and
-                even larger devices by utilizing themes which adapt to each
-                platform. He is effecient at developing complex, fully featured
-                solutions for clients using NodeJS tools & frameworks that
-                enable rapid prototype review. Ultimately, the suite of tools
-                and servies Douglas currently uses provide the fastest means to
-                ship apps to both app stores and as a progressive web app(PWA),
-                but he is not averse to learning and developing with any coding
-                language.
+                Douglas White is a web application developer who much like a
+                chemist mixes together components from a set of known materials
+                in unique & novel ways seeking to create valuable, user friendly
+                products. He is versed in coding JavaScript to design & develop
+                web apps that look great on mobile, desktop & even larger
+                devices by utilizing themes which adapt to each platform. The
+                suite of tools & services Douglas commonly uses provide the
+                fastest means to ship apps to both app stores and as a
+                progressive web App (PWA), from one codebase; but he is not
+                averse to learning & developing with other coding languages.
               </p>
 
               <div class="btn-group">
@@ -112,25 +109,19 @@
             <ion-card class="normalCard ion-padding">
               <p class="text">
                 Once an app is deployed, Douglas combines user analytics with
-                other tools and services to establish a concise approach for
-                effectively improving outcomes. This combination of services
-                offers user tracking across devices, A/B testing automation, and
-                automated user segment customizations which helps guide the user
-                along each stage of the the customer journey. Additionally,
-                analytic funnel analysis provides a means for more rapid market
-                penetration with less churn. Using Google's cloud based
-                Infrastructure as a Service(IaaS) a.k.a. Google Cloud
-                Platform(GCP), Douglas uses his evolved knowledge of DevOps to
-                keep operational costs radically reduced. Features such as
-                auto-scaling all backend resources, edge caching of user data
-                across a global content delivery network (CDN), and serverless
-                functions all improve app responsiveness while greatly reducing
-                operational expenses. Douglas has experience working in an
-                autonomous environment although he is a team player. Thus he is
-                quite comfortable working alone or in an Agile environment where
-                utilizing Scrum and/or team coding along with continuous
-                integration, continuous deployment(CI/CD) can greatly improve
-                coding effeciences.
+                other tools & services to establish a concise approach for
+                effectively improving outcomes. These services offer user
+                tracking across devices, automated A/B testing & automated user
+                segment customizations. All of which help guide the user along
+                each stage of the customer journey. With Google Cloud Platform
+                (GCP), Douglas utilizes his evolved knowledge of DevOps to
+                implement features including automatically scaling backend
+                resources, edge caching user data across a global content
+                delivery network (CDN) & serverless functions. All of which
+                improve app responsiveness while greatly reducing operational
+                expenses. Douglas is quite comfortable working alone or in an
+                Agile environment utilizing Scrum and/or team coding along with
+                continuous integration, continuous deployment (CI/CD).
               </p>
 
               <div class="btn-group">
@@ -170,20 +161,21 @@
               <p class="text">
                 Douglas began working in the IT industry at an ISP as a network
                 technician over fifteen years ago. His career path led him to
-                more advanced positions where he eventually found himself
-                working with C-level business leaders as a software sales
-                representative and as a IT services consultant. Thus, he
-                understands how to communicate with business leaders, he knows
-                how important their expectations are, and he knows how to
-                deliver on those expectations. His intrinsic interest in the
-                sciences along with an ingrained desire to understand how things
-                work have allowed him to keep at the forefront of the IT
-                industry. He is a self-starter, but he does enjoy the company of
-                peers and he works well on any team. Douglas is results driven
-                and he truly enjoys the feeling of success achieved upon
-                implementing a complex solution that enables a client to make an
-                impact in their market. He also has every intention to continue
-                in that success.
+                more advanced positions where he found himself working with
+                C-level business leaders as a software sales representative & IT
+                services consultant. Thus, he understands their expectations,
+                how to communicate & most importantly he knows how to deliver on
+                those expectations. Just over 3 years ago, Douglas was presented
+                with a position that provided him the opportunity to learn
+                JavaScript, a long held desire. So, he jumped at the chance and
+                has never looked Back. With an ingrained desire to understand
+                how all things work he has stayed at the forefront of the IT
+                industry. A self-starter, he also enjoys the company of peers &
+                he works well on any team. Results driven, he truly enjoys the
+                feeling of success such as that achieved upon implementing a
+                complex solution that enables a client to make an impact in
+                their market. He has every intention to continue in that
+                success.
               </p>
 
               <div class="btn-group">
@@ -221,25 +213,20 @@
 
             <ion-card class="normalCard ion-padding">
               <p class="text">
-                Just over 3 years ago, Douglas was presented with a position
-                that provided him the opportunity to learn JavaScript, a long
-                held desire. So, he jumped at the chance and has never looked
-                back. He enjoys developing web apps using Ionic & Angular web
-                frameworks, Google Cloud Platform and Firebase. He has a
-                lifelong commitment to continuing education in his field, and he
-                has specifically been working with SVG, D3, TensorFlow and
-                Actions on Google in order to bring animations, data
-                visualizations, machine learning and voice interactions under
-                his belt.
+                Douglas currently develops web apps using Ionic & Angular web
+                frameworks, Google Cloud Platform & Firebase. He has a lifelong
+                commitment to expanding his skillsets. He has recently been
+                working with SVG, D3, TensorFlow & Actions on Google in order to
+                bring animations, data visualizations, machine learning & voice
+                interactions under his belt.
               </p>
               <p class="text">
-                Currently, Douglas White is considering new projects and/or full
-                time work. He is available for conversation in person or by
-                virtual meeting. He welcomes the chance to discuss your current
-                or upcoming project and his potential role in helping you
-                achieve results. He currently resides in Lubbock, TX and will
-                consider local or remote positions, and he will also readily
-                entertain relocating to metropolitan areas of Texas.
+                Currently, Douglas White is considering new projects & full time
+                work. He welcomes the chance to discuss your current or upcoming
+                project & his potential role in helping you achieve results. He
+                resides in Lubbock, TX & will consider local or remote
+                positions, & he will also readily entertain relocating to
+                metropolitan areas of Texas.
               </p>
 
               <div class="btn-group">
