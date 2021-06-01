@@ -5,7 +5,7 @@ div {
   margin: 6px;
   // background-color: var(--ion-color-dark-shade);
   // border: 1px solid var(--ion-color-secondary-shade);
-  border-radius: 15px;
+  border-radius: 12px;
   animation: turnOnBorder 0.24s forwards step-end,
   flickerBorder calc(var(--animation-time) * 16) infinite step-end 7s;
   --box-shadow:  inset

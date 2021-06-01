@@ -6,16 +6,8 @@
 /* Light colors (default) */
 :root {
 
-
-  .normalCard {
-    --background: var(--ion-color-medium-shade);
-    p {
-      color: #ffffff;
-    }
-  }
-
   .contact-card {
-    background: linear-gradient(to bottom, #00ff0a 5%, #2c612c 95%);
+    background: linear-gradient(to bottom, var(--ion-color-secondary-shade) 5%, #2c612c 95%);
   }
 
   ion-tab-bar,
@@ -102,9 +94,6 @@
 */
 // @media (prefers-color-scheme: dark) {
 body.dark {
-  .normalCard {
-    --background: var(--ion-color-dark-shade);
-  }
 
   .contact-card {
     background: linear-gradient(to bottom, #3880ff 10%, #192b4e 100%);
