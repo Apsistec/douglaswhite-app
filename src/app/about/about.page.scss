@@ -1,8 +1,12 @@
-/* Main section of each page */
+#landing {
+  height: 100vh;
+  width: 100vw;
+}
 
+/* Main section of each page */
 .main {
   text-align: center;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   display: grid;
   place-content: center;
@@ -11,6 +15,15 @@
 /* Centerpiece in main */
 .display {
   z-index: 30;
+  transform: translateY(-33%);
+}
+
+/* Call to action button */
+.cta {
+  --color: var(--ion-color-secondary);
+  --background-color: var(--ion-color-primary-shade);
+  --box-shadow: inset 0 0 10px var(--ion-color-tertiary),
+    0 0 10px var(--ion-color-tertiary), 0 0 20px var(--ion-color-tertiary);
 }
 
 .myImage {
@@ -41,19 +54,17 @@
         div.label {
           color: #ffffff !important;
         }
-
       }
     }
     li.current {
       a {
         div.step-indicator {
-          background-color:var(--ion-color-primary) !important;
+          background-color: var(--ion-color-primary) !important;
         }
 
         div.label {
-          border-bottom: 1px solid #ffffff !important;
+          border-bottom: 2px solid #ffffff !important;
         }
-
       }
     }
   }
@@ -62,7 +73,11 @@
 aw-wizard.custom-line-css {
   aw-wizard-navigation-bar.horizontal ul.steps-indicator {
     li.done:not(.editing):not(:last-child):after {
-      background-color: green !important;
+      background-color: var(--ion-color-success) !important;
     }
   }
+}
+
+.wizzardCard{
+  height: fit-content;
 }

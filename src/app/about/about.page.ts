@@ -1,7 +1,5 @@
 import {
-  AfterViewInit,
   Component,
-  OnInit,
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
@@ -11,25 +9,27 @@ import { IonContent } from '@ionic/angular';
   selector: 'app-about',
   templateUrl: 'about.page.html',
   styleUrls: ['about.page.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
-export class AboutPage implements OnInit, AfterViewInit {
+export class AboutPage {
+
   particlesUrl: any = '../../assets/particles.json';
   id: any = 'tsparticles';
-
-  scrolledDown = false;
+  showBackToTopFab = false;
   @ViewChild(IonContent, { static: false }) content: IonContent;
-  constructor() {}
-  ngOnInit() {}
-  ngAfterViewInit() {
 
+  constructor() {}
+
+  onScroll(event) {
+    this.showBackToTopFab = event.detail.scrollTop > 200 ? true : false;
+  }
+
+  scrollToId(id) {
+    const element = document.getElementById(id);
+    this.content.scrollToPoint(0, element.offsetTop, 750);
   }
 
   scrollToTop() {
     this.content.scrollToTop(750);
-  }
-
-  onScroll(event) {
-    this.scrolledDown = event.detail.scrollTop > 400 ? true : false;
   }
 }

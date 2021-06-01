@@ -1,69 +1,24 @@
-<ion-footer  class="ion-padding-top ion-margin-top">
+<ion-footer class="ion-padding-top ion-margin-top">
   <ion-toolbar class="footer-toolbar">
-    <ion-buttons  class="link-icon">
-      <ion-button
-
-        color="primary"
-        href="https://github.com/Apsistec"
-        target="_blank"
-        size="large"
-      >
-        <ion-icon
-          size="large"
-          slot="icon-only"
-          class="github"
-          name="logo-github"
-        >
-        </ion-icon>
-      </ion-button>
-      <ion-button
-
-        color="primary"
-        href="https://twitter.com/ApsisTech"
-        target="_blank"
-        size="large"
-      >
-        <ion-icon
-          size="large"
-          slot="icon-only"
-          class="twitter"
-          name="logo-twitter"
-        >
-        </ion-icon>
-      </ion-button>
-      <ion-button
-
-        color="primary"
-        href="https://www.linkedin.com/in/apsistec/"
-        target="_blank"
-        size="large"
-      >
-        <ion-icon
-          size="large"
-          slot="icon-only"
-          class="linkedin"
-          name="logo-linkedin"
-        >
-        </ion-icon>
-      </ion-button>
-      <ion-button
-
-        color="primary"
+    <ion-buttons class="link-icon">
+      <a href="https://github.com/Apsistec" target="_blank">
+        <ion-icon class="icon github" name="logo-github"> </ion-icon>
+      </a>
+      <a href="https://twitter.com/ApsisTech" target="_blank">
+        <ion-icon class="icon twitter" name="logo-twitter"> </ion-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/apsistec/" target="_blank">
+        <ion-icon class="icon linkedin" name="logo-linkedin"> </ion-icon>
+      </a>
+      <a
         href="https://stackoverflow.com/users/10599330/doug-white?tab=profile"
         target="_blank"
-        size="large"
       >
-        <ion-icon
-          size="large"
-          slot="icon-only"
-          class="stack"
-          name="logo-stackoverflow"
-        >
-        </ion-icon>
-      </ion-button>
+        <ion-icon class="icon stack" name="logo-stackoverflow"> </ion-icon>
+      </a>
     </ion-buttons>
     <ion-text class="copyright" color="warning">
-      &#9426;{{ yearDate | date:"yyyy" }} www.douglaswhite.app
+      &#9426;{{ yearDate | date: "yyyy" }} www.douglaswhite.app
     </ion-text>
     <ion-icon
       src="../../../assets/logo.svg"

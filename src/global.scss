@@ -80,7 +80,7 @@
 ion-item.item-has-focus.ion-invalid.ion-dirty {
   --background: var(--ion-color-danger) !important;
   p.help.is-danger {
-    color: #ffacac
+    color: #ffacac;
   }
 }
 
@@ -105,33 +105,29 @@ p.help.is-danger {
   overflow: hidden;
 }
 
+/* Page transition animation */
+.bounceOutDown {
+  animation: 2.5s ease-out infinite bounceoutdown;
+}
+
+/* animations for fab button on landing page going down */
+@keyframes bounceoutdown {
+  50% {
+    transform: translate(0, 4px);
+    opacity: 0.7;
+  }
+}
+
 /* Header Toolbar Icon*/
 .header-icon {
   margin-left: 5px;
   font-size: 46px;
 }
 
-
 /* All Cards */
-ion-card {
+.card {
   border-radius: 15px;
   border: 3px solid var(--ion-color-tertiary);
-}
-
-/* Git in Touch Button/ Call to Action */
-.git {
-  --border-radius: 15px;
-  --color: var(--ion-color-warning);
-  --border-width: 3px;
-  --border-style: solid;
-  --border-color: var(--ion-color-light);
-  --background: linear-gradient(to bottom right, #041dff, #ff00f5, #041dff),
-    linear-gradient(
-      to bottom left,
-      rgba(0, 0, 0, 0.562),
-      rgba(0, 0, 0, 0.397),
-      rgba(0, 0, 0, 0.308)
-    );
 }
 
 /* PDF resume page */
@@ -141,17 +137,6 @@ ion-card {
   justify-content: center;
   filter: drop-shadow(5px 5px 5px #222222);
 }
-
-/* For Contact card */
-.textarea {
-  margin-top: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-/* in footer for date */
 
 /* Back background */
 .content {
@@ -185,7 +170,12 @@ ion-card {
 }
 
 /* Footer to keep footer at bottom */
-.footer{
+.footer {
   position: relative;
   bottom: 0;
+}
+
+.slideDown {
+  transform: translateY(100px);
+  transition: ease-out;
 }

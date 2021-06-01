@@ -1,13 +1,18 @@
 
 .footer-toolbar {
-  --min-height: 15vh;
+  --min-height: 12vh;
   width: 100%;
 }
 
 .link-icon{
   position: absolute;
-  top: 5px;
+  padding-left:20px;
+  top: 10px;
+}
+
+.icon{
   margin-right: 15px;
+  font-size: 64px;
 }
 
 .twitter {

@@ -9,28 +9,46 @@
   [scrollEvents]="true"
   (ionScroll)="onScroll($event)"
 >
-  <ng-particles [id]="id" [url]="particlesUrl"></ng-particles>
-
-  <div class="main">
-    <div class="display">
-      <h1>Douglas White</h1>
-      <app-flask-bak class="display-icon"></app-flask-bak>
-      <h2>Web Application Developer</h2>
+  <div id="landing">
+    <ng-particles [id]="id" [url]="particlesUrl"></ng-particles>
+    <div class="main">
+      <div class="display">
+        <h1>Douglas White</h1>
+        <app-flask-bak class="display-icon"></app-flask-bak>
+        <h2>Web Application Developer</h2>
+      </div>
+      <ion-button
+        size="large"
+        shape="round"
+        class="bounceOutDown ion-text-center cta"
+        (click)="scrollToId('about')"
+      >
+        <ion-icon
+          size="large"
+          color="tertiary"
+          button
+          name="chevron-down-sharp"
+        ></ion-icon>
+        Learn More
+        <ion-icon
+          size="large"
+          color="tertiary"
+          button
+          name="chevron-down-sharp"
+        ></ion-icon>
+      </ion-button>
     </div>
   </div>
-  <ion-grid class="ion-padding">
-    <ion-row class="ion-justify-content-center">
-      <ion-col class="ion-text-center">
-        <ion-card class="contact-card ion-text-center">
-          <ion-card-header>
-            <ion-card-title class="title"> About Douglas </ion-card-title>
-            <ion-card-subtitle class="sub-heading">
-              IT Career & Background
-            </ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+
+  <ion-card id="about" class="card contact-card ion-text-center">
+    <ion-card-header>
+      <ion-card-title class="title"> About Douglas </ion-card-title>
+      <ion-card-subtitle class="sub-heading">
+        IT Career & Background
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid class="ion-no-padding">
     <ion-row class="ion-justify-content-center">
       <ion-col
         size-sm="12"
@@ -51,7 +69,7 @@
         size-sm="12"
         size-md="12"
         size-lg="8"
-        class="ion-align-self-center"
+        class="ion-align-self-stretch ion-align-self-stretch"
       >
         <aw-wizard
           navBarLocation="top"
@@ -60,6 +78,8 @@
           #wizard
           class="custom-line-css"
         >
+            <ion-card class="card wizzardCard normalCard ion-padding">
+
           <aw-wizard-step [stepTitle]="'Intro'" [awOptionalStep]="true">
             <ng-template awWizardStepSymbol>
               <ion-icon
@@ -69,7 +89,7 @@
                 color="secondary"
               ></ion-icon>
             </ng-template>
-            <ion-card class="normalCard ion-padding">
+            <!-- <ion-card class="card normalCard ion-padding"> -->
               <p class="text">
                 Douglas White is a web application developer who much like a
                 chemist mixes together components from a set of known materials
@@ -94,7 +114,7 @@
                   Continue
                 </ion-button>
               </div>
-            </ion-card>
+            <!-- </ion-card> -->
           </aw-wizard-step>
           <aw-wizard-step [stepTitle]="'Skills'">
             <ng-template awWizardStepSymbol>
@@ -106,22 +126,105 @@
               ></ion-icon>
             </ng-template>
 
-            <ion-card class="normalCard ion-padding">
+            <!-- <ion-card class="card normalCard ion-padding"> -->
               <p class="text">
                 Once an app is deployed, Douglas combines user analytics with
                 other tools & services to establish a concise approach for
-                effectively improving outcomes. These services offer user
-                tracking across devices, automated A/B testing & automated user
-                segment customizations. All of which help guide the user along
-                each stage of the customer journey. With Google Cloud Platform
-                (GCP), Douglas utilizes his evolved knowledge of DevOps to
-                implement features including automatically scaling backend
-                resources, edge caching user data across a global content
-                delivery network (CDN) & serverless functions. All of which
-                improve app responsiveness while greatly reducing operational
-                expenses. Douglas is quite comfortable working alone or in an
-                Agile environment utilizing Scrum and/or team coding along with
-                continuous integration, continuous deployment (CI/CD).
+                effectively improving outcomes.
+              </p>
+              <ion-list lines="none" inset="false"   class="ion-padding">
+                <ion-list-header class="ion-text-center" lines="none" >
+                  <ion-title>
+
+                    Web App Developer Skills
+                  </ion-title>
+
+                </ion-list-header>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+
+                <ion-item-divider>
+                  <ion-label>Backend & Analytics Skills which help guide the user along each stage of the
+                customer journey</ion-label>
+                </ion-item-divider>
+                <ion-item-group>
+                        <ion-item>
+                          <ion-label> user tracking across devices </ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label> automated A/B testing </ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>
+                            automated user segment customizations
+                          </ion-label>
+                        </ion-item>
+                </ion-item-group>
+                            </ion-col>
+                            <ion-col>
+                                  <ion-item-divider>
+                  <ion-label>
+                    Google Cloud Platform (GCP) DevOps to improve app responsiveness
+                while greatly reducing operational expenses
+
+              </ion-label>
+                </ion-item-divider>
+                <ion-item-group>
+                        <ion-item>
+                          <ion-label>
+automatic resource scaling
+                          </ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>
+edge caching user data across a global content delivery network (CDN)
+
+                          </ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>
+ Cloud functions/ serverless functions
+                          </ion-label>
+                        </ion-item>
+                      </ion-item-group>
+                      </ion-col>
+                            <ion-col>
+                                  <ion-item-divider>
+                  <ion-label>
+Collaboration
+              </ion-label>
+                </ion-item-divider>
+                <ion-item-group>
+                        <ion-item>
+                          <ion-label>
+                            Agile environment utilizing
+                Scrum and/or team coding
+                          </ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>
+                            ontinuous integration,
+                continuous deployment (CI/CD)
+                          </ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>
+
+                          </ion-label>
+                        </ion-item>
+                      </ion-item-group>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+              </ion-list>
+              <p>
+                With , Douglas
+                utilizes his evolved knowledge of  to implement features
+                including ,  &
+                All of which . Douglas is quite
+                comfortable working alone or in an Agile environment utilizing
+                Scrum and/or team coding along with c.
               </p>
 
               <div class="btn-group">
@@ -145,7 +248,7 @@
                   Back
                 </ion-button>
               </div>
-            </ion-card>
+            <!-- </ion-card> -->
           </aw-wizard-step>
           <aw-wizard-step [stepTitle]="'Background'">
             <ng-template awWizardStepSymbol>
@@ -157,7 +260,7 @@
               ></ion-icon>
             </ng-template>
 
-            <ion-card class="normalCard ion-padding">
+            <!-- <ion-card class="card normalCard ion-padding"> -->
               <p class="text">
                 Douglas began working in the IT industry at an ISP as a network
                 technician over fifteen years ago. His career path led him to
@@ -199,7 +302,7 @@
                   Back
                 </ion-button>
               </div>
-            </ion-card>
+            <!-- </ion-card> -->
           </aw-wizard-step>
           <aw-wizard-step [stepTitle]="'Vision'">
             <ng-template awWizardStepSymbol>
@@ -211,7 +314,7 @@
               ></ion-icon>
             </ng-template>
 
-            <ion-card class="normalCard ion-padding">
+            <!-- <ion-card class="card normalCard ion-padding"> -->
               <p class="text">
                 Douglas currently develops web apps using Ionic & Angular web
                 frameworks, Google Cloud Platform & Firebase. He has a lifelong
@@ -250,8 +353,9 @@
                   Back
                 </ion-button>
               </div>
-            </ion-card>
+            <!-- </ion-card> -->
           </aw-wizard-step>
+            </ion-card>
         </aw-wizard>
       </ion-col>
     </ion-row>
@@ -259,7 +363,7 @@
   <ion-fab slot="fixed" horizontal="end" vertical="bottom">
     <ion-fab-button
       id="up"
-      [hidden]="!scrolledDown"
+      [hidden]="!showBackToTopFab"
       class="up"
       size="small"
       (click)="scrollToTop()"

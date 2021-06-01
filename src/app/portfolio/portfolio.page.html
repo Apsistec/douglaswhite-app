@@ -1,65 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="toolbar">
-    <app-neon  routerLink="/tabs/about"      class="neon"></app-neon>
+    <app-neon routerLink="/tabs/about" class="neon"></app-neon>
 
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
 <ion-content class="content">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar class="collapse">
-      <ion-title
-        size="small"
-        class="heading ion-text-uppercase"
-        color="tertiary"
-      >
-        DouglasWhite.app
-      </ion-title>
-    </ion-toolbar>
-  </ion-header> -->
-  <ion-grid>
-    <ion-row>
-      <ion-col size-sm="12" size-md="6" class="ion-text-center">
-        <ion-card class="ion-text-center">
-          <div class="container">
-            <a href="https://xfitness.studio" target="_blank"
-              ><img src="../../assets/xfitness_studio.png" class="projects"
-            /></a>
-          </div>
-        </ion-card>
-        <ion-title>XFitness Studio</ion-title>
-      </ion-col>
-      <ion-col size-sm="12" size-md="6" class="ion-text-center">
-        <ion-card class="ion-text-center">
-          <div class="container">
-            <a href="" target="_blank"
-              ><img src="../../assets/xfitness_studio.png" class="projects"
-            /></a>
-          </div>
-        </ion-card>
-        <ion-title>XFitness Studio</ion-title>
-      </ion-col>
-      <ion-col size-sm="12" size-md="6" class="ion-text-center">
-        <ion-card class="ion-text-center">
-          <div class="container">
-            <a href="" target="_blank"
-              ><img src="../../assets/xfitness_studio.png" class="projects"
-            /></a>
-          </div>
-        </ion-card>
-        <ion-title>XFitness Studio</ion-title>
-      </ion-col>
-      <ion-col size-sm="12" size-md="6" class="ion-text-center">
-        <ion-card class="ion-text-center">
-          <div class="container">
-            <a href="" target="_blank"
-              ><img src="../../assets/xfitness_studio.png" class="projects"
-            /></a>
-          </div>
-        </ion-card>
-        <ion-title>XFitness Studio</ion-title>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <app-footer class="footer"></app-footer>
+    <ion-grid>
+      <ion-row class="ion-justify-content-around">
+        <ion-col
+          size-sm="12"
+          size-md="4"
+          class="ion-text-center ion-align-self-center"
+        >
+          <ion-card
+            color="dark"
+            class="card overlay ion-text-center"
+            (click)="toggle('xfitness')"
+          >
+            <img src="../../assets/xfitness_studio.png" class="projects" />
+            <div *ngIf="expand && id==='xfitness'" class="container">
+              <a href="https://xfitness.studio" target="_blank" class="link">
+                <ion-title>XFitness Studio</ion-title>
+              </a>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col
+          size-sm="12"
+          size-md="4"
+          class="ion-text-center ion-align-self-center"
+        >
+          <ion-card
+            color="dark"
+            id="rfs"
+            class="card overlay ion-text-center"
+            (click)="toggle('rfs')"
+          >
+            <img src="../../assets/rankfantasysports.png" class="projects" />
+            <div *ngIf="expand && id==='rfs'" class="container">
+              <a
+                href="https://rankfantasysports.web.app"
+                target="_blank"
+                class="link"
+              >
+                <ion-title>Rank Fantasy Sports</ion-title>
+              </a>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <app-footer class="footer"></app-footer>
 </ion-content>

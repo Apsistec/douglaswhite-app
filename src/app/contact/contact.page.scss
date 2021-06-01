@@ -10,7 +10,17 @@
   margin-right: 5px;
 }
 
-ion-grid{
+ion-grid {
   min-height: 100vh;
-  width: 100%
+  width: 100%;
+}
+
+/* For Contact card */
+.textarea {
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  --placeholder-opacity: 0.5;
 }

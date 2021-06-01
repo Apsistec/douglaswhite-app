@@ -1,9 +1,26 @@
 .projects {
   display: block;
   margin: auto;
+  border-radius: 15px;
 }
 
 .container{
   margin: auto;
+  padding: 5px;
   text-align: center;
+}
+
+.card-container{
+  // overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  border: 2px solid var(--ion-color-tertiary);
+}
+
+.link{
+color: white;
+}
+
+ion-grid{
+  height: 100vh;
 }
