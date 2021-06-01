@@ -1,192 +1,270 @@
-# TOAST UI Editor v3 major update planning🏃🏃🏃
-TOAST UI Editor is planning a **v3 major update for 2021**. You can see our detail **RoadMap [here](https://github.com/nhn/tui.editor/issues/1253)!**
-<br>
-<br>
+<h1 align="center"> Douglas White App</h1>
 
-# ![TOAST UI Editor](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GNU General Public License v3.0][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-> GFM  Markdown and WYSIWYG Editor - Productive and Extensible
+<p align="center">
+<img src="src/assets/icons/icon-192x192.png" />
+</p>
+<p align="left"><b>What is DouglasWhite.app?</b></p>
+<p>A portfolio app for Douglas White, showing contact info and past work built on
+a progressive web app(PWA), allowing home screen installation, and other
+features that work cross-platform on mobile, desktop, and larger devices that
+have a browser.</p>
 
-[![github release version](https://img.shields.io/github/v/release/nhn/tui.editor.svg?include_prereleases)](https://github.com/nhn/tui.editor/releases/latest) [![npm version](https://img.shields.io/npm/v/@toast-ui/editor.svg)](https://www.npmjs.com/package/@toast-ui/editor) [![license](https://img.shields.io/github/license/nhn/tui.editor.svg)](https://github.com/nhn/tui.editor/blob/master/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/nhn/tui.editor/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) [![code with hearth by NHN](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-NHN-ff1414.svg)](https://github.com/nhn)
+[Commit Activity][ca]
 
-<img src="https://user-images.githubusercontent.com/18183560/84614193-59392700-af00-11ea-9a55-4a90a6ab5fe8.gif" />
+[Douglas White App on Github](https://github.com/apsistec/douglaswhite=app)
 
+[Explore the docs](https://github.com/apsistec/expert-fit")
 
-## 🚩 Table of Contents
+[View Demo](https://github.com/apsistec/expert-fit)
 
-- [Packages](#-packages)
-- [Why TOAST UI Editor?](#-why-toast-ui-editor)
-- [Features](#-features)
-- [Examples](#-examples)
-- [Browser Support](#-browser-support)
-- [Pull Request Steps](#-pull-request-steps)
-- [Contributing](#-contributing)
-- [TOAST UI Family](#-toast-ui-family)
-- [Used By](#-used-by)
-- [License](#-license)
+[Report Bug](https://github.com/apsistec/expert-fit/issues)
 
+[Request Feature](https://github.com/apsistec/expert-fit/issues)
 
-## 📦 Packages
+## Table of Contents
 
-### TOAST UI Editor
+- [Tech Stack](#tech-stack)
+- [About The Project](#about-the-project)
+- [Structure of App](#structure-of-app)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Contributors/People](#contributorspeople)
+- [Support](#support)
 
-| Name | Description |
-| --- | --- |
-| [`@toast-ui/editor`](https://github.com/nhn/tui.editor/tree/master/apps/editor) | Plain JavaScript component |
+## Tech Stack
 
-### TOAST UI Editor's Wrappers
+- [Ionic](https://ionicframework.com)
+- [Angular](https://angular.io)
+- [Firebase](https://firebase.com)
+- [Sendgrid](https://sendgrid.com)
 
-| Name | Description |
-| --- | --- |
-| [`@toast-ui/jquery-editor`](https://github.com/nhn/tui.editor/tree/master/apps/jquery-editor) | [jQuery](https://jquery.com/) wrapper component |
-| [`@toast-ui/react-editor`](https://github.com/nhn/tui.editor/tree/master/apps/react-editor) | [React](https://reactjs.org/) wrapper component |
-| [`@toast-ui/vue-editor`](https://github.com/nhn/tui.editor/tree/master/apps/vue-editor) | [Vue](https://vuejs.org/) wrapper component |
+---
 
-### TOAST UI Editor's Plugins
+## About The Project
 
-| Name | Description |
-| --- | --- |
-| [`@toast-ui/editor-plugin-chart`](https://github.com/nhn/tui.editor/tree/master/plugins/chart) | Plugin to render chart |
-| [`@toast-ui/editor-plugin-code-syntax-highlight`](https://github.com/nhn/tui.editor/tree/master/plugins/code-syntax-highlight) | Plugin to highlight code syntax |
-| [`@toast-ui/editor-plugin-color-syntax`](https://github.com/nhn/tui.editor/tree/master/plugins/color-syntax) | Plugin to color editing text |
-| [`@toast-ui/editor-plugin-table-merged-cell`](https://github.com/nhn/tui.editor/tree/master/plugins/table-merged-cell) | Plugin to merge table columns |
-| [`@toast-ui/editor-plugin-uml`](https://github.com/nhn/tui.editor/tree/master/plugins/uml) | Plugin to render UML |
+[![product-screenshot][product screenshot]][screenshot]
 
+The goal has been simple, to develop a web apps capable of enabling clients to
+make a mark in their market.
 
-## 🤖 Why TOAST UI Editor?
+## Getting Started
 
-TOAST UI Editor provides **Markdown mode** and **WYSIWYG mode**. Depending on the type of use you want like production of *Markdown* or maybe to just edit the *Markdown*. The TOAST UI Editor can be helpful for both the usage. It offers **Markdown mode** and **WYSIWYG mode**, which can be switched any point in time.
+To get a local copy up and running follow these simple example steps.
 
-### Productive Markdown Mode
+### Prerequisites
 
-![markdown](https://user-images.githubusercontent.com/18183560/84381972-d3c62600-ac24-11ea-99e2-9640b0a2bfe8.png)
+    1. Install
+      [NodeJS](https://www.nodejs.com)
 
-**CommonMark + GFM Specifications**
+    2. Using npm, install:
 
-Today *CommonMark* is the de-facto *Markdown* standard. *GFM (GitHub Flavored Markdown)* is another popular specification based on *CommonMark* - maintained by *GitHub*, which is the *Markdown* mostly used. TOAST UI Editor follows both [*CommonMark*](http://commonmark.org/) and [*GFM*](https://github.github.com/gfm/) specifications. Write documents with ease using productive tools provided by TOAST UI Editor and you can easily open the produced document wherever the specifications are supported.
+      ```sh
+      npm install npm@latest -global
+      ```
 
-* **Live Preview** : Edit Markdown while keeping an eye on the rendered HTML. Your edits will be applied immediately.
-* **Scroll Sync** : Synchronous scrolling between Markdown and Preview. You don't need to scroll through each one separately.
-* **Auto Indent** : The cursor will always be where you want it to be.
-* **Syntax Highlight** : You can check broken Markdown syntax immediately.
+      ```sh
+      npm install @angular/cli@latest -global
+      ```
 
-### Easy WYSIWYG Mode
+      ```sh
+      npm install @ionic/cli@latest -global
+      ```
 
-![wysiwyg](https://user-images.githubusercontent.com/18183560/84381978-d88ada00-ac24-11ea-8655-3208cb46a8ae.png)
+      ```sh
+      npm install firebase-tools@latest -global
+      ```
 
-* **Table** : Through the context menu of the table, you can add or delete columns or rows of the table, and you can also arrange text in cells.
-* **Code Block Editor** : The code block area can be edited through the layer popup editor.
+### Acquire Accounts
 
-### Usability Common UI
+    1. Get a free Stripe Account at [https://dashboard.stripe.com/apikeys](https://dashboard.stripe.com/apikeys)
+    2. Get a free Firebase Account at [https://firebase.com](https://firebase.com)
+    3. Get a free Sendgrid Account at [https://app.sendgrid.com](https://app.sendgrid.com)
 
-![UI](https://user-images.githubusercontent.com/18183560/84381975-d6c11680-ac24-11ea-9816-9cf2aecbdf06.gif)
+## Installation
 
-* **Toolbar** : Through the toolbar, you can style or add elements to the document you are editing.
-* **Copy and Paste** : Paste anything from browser, screenshot, excel, powerpoint, etc.
+<details open>
+<summary>Installation Steps:</summary>
+<ol>
+    <li>Clone the repo
 
-### Use of Various Extended Functions - Plugins
+    ```sh
+    git clone https://github.com/apsistec/expert-fit.git
+    ```
 
-![plugin](https://user-images.githubusercontent.com/18183560/84381966-cf9a0880-ac24-11ea-9bb4-1e8a8ca186de.png)
+      </li>
+      <li> Install NPM packages
 
-CommonMark and GFM are great, but we often need more abstraction. The TOAST UI Editor comes with powerful **Plugins** in compliance with the Markdown syntax.
+    ```sh
+    npm install
+    ```
 
-**Five basic plugins** are provided as follows, and can be downloaded and used with npm.
+    </li>
 
-* [**`chart`**](https://github.com/nhn/tui.editor/tree/master/plugins/chart) : A code block marked as a 'chart' will render [TOAST UI Chart](https://github.com/nhn/tui.chart).
-* [**`code-syntax-highlight`**](https://github.com/nhn/tui.editor/tree/master/plugins/code-syntax-highlight) : Highlight the code block area corresponding to the language provided by [highlight.js](https://highlightjs.org/).
-* [**`color-syntax`**](https://github.com/nhn/tui.editor/tree/master/plugins/color-syntax) :
-Using [TOAST UI ColorPicker](https://github.com/nhn/tui.color-picker), you can change the color of the editing text with the GUI.
-* [**`table-merged-cell`**](https://github.com/nhn/tui.editor/tree/master/plugins/table-merged-cell) :
-You can merge columns of the table header and body area.
-* [**`uml`**](https://github.com/nhn/tui.editor/tree/master/plugins/uml) : A code block marked as an 'uml' will render [UML diagrams](http://plantuml.com/screenshot).
+    <li>Setup Firebase backend
 
-## 🎨 Features
+    ```sh
+    firebase init
+    ```
+    </li>
+    <li>Enter your APIs in `environments/environment.ts` and `environments/environment.prod.ts`
 
-* [**Viewer**](https://github.com/nhn/tui.editor/tree/master/apps/editor/docs/viewer.md) : Supports a mode to display only markdown data without an editing area.
-* [**Internationalization (i18n)**](https://github.com/nhn/tui.editor/tree/master/apps/editor/docs/i18n.md) : Supports English, Dutch, Korean, Japanese, Chinese, Spanish, German, Russian, French, Ukrainian, Turkish, Finnish, Czech, Arabic, Polish, Galician, Swedish, Italian, Norwegian, Croatian, Portuguese + language and you can extend.
+    ```js
+    export const environment = {
+      production: "boolean",
+      firebaseConfig: {
+        apiKey: "...",
+        authDomain: "...",
+        databaseURL: "...",
+        projectId: "...",
+        storageBucket: "...",
+        messagingSenderId: "...",
+        appId: "...",
+        measurementId: "...",
+      },
+      stripePubKey: "pk_test_ API",
+      taxRates: ["enter API"],
+    };
+    ```
+    </li>
 
-## 🐾 Examples
+    <li>Compile the function code
 
-* [Basic](https://nhn.github.io/tui.editor/latest/tutorial-example01-editor-basic)
-* [Viewer](https://nhn.github.io/tui.editor/latest/tutorial-example04-viewer)
-* [Using All Plugins](https://nhn.github.io/tui.editor/latest/tutorial-example15-editor-with-all-plugins)
-* [Creating the User's Plugin](https://nhn.github.io/tui.editor/latest/tutorial-example17-creating-plugin)
-* [Customizing the Toobar Buttons](https://nhn.github.io/tui.editor/latest/tutorial-example19-customizing-toolbar-buttons)
-* [Internationalization (i18n)](https://nhn.github.io/tui.editor/latest/tutorial-example20-i18n)
+    ```sh
+    cd functions
+    ```
 
-Here are more [examples](https://nhn.github.io/tui.editor/latest/tutorial-example01-editor-basic) and play with TOAST UI Editor!
+    ```sh
+    npm install
+    ```
 
+    ```sh
+    ng build
+    ```
 
-## 🌏 Browser Support
+    ```sh
+    cd -
+    ```
 
-| <img src="https://user-images.githubusercontent.com/1215767/34348387-a2e64588-ea4d-11e7-8267-a43365103afe.png" alt="Chrome" width="16px" height="16px" /> Chrome | <img src="https://user-images.githubusercontent.com/1215767/34348590-250b3ca2-ea4f-11e7-9efb-da953359321f.png" alt="IE" width="16px" height="16px" /> Internet Explorer | <img src="https://user-images.githubusercontent.com/1215767/34348380-93e77ae8-ea4d-11e7-8696-9a989ddbbbf5.png" alt="Edge" width="16px" height="16px" /> Edge | <img src="https://user-images.githubusercontent.com/1215767/34348394-a981f892-ea4d-11e7-9156-d128d58386b9.png" alt="Safari" width="16px" height="16px" /> Safari | <img src="https://user-images.githubusercontent.com/1215767/34348383-9e7ed492-ea4d-11e7-910c-03b39d52f496.png" alt="Firefox" width="16px" height="16px" /> Firefox |
-| :---------: | :---------: | :---------: | :---------: | :---------: |
-| Yes | 10+ | Yes | Yes | Yes |
+    </li>
 
+    <li>Compile the app code -production quality
 
-## 🔧 Pull Request Steps
+    ```sh
+    ionic build --prod
+    ```
 
-TOAST UI products are open source, so you can create a pull request(PR) after you fix issues. Run npm scripts and develop yourself with the following process.
+    </li>
 
-### Setup
+    <li>Work on the app code with hot-reload
 
-Fork `master` branch into your personal repository. Clone it to local computer. Install node modules. Before starting development, you should check to see if there are any errors.
+    ```sh
+    ionic serve
+    ```
 
-```sh
-$ git clone https://github.com/{your-personal-repo}/tui.editor.git
-$ cd [project-name]
-$ npm install
-$ npm run setup:libs
-$ cd ./apps/editor
-$ npm install
-$ npm run test
-```
+    </li>
 
-### Develop
+    <li>Deploy to Firebase Authentication, Hosting, Database, Serverless and Storage
 
-You can see your code is reflected as soon as you saving the codes by running a server. Don't miss adding test cases and then make green rights.
+    ```sh
+    firebase deploy
+    ```
 
-#### Run webpack-dev-server
+    </li>
 
-``` sh
-$ npm run serve
-```
+</ol>
+</details>
 
-#### Run karma
+## Contributing
 
-``` sh
-$ npm run test
-```
+    > To get started...
 
-### Pull Request
+    **Step 1** Install Repo
 
-Before creating a PR, test and check for any errors. If there are no errors, then commit and push.
+    * [ ] **Option :one:**
 
-For more information, please refer to the Contributing section.
+    :trident: Fork this repo:
 
-## 💬 Contributing
+      ```http
+    https://github.com/apsistec/douglaswhite-app
+    ```
 
-* [Code of Conduct](https://github.com/nhn/tui.editor/blob/master/CODE_OF_CONDUCT.md)
-* [Contributing Guideline](https://github.com/nhn/tui.editor/blob/master/CONTRIBUTING.md)
-* [Commit Convention](https://github.com/nhn/tui.editor/blob/master/docs/COMMIT_MESSAGE_CONVENTION.md)
-* [Issue Guidelines](https://github.com/nhn/tui.editor/tree/master/.github/ISSUE_TEMPLATE)
+    * [ ] **Option :two:**
 
+    Clone this repo to your local machine:
 
-## 🍞 TOAST UI Family
+      ```shell
+    git clone https://github.com/apsistec/douglaswhite-app.git
+    ```
 
-- [TOAST UI Calendar](https://github.com/nhn/tui.calendar)
-- [TOAST UI Chart](https://github.com/nhn/tui.chart)
-- [TOAST UI Grid](https://github.com/nhn/tui.grid)
-- [TOAST UI Image Editor](https://github.com/nhn/tui.image-editor)
-- [TOAST UI Components](https://github.com/nhn)
+    **Step 2** Code your Code
 
+    * [ ] **Option :one:**
 
-## 🚀 Used By
+    Add previously approved **new code**
 
-* [Dooray! - Collaboration Service (Project, Messenger, Mail, Calendar, Drive, Wiki, Contacts)](https://dooray.com)
-* [UNOTES - Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes)
+    ``` js
+      baz = foo(bar) * foo(bar)
+      betterBaz = foo(bar^2)
+    ```
 
+    -or-
 
-## 📜 License
+    * [ ] **Option :two:**
 
-This software is licensed under the [MIT](https://github.com/nhn/tui.editor/blob/master/LICENSE) © [NHN](https://github.com/nhn).
+    :mag:Find then :wrench:work on the previously approved **changes** and/or
+     **refactoring code**
+
+    ``` js
+      newFoo(bar2)
+      fooBar(newBaz)
+    ```
+
+    **Step 3** Pull Request
+
+    * [ ] 🔃 **Create a Pull Request at**
+
+    ```http
+    https://github.com/Apsistec/douglaswhite-app/pulls
+    ```
+
+    **Step 4** Submit for Review and Acceptance
+
+    * [ ] **Submit!** :beer:
+
+## Contributors/People
+
+![**Apsistec**](https://avatars0.githubusercontent.com/u/6438623?s=400&u=aaaf57f08f5fff530672ecd3a18f26a53f704850&v=4)
+
+### Support
+
+> Reach me at any of the following :link:sites:
+
+- [Douglas White App Contact Info](https://DouglasWhite.app)
+- [Twitter Channel](https://twitter.com/rankfsports)
+- [Slack Channnel](https://apsistec.slack.com)
+
+Copyright 2021 © [douglaswhiteapp](https://DouglasWhite.app)
+
+[contributors-shield]: https://img.shields.io/github/contributors/apsistec/douglaswhite-app.svg?style=for-the-badge
+[contributors-url]: https://github.com/apsistec/douglaswhite-app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/apsistec/douglaswhite-app.svg?style=for-the-badge
+[forks-url]: https://github.com/apsistec/douglaswhite-app/network/members
+[stars-shield]: https://img.shields.io/github/stars/apsistec/douglaswhite-app.svg?style=for-the-badge
+[stars-url]: https://github.com/apsistec/douglaswhite-app/stargazers
+[issues-shield]: https://img.shields.io/github/issues/apsistec/douglaswhite-app.svg?style=for-the-badge
+[issues-url]: https://github.com/apsistec/douglaswhite-app/issues
+[license-shield]: https://img.shields.io/github/license/apsistec/douglaswhite-app.svg?style=for-the-badge
+[license-url]: https://github.com/apsistec/douglaswhite-app/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/apsistec
+[ca]: https://github.com/Apsistec/douglaswhite-app/graphs/commit-activity
+[project]: https://github.com/apsistec/douglaswhite-app
