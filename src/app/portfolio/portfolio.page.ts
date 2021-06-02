@@ -1,6 +1,7 @@
+import { expand } from 'rxjs/operators';
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent } from '@ionic/angular';
-import { expand } from 'rxjs/operators';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,7 +9,6 @@ import { expand } from 'rxjs/operators';
   styleUrls: ['./portfolio.page.scss'],
 })
 export class PortfolioPage implements OnInit {
-
   @ViewChild(IonContent, { static: false }) content: IonContent;
   cardId;
   expand;
@@ -17,12 +17,11 @@ export class PortfolioPage implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log("id: ", this.id)
-
+    console.log('id: ', this.id);
   }
 
   toggle(id) {
-   this.id = id;
+    this.id = id;
     this.expand = !this.expand;
   }
 }

@@ -1,22 +1,16 @@
+import { untilDestroyed } from 'ngx-take-until-destroy';
+import { EMPTY, merge, Observable } from 'rxjs';
+
 import {
-  Directive,
-  Optional,
-  Inject,
-  ViewContainerRef,
-  ComponentFactoryResolver,
-  ComponentRef,
-  Input,
-  Host,
-  OnInit,
-  OnDestroy,
+    ComponentFactoryResolver, ComponentRef, Directive, Host, Inject, Input, OnDestroy, OnInit,
+    Optional, ViewContainerRef
 } from '@angular/core';
 import { NgControl } from '@angular/forms';
+
+import { FORM_ERRORS } from '../contact/form-errors';
 import { ControlErrorComponent } from '../control-error/control-error.component';
 import { ControlErrorContainerDirective } from './control-error-container.directive';
 import { FormSubmitDirective } from './form-submit.directive';
-import { merge, EMPTY, Observable, Subscription } from 'rxjs';
-import { FORM_ERRORS } from '../contact/form-errors';
-import { untilDestroyed } from 'ngx-take-until-destroy';
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector

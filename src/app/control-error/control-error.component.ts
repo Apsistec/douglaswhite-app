@@ -1,9 +1,5 @@
 import {
-  Component,
-  OnInit,
-  Input,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
+    ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit
 } from '@angular/core';
 
 @Component({

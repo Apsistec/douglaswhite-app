@@ -6,50 +6,67 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="content">
-    <ion-grid>
-      <ion-row class="ion-justify-content-around">
-        <ion-col
-          size-sm="12"
-          size-md="4"
-          class="ion-text-center ion-align-self-center"
+  <ion-grid class="ion-no-padding ion-margin-vertical">
+    <ion-row
+      class="ion-justify-content-around ion-no-padding ion-margin-vertical"
+    >
+      <ion-col
+        size-xs="12"
+        size-sm="12"
+        size-md="4"
+        class="ion-text-center ion-align-self-center ion-margin-vertical"
+      >
+        <ion-card
+          color="dark"
+          class="
+            card
+            overlay
+            ion-text-center ion-no-padding ion-margin-vertical
+          "
+          (click)="toggle('xfitness')"
         >
-          <ion-card
-            color="dark"
-            class="card overlay ion-text-center"
-            (click)="toggle('xfitness')"
-          >
-            <img src="../../assets/xfitness_studio.png" class="projects" />
-            <div *ngIf="expand && id==='xfitness'" class="container">
-              <a href="https://xfitness.studio" target="_blank" class="link">
-                <ion-title>XFitness Studio</ion-title>
-              </a>
-            </div>
-          </ion-card>
-        </ion-col>
-        <ion-col
-          size-sm="12"
-          size-md="4"
-          class="ion-text-center ion-align-self-center"
+          <img src="../../assets/xfitness_studio.png" class="projects" />
+          <div *ngIf="expand && id==='xfitness'" class="container">
+            <a href="https://xfitness.studio" target="_blank" class="link">
+              <ion-title>XFitness Studio</ion-title>
+            </a>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col
+        size-xs="12"
+        size-sm="12"
+        size-md="4"
+        class="
+          ion-text-center
+          ion-align-self-center
+          ion-no-padding
+          ion-margin-vertical
+        "
+      >
+        <ion-card
+          color="dark"
+          id="rfs"
+          class="
+            card
+            overlay
+            ion-text-center ion-no-padding ion-margin-vertical
+          "
+          (click)="toggle('rfs')"
         >
-          <ion-card
-            color="dark"
-            id="rfs"
-            class="card overlay ion-text-center"
-            (click)="toggle('rfs')"
-          >
-            <img src="../../assets/rankfantasysports.png" class="projects" />
-            <div *ngIf="expand && id==='rfs'" class="container">
-              <a
-                href="https://rankfantasysports.web.app"
-                target="_blank"
-                class="link"
-              >
-                <ion-title>Rank Fantasy Sports</ion-title>
-              </a>
-            </div>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <app-footer class="footer"></app-footer>
+          <img src="../../assets/rankfantasysports.png" class="projects" />
+          <div *ngIf="expand && id==='rfs'" class="container">
+            <a
+              href="https://rankfantasysports.web.app"
+              target="_blank"
+              class="link"
+            >
+              <ion-title>Rank Fantasy Sports</ion-title>
+            </a>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-footer class="footer"></app-footer>
 </ion-content>

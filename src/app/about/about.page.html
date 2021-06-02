@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="ion-padding-horizontal">
+  <ion-toolbar>
     <app-neon routerLink="/tabs/about" class="neon"></app-neon>
-    <app-toggle slot="end"></app-toggle>
+    <app-toggle class="toggle" slot="end"></app-toggle>
   </ion-toolbar>
 </ion-header>
 <ion-content
@@ -40,76 +40,101 @@
     </div>
   </div>
 
-  <ion-grid id="about" class="ion-no-margin">
+  <ion-grid id="about" class="ion-no-padding ion-margin-vertical">
     <ion-row
-      class="ion-justify-content-center ion-margin-bottom ion-text-center"
+      class="ion-justify-content-center ion-margin-vertical ion-no-padding"
     >
       <ion-col
+        size-xs="12"
         size-sm="12"
         size-m="6"
         size-lg="4"
-        class="ion-align-self-center ion-text-center"
+        size-xl="4"
+        class="ion-align-self-center"
       >
         <ion-card class="image-card">
-          <!-- <ion-grid> -->
-          <ion-row class="ion-justify-content-center">
-            <ion-col>
-              <img
-                height="300"
-                width="300"
-                src="../../assets/me.jpg"
-                class="myImage"
-              />
-            </ion-col>
-            <ion-col class="ion-align-self-center">
-              <div class="nameplate">
-                <ion-item  lines="none" class="nameplate-info">
-                  <ion-title class="step-list-title"> Douglas White </ion-title>
-                </ion-item>
-                <ion-item  lines="none" class="nameplate-info">
-                  <ion-icon
-                    slot="start"
-                    class="nameplate-icon"
-                    name="call-sharp"
-                  ></ion-icon>
+          <ion-grid>
+            <ion-row class="ion-justify-content-center ion-text-center">
+              <ion-col
+                size-xs="12"
+                size-sm="12"
+                size-md="6"
+                size-lg="6"
+                size-xl="6"
+                class="ion-align-items-center"
+              >
+                <img
+                  height="300"
+                  width="300"
+                  src="../../assets/me.jpg"
+                  class="myImage"
+                />
+              </ion-col>
+              <ion-col
+                class="ion-align-self-center"
+                size-xs="12"
+                size-sm="12"
+                size-md="6"
+                size-lg="6"
+                size-xl="6"
+              >
+                <div class="nameplate ion-text-center">
+                  <ion-item lines="none" class="nameplate-info">
+                    <ion-label class="step-list-title">
+                      Douglas White
+                    </ion-label>
+                  </ion-item>
+                  <ion-item lines="none" class="nameplate-info">
+                    <ion-icon
+                      slot="start"
+                      class="nameplate-icon"
+                      name="call-sharp"
+                    ></ion-icon>
 
-                  <ion-label>512.293.1045</ion-label>
-                </ion-item>
-                <ion-item lines="none" class="nameplate-info">
-                  <ion-icon
-                    slot="start"
-                    size="small"
-                    name="mail-sharp"
-                    class="nameplate-icon"
-                  ></ion-icon>
+                    <ion-label>512.293.1045</ion-label>
+                  </ion-item>
+                  <ion-item lines="none" class="nameplate-info">
+                    <ion-icon
+                      slot="start"
+                      size="small"
+                      name="mail-sharp"
+                      class="nameplate-icon"
+                    ></ion-icon>
 
-                  <ion-label class="ion-text-lowercase"
-                    >email@douglaswhite.app</ion-label
-                  >
-                </ion-item>
-              </div>
-            </ion-col>
-          </ion-row>
+                    <ion-label class="ion-text-lowercase"
+                      >email@douglaswhite.app</ion-label
+                    >
+                  </ion-item>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
         </ion-card>
       </ion-col>
     </ion-row>
 
-    <ion-row class="ion-justify-content-center">
+    <ion-row
+      class="ion-justify-content-center ion-no-padding ion-margin-vertical"
+    >
       <ion-col
+        size-xs="12"
         size-sm="12"
         size-md="10"
         size-lg="8"
         size-xl="8"
         class="ion-align-items-center ion-align-self-center"
       >
-        <ion-card id="about" class="card contact-card">
+        <ion-card
+          id="about"
+          class="card contact-card ion-no-padding ion-margin-vertical"
+        >
           <ion-card-header class="ion-text-center">
             <ion-card-title class="title"> About Douglas </ion-card-title>
             <ion-card-subtitle class="sub-heading">
               IT Career & Background
             </ion-card-subtitle>
           </ion-card-header>
-          <ion-card-content>
+          <ion-card-content class="ion-margin-vertical">
             <aw-wizard
               navBarLocation="top"
               navBarLayout="large-filled-symbols"
@@ -117,8 +142,11 @@
               #wizard
               class="custom-line-css"
             >
-              <ion-card class="wizzardCard ion-padding">
-                <aw-wizard-step [stepTitle]="'Frontend'" [awOptionalStep]="true">
+              <ion-card class="wizzardCard ion-margin-vertical ion-padding">
+                <aw-wizard-step
+                  [stepTitle]="'Frontend'"
+                  [awOptionalStep]="true"
+                >
                   <ng-template awWizardStepSymbol>
                     <ion-icon
                       class="stepperIcon"
@@ -128,13 +156,14 @@
                     ></ion-icon>
                   </ng-template>
 
-                  <ion-list lines="none" class="list">
+                  <ion-list
+                    lines="none"
+                    class="list ion-no-padding ion-margin-vertical"
+                  >
                     <ion-list-header class="list-header ion-text-center">
-                      <ion-title class="step-list-title">
-                        Frontend Skills
-                      </ion-title>
+                      <ion-label class="step-list-title"> Frontend </ion-label>
                     </ion-list-header>
-                    <ion-grid>
+                    <ion-grid class="ion-no-padding ion-margin-vertical">
                       <ion-row
                         class="ion-justify-content-center ion-text-center"
                       >
@@ -301,13 +330,14 @@
                     ></ion-icon>
                   </ng-template>
 
-                  <ion-list lines="none" class="list">
+                  <ion-list
+                    lines="none"
+                    class="list ion-no-padding ion-margin-vertical"
+                  >
                     <ion-list-header class="list-header ion-text-center">
-                      <ion-title class="step-list-title">
-                        Backend Skills
-                      </ion-title>
+                      <ion-label class="step-list-title"> Backend </ion-label>
                     </ion-list-header>
-                    <ion-grid>
+                    <ion-grid class="ion-margin-vertical">
                       <ion-row class="ion-justify-content-center">
                         <ion-col class="list-col">
                           <ion-item-divider class="divider">
@@ -482,32 +512,31 @@
                     ></ion-icon>
                   </ng-template>
                   <div class="ion-padding">
-
                     <p class="text">
                       Douglas began working in the IT industry at an ISP as a
-                    network technician over fifteen years ago. His career path
-                    led him to more advanced positions where he found himself
-                    working with C-level business leaders as a software sales
-                    representative & IT services consultant. Thus, he
-                    understands their expectations, how to communicate with them
-                    & he knows how to deliver on those expectations.
-                  </p>
+                      network technician over fifteen years ago. His career path
+                      led him to more advanced positions where he found himself
+                      working with C-level business leaders as a software sales
+                      representative & IT services consultant. Thus, he
+                      understands their expectations, how to communicate with
+                      them & he knows how to deliver on those expectations.
+                    </p>
                   </div>
                   <div class="ion-padding">
-                  <p class="text">
-                    Just over 3 years ago, Douglas was presented with a position
-                    that provided him the opportunity to learn JavaScript, a
-                    long held desire. So, he jumped at the chance and has never
-                    looked Back. His ingrained desire to understand how all
-                    things work has allowed him to remain at the forefront of
-                    the IT industry. A self-starter, he enjoys enjoys working
-                    with his peers. Results driven, he truly enjoys the feeling
-                    of success such as when when implementing a complex solution
-                    that successfully enables a client to make an impact in
-                    their market; and he has every intention to continue in that
-                    success.
-                  </p>
-                </div>
+                    <p class="text">
+                      Just over 3 years ago, Douglas was presented with a
+                      position that provided him the opportunity to learn
+                      JavaScript, a long held desire. So, he jumped at the
+                      chance and has never looked Back. His ingrained desire to
+                      understand how all things work has allowed him to remain
+                      at the forefront of the IT industry. A self-starter, he
+                      enjoys enjoys working with his peers. Results driven, he
+                      truly enjoys the feeling of success such as when when
+                      implementing a complex solution that successfully enables
+                      a client to make an impact in their market; and he has
+                      every intention to continue in that success.
+                    </p>
+                  </div>
 
                   <div class="btn-group">
                     <ion-button
@@ -541,26 +570,25 @@
                     ></ion-icon>
                   </ng-template>
                   <div class="ion-padding">
-
                     <p class="text">
                       Douglas has a lifelong commitment to expanding his
-                    skillsets. He has recently been working with SVG, D3,
-                    TensorFlow & Actions on Google in order to bring animations,
-                    data visualizations, machine learning & voice interactions
-                    under his belt.
-                  </p>
-                </div>
-                <div class="ion-padding">
-
-                  <p class="text">
-                    Currently, Douglas White is considering new projects & full
-                    time work. He welcomes and appreciates your interest to
-                    discuss current or upcoming projects & his potential role in
-                    helping you achieve results. He resides in Lubbock, TX &
-                    will consider local and remote positions. He will also
-                    readily entertain relocating to metropolitan areas of Texas.
-                  </p>
-                </div>
+                      skillsets. He has recently been working with SVG, D3,
+                      TensorFlow & Actions on Google in order to bring
+                      animations, data visualizations, machine learning & voice
+                      interactions under his belt.
+                    </p>
+                  </div>
+                  <div class="ion-padding">
+                    <p class="text">
+                      Currently, Douglas White is considering new projects &
+                      full time work. He welcomes and appreciates your interest
+                      to discuss current or upcoming projects & his potential
+                      role in helping you achieve results. He resides in
+                      Lubbock, TX & will consider local and remote positions. He
+                      will also readily entertain relocating to metropolitan
+                      areas of Texas.
+                    </p>
+                  </div>
 
                   <div class="btn-group">
                     <ion-button

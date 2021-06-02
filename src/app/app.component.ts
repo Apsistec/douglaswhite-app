@@ -1,10 +1,11 @@
-import { Observable } from 'rxjs';
+
 
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Platform } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -49,7 +50,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.darkSetting = window.matchMedia('(prefers-color-scheme: dark)');
     if (this.darkSetting.matches === true) {
-      // this.dark = !this.dark;
       document.body.classList.toggle('dark');
     }
   }

@@ -180,3 +180,13 @@ p.help.is-danger {
   transform: translateY(100px);
   transition: ease-out;
 }
+
+.toggle {
+  position: relative;
+  float: right;
+}
+
+.neon {
+  position: relative;
+  float: left;
+}

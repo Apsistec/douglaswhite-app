@@ -1,8 +1,4 @@
-import {
-  Component,
-  ViewChild,
-  ViewEncapsulation,
-} from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { IonContent } from '@ionic/angular';
 
 @Component({
@@ -12,7 +8,6 @@ import { IonContent } from '@ionic/angular';
   encapsulation: ViewEncapsulation.None,
 })
 export class AboutPage {
-
   particlesUrl: any = '../../assets/particles.json';
   id: any = 'tsparticles';
   showBackToTopFab = false;

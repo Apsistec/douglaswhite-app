@@ -1,3 +1,4 @@
+import { ArchwizardModule } from 'angular-archwizard';
 import { NgParticlesModule } from 'ng-particles';
 
 import { CommonModule } from '@angular/common';
@@ -9,7 +10,6 @@ import { FlaskBakComponent } from '../flask-bak/flask-bak.component';
 import { SharedModule } from '../shared/shared.module';
 import { AboutPageRoutingModule } from './about-routing.module';
 import { AboutPage } from './about.page';
-import { ArchwizardModule } from 'angular-archwizard';
 
 @NgModule({
   imports: [
@@ -22,6 +22,5 @@ import { ArchwizardModule } from 'angular-archwizard';
     ArchwizardModule,
   ],
   declarations: [AboutPage, FlaskBakComponent],
-
 })
 export class AboutPageModule {}

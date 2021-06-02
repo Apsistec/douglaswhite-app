@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="toolbar">
-    <app-neon  routerLink="/tabs/about"      class="neon"></app-neon>
+    <app-neon routerLink="/tabs/about" class="neon"></app-neon>
 
     <app-toggle slot="end"></app-toggle>
   </ion-toolbar>
@@ -9,6 +9,7 @@
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col
+        size-xs="12"
         size-sm="12"
         size-md="6"
         size-lg="4"
@@ -16,7 +17,11 @@
         class="ion-align-self-center"
       >
         <ion-card
-          class="card contact-card ion-no-padding ion-margin-vertical ion-text-center"
+          class="
+            card
+            contact-card
+            ion-no-padding ion-margin-vertical ion-text-center
+          "
         >
           <ion-card-header class="ion-text-center">
             <ion-card-title class="title"> Contact Douglas </ion-card-title>
@@ -26,7 +31,7 @@
               </ion-text>
             </ion-card-subtitle>
           </ion-card-header>
-          <ion-card-content class="ion-no-margin">
+          <ion-card-content class="ion-margin-vertical">
             <!-- <pre> {{ results | json }} </pre> -->
             <form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
               <ion-item class="items ion-margin-vertical" lines="none">

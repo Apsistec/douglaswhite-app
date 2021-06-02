@@ -1,10 +1,10 @@
-import { JsonPipe, KeyValuePipe } from '@angular/common';
+
+
 import { Component, OnInit } from '@angular/core';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
-import { pipe } from 'rxjs';
 
 interface Result {
   header: string;
