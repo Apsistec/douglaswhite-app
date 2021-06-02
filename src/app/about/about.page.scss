@@ -35,6 +35,7 @@
 
 .nameplate-icon {
   --color: transparent;
+  padding-right:5px;
 }
 
 .nameplate-info {
@@ -76,12 +77,12 @@
     li.current {
       a {
         div.step-indicator {
-          background-color: var(--ion-color-medium) !important;
+          background-color: var(--ion-color-medium-shade) !important;
         }
 
         div.label {
           // border-bottom: 2px solid var(--ion-color-primary) !important;
-          color: var(--ion-color-primary) !important;
+          color: var(--ion-color-secondary) !important;
         }
       }
     }
@@ -114,9 +115,12 @@ ion-label {
   font-family: Prompt, sans-serif;
   font-weight: 400;
   font-size: 1.3em;
-  margin-bottom: 5px;
-  box-shadow: 0 0 10px var(--ion-color-tertiary-shade),
-    0 0 8px var(--ion-color-tertiary);
+  margin-bottom: 8px;
+  box-shadow: inset 0 0 12px white;
+  // 0 0 10px var(--ion-color-tertiary-shade),
+  //   0 0 8px var(--ion-color-tertiary)
+
+    text-align: center;
 }
 
 .list-col {
@@ -133,7 +137,7 @@ ion-label {
 
 .list {
   border-radius: 15px;
-  background-color: var(--ion-color-medium);
+  background-color: transparent;
 }
 
 .list-item {
@@ -141,22 +145,32 @@ ion-label {
 }
 
 .wizzardCard {
-  box-shadow: 0 0 10px var(--ion-color-secondary-shade),
-    0 0 8px var(--ion-color-secondary);
+  box-shadow: inset 0 0 10px white,
+  inset 0 0 48px white;
   border-radius: 15px;
-  background-color: var(--ion-color-medium);
+  background-color: var(--ion-color-medium-shade);
   width: 100%;
 }
 
 .item-icon {
   color: var(--ion-color-medium-shade);
+  padding-right: 15px;
 }
 
 .group {
-  box-shadow: 0 0 10px var(--ion-color-tertiary-shade),
-    0 0 8px var(--ion-color-tertiary);
-  background-color: var(--ion-color-medium-tint);
-  border-radius: 8px;
-  margin-left: 4px;
-  margin-right: 4px;
+  box-shadow: inset 0 0 10px white;
+    background-color: var(--ion-color-medium-tint);
+    border-radius: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 8px;
+  }
+
+  .slogan{
+    border-radius: 15px;
+    padding: 4px;
+    box-shadow: inset 0 0 10px white,
+      inset 0 0 22px white,
+      inset 0 0 42px white;
+
 }

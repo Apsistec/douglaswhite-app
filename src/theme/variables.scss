@@ -8,8 +8,8 @@
   .contact-card {
     background: linear-gradient(
       to bottom,
-      var(--ion-color-secondary-shade) 5%,
-      #2c612c 95%
+     #02b308b2 5%,
+      #014b01bd 95%
     );
   }
 
@@ -97,7 +97,7 @@
 // @media (prefers-color-scheme: dark) {
 body.dark {
   .contact-card {
-    background: linear-gradient(to bottom, #3880ff 10%, #192b4e 100%);
+    background: linear-gradient(to bottom, #0015d4ad 10%, #001e5aad 100%);
   }
 
   ion-tab-bar,
