@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import {
+  AngularFireFunctionsModule,
+  ORIGIN,
+  NEW_ORIGIN_BEHAVIOR,
+} from '@angular/fire/functions';
 import { BrowserModule } from '@angular/platform-browser';
 import {
     BrowserAnimationsModule, NoopAnimationsModule
@@ -21,7 +25,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-     IonicStorageModule.forRoot(),
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -38,6 +42,8 @@ import { IonicStorageModule } from '@ionic/storage-angular';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     StatusBar,
     SplashScreen,
+    { provide: NEW_ORIGIN_BEHAVIOR, useValue: true },
+    { provide: ORIGIN, useValue: 'https://douglaswhite.app' },
   ],
   bootstrap: [AppComponent],
 })
