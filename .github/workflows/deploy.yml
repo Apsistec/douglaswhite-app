@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: my-artifact
-          path: my-artifact
+          path: /my-artifact
   deploy:
     name: Deploy
     needs: build
@@ -31,7 +31,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: my-artifact
-          path: my-artifact
+          path: /my-artifact
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
