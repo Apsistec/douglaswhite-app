@@ -5,6 +5,7 @@ import { SwUpdate } from '@angular/service-worker';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Platform } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-root',
@@ -18,11 +19,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     private swUpdate: SwUpdate,
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private storage: Storage
   ) {}
 
   ngOnInit() {
     this.initializeApp();
+    this.storage.create()
   }
 
   initializeApp() {

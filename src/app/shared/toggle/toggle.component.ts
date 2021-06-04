@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-toggle',
@@ -6,18 +7,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toggle.component.scss'],
 })
 export class ToggleComponent implements OnInit {
-  dark: boolean;
-  darkSetting;
+  themeState;
+  checked;
+  prefersDark;
+  toggle;
 
-  constructor() {}
+  constructor(private storage: StorageService) {}
 
   ngOnInit() {
+    this.toggle = document.getElementById('toggle');
+    this.toggle.addEventListener('ionChange', (ev) => {
+      document.body.classList.toggle('dark', ev.detail.checked);
+    });
+
+    this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    this.prefersDark.addEventListener('change', (e) =>
+    this.checkToggle(e.matches)
+    );
+    this.checkToggle(this.prefersDark.matches);
+  }
+
+  loadApp(){
 
   }
 
-  toggle() {
-    document.body.classList.toggle('dark');
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    // this.dark = !this.dark;
+
+  toggleDarkTheme(shouldAdd) {
+    document.body.classList.toggle('dark', shouldAdd);
+  }
+
+  checkToggle(shouldCheck){
+    this.checked = shouldCheck;
   }
 }

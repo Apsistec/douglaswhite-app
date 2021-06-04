@@ -94,7 +94,7 @@
 * Dark Theme Colors
 * -------------------------------------------
 */
-// @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
 body.dark {
   .contact-card {
     background: linear-gradient(to bottom, #0015d4ad 10%, #001e5aad 100%);
@@ -236,4 +236,5 @@ body.dark {
 /* Optional CSS, this is added for the flashing that happens when toggling between themes */
 ion-item {
   --transition: none;
+}
 }
