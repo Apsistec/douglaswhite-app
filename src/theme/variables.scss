@@ -5,13 +5,7 @@
 
 /* Light colors (default) */
 :root {
-  .contact-card {
-    background: linear-gradient(
-      to bottom,
-     #02b308b2 5%,
-      #014b01bd 95%
-    );
-  }
+
 
   ion-tab-bar,
   ion-tab-button {
@@ -94,11 +88,9 @@
 * Dark Theme Colors
 * -------------------------------------------
 */
-@media (prefers-color-scheme: dark) {
-body.dark {
-  .contact-card {
-    background: linear-gradient(to bottom, #0015d4ad 10%, #001e5aad 100%);
-  }
+body.dark  {
+
+
 
   ion-tab-bar,
   ion-tab-button {
@@ -236,5 +228,4 @@ body.dark {
 /* Optional CSS, this is added for the flashing that happens when toggling between themes */
 ion-item {
   --transition: none;
-}
 }

@@ -24,17 +24,15 @@ export class StorageService {
     this._storage?.set(key, value);
   }
 
-  public get(key: string){
+  public get(key: string) {
     this._storage.get(key);
   }
 
-  public remove(key: string){
+  public remove(key: string) {
     this._storage.remove(key);
   }
 
-  public clear(){
+  public clear() {
     this._storage.clear();
   }
-
-
 }

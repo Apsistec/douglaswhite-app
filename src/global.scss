@@ -26,24 +26,23 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Exo&family=Itim&family=Rock+Salt&family=Prompt&display=swap");
-
-/* Adobe Fonts */
-@import url("https://use.typekit.net/zaq2hoe.css");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Rock+Salt&display=swap");
 
 /* Fonts */
 /* Text for Paragraph Readability */
 .slogan {
-  font-family: Itim, cursive;
-  font-weight: 600;
-  font-size: 1.4em;
+  font-family: professor, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.75em;
   color: var(--ion-text-color);
 }
 
 .text {
-  font-family: Prompt, sans-serif;
-  font-weight: 600;
-  font-size: 1.2em;
+  // font-family: acumin-pro, sans-serif;
+  // font-style: normal;
+  // font-weight: 600;
+  // font-size: 1.2em;
   color: var(--ion-text-color);
 }
 
@@ -60,28 +59,27 @@
   }
   h2 {
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 900;
   }
 }
 
 /* Card Header Titles */
 .title {
   font-family: "Rock Salt", cursive;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.7em;
   text-transform: capitalize;
   color: var(--ion-text-color);
 }
 
 /* Card Header Sub-Titles */
 .sub-heading {
-  font-family: siruca, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
+    --color: var(--ion-color-tertiary);
+  font-family: sofachrome, sans-serif;
   font-style: normal;
-  text-transform: uppercase;
-  color: var(--ion-color-tertiary);
+  font-weight: 400;
+  font-size: 1.3em;
 }
 
 /* Error change color of words in label */
@@ -183,6 +181,8 @@ p.help.is-danger {
   bottom: 0;
 }
 
+Animation of icon for call to action on landing page
+
 .slideDown {
   transform: translateY(100px);
   transition: ease-out;
@@ -198,7 +198,9 @@ p.help.is-danger {
   float: left;
 }
 
-ion-card{
-  box-shadow: 0 1px 3px black, 0 2px 13px black, 0 3px 18px black, 0 0 10px black;
+/* All cards in app */
+ion-card {
+  box-shadow: 0 1px 3px black, 0 2px 13px black, 0 3px 18px black,
+    0 0 10px black;
   z-index: 30;
 }

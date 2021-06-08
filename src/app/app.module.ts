@@ -7,7 +7,8 @@ import {
 } from '@angular/fire/functions';
 import { BrowserModule } from '@angular/platform-browser';
 import {
-    BrowserAnimationsModule, NoopAnimationsModule
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';

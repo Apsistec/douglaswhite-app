@@ -9,11 +9,7 @@ import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   declarations: [ToggleComponent, FooterComponent, NeonComponent],
-  imports: [
-    IonicModule,
-    FormsModule,
-    CommonModule
-  ],
-  exports: [ ToggleComponent, FooterComponent, NeonComponent ]
+  imports: [IonicModule, FormsModule, CommonModule],
+  exports: [ToggleComponent, FooterComponent, NeonComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

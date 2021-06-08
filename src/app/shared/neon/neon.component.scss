@@ -7,22 +7,19 @@ div {
   // border: 1px solid var(--ion-color-secondary-shade);
   border-radius: 12px;
   animation: turnOnBorder 0.24s forwards step-end,
-  flickerBorder calc(var(--animation-time) * 16) infinite step-end 7s;
-  --box-shadow:  inset
-    0 0 10px var(--border-color),
-    0 0 10px var(--border-color), 0 0 20px var(--border-color);
-  }
+    flickerBorder calc(var(--animation-time) * 16) infinite step-end 7s;
+  --box-shadow: inset 0 0 10px var(--border-color), 0 0 10px var(--border-color),
+    0 0 20px var(--border-color);
+}
 
 p {
   --text-color: var(--ion-color-tertiary);
-    --text-shadow:
-    0 0 3px var(--text-color),
-    0 0 6px var(--text-color),
+  --text-shadow: 0 0 3px var(--text-color), 0 0 6px var(--text-color),
     0 0 9px var(--text-color);
-    // 0 0 20px var(--text-color),
-    // 0 0 30px var(--text-color),
-    // 0 0 40px var(--text-color),
-    // 0 0 55px var(--text-color);
+  // 0 0 20px var(--text-color),
+  // 0 0 30px var(--text-color),
+  // 0 0 40px var(--text-color),
+  // 0 0 55px var(--text-color);
   font-family: "Libre Barcode 128 Text";
   font-weight: 500;
   font-size: 2.3rem;
@@ -44,8 +41,7 @@ p span:nth-child(2) {
 
 p span:nth-child(3) {
   animation-delay: 0.4s;
-    animation: turnOn .2s forwards step-end,
-    flicker 10s infinite step-end 4s;
+  animation: turnOn 0.2s forwards step-end, flicker 10s infinite step-end 4s;
 }
 
 p span:nth-child(4) {
@@ -61,8 +57,7 @@ p span:nth-child(6) {
 }
 
 p span:nth-child(7) {
-  animation: turnOn 1.2s forwards step-end,
-    flicker 0.65s infinite step-end 2s;
+  animation: turnOn 1.2s forwards step-end, flicker 0.65s infinite step-end 2s;
 }
 
 p span:nth-child(8) {

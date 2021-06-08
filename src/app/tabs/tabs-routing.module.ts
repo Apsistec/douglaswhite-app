@@ -10,32 +10,38 @@ const routes: Routes = [
     children: [
       {
         path: 'about',
-        loadChildren: () => import('../about/about.module').then(m => m.AboutPageModule)
+        loadChildren: () =>
+          import('../about/about.module').then((m) => m.AboutPageModule),
       },
       {
         path: 'resume',
-        loadChildren: () => import('../resume/resume.module').then(m => m.ResumePageModule)
+        loadChildren: () =>
+          import('../resume/resume.module').then((m) => m.ResumePageModule),
       },
       {
         path: 'contact',
-        loadChildren: () => import('../contact/contact.module').then(m => m.ContactPageModule)
+        loadChildren: () =>
+          import('../contact/contact.module').then((m) => m.ContactPageModule),
       },
       {
         path: 'portfolio',
-        loadChildren: () => import('../portfolio/portfolio.module').then(m => m.PortfolioPageModule)
+        loadChildren: () =>
+          import('../portfolio/portfolio.module').then(
+            (m) => m.PortfolioPageModule
+          ),
       },
       {
         path: '',
         redirectTo: '/tabs/about',
-        pathMatch: 'full'
-      }
-    ]
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: '',
     redirectTo: '/tabs/about',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

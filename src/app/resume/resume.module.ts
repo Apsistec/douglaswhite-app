@@ -16,8 +16,8 @@ import { ResumePage } from './resume.page';
     FormsModule,
     ResumePageRoutingModule,
     NgxExtendedPdfViewerModule,
-    SharedModule
+    SharedModule,
   ],
-  declarations: [ResumePage]
+  declarations: [ResumePage],
 })
 export class ResumePageModule {}

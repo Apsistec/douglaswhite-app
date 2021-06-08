@@ -1,5 +1,3 @@
-
-
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -25,7 +23,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.initializeApp();
-    this.storage.create()
+    this.storage.create();
   }
 
   initializeApp() {

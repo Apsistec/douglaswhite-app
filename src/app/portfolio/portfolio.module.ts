@@ -13,8 +13,8 @@ import { PortfolioPage } from './portfolio.page';
     FormsModule,
     IonicModule,
     PortfolioPageRoutingModule,
-    SharedModule
+    SharedModule,
   ],
-  declarations: [PortfolioPage]
+  declarations: [PortfolioPage],
 })
 export class PortfolioPageModule {}

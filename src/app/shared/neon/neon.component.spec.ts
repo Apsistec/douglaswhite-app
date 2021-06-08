@@ -8,9 +8,8 @@ describe('NeonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NeonComponent ]
-    })
-    .compileComponents();
+      declarations: [NeonComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
