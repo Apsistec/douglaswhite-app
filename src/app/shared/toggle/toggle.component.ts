@@ -1,5 +1,5 @@
+
 import { Component, OnInit } from '@angular/core';
-import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-toggle',
@@ -12,7 +12,7 @@ export class ToggleComponent implements OnInit {
   prefersDark;
   toggle;
 
-  constructor(private storage: StorageService) {}
+  constructor() {}
 
   ngOnInit() {
     this.toggle = document.getElementById('toggle');

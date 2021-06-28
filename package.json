@@ -79,7 +79,10 @@
   },
   "description": "Douglas White's Ionic project portraying his web application developer portfolio",
   "browserslist": [
-    "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "> 0.5%",
+    "Firefox ESR",
+    "not dead",
+    "not IE 9-11"
   ]
 }

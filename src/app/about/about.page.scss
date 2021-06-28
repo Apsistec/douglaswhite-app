@@ -154,10 +154,11 @@ font-style: normal;
 .slogan {
   border-radius: 15px;
   padding: 15px;
-  background-color: var(--ion-color-primary-tint);
-  box-shadow: inset 0 0 10px var(--ion-color-secondary),
-    inset 0 0 22px var(--ion-color-secondary),
-    inset 0 0 42px var(--ion-color-secondary);
+  background-color: var(--ion-color-dark-tint);
+  box-shadow:
+  0 0 42px var(--ion-color-light-tint),
+  0 0 10px var(--ion-color-light),
+    inset 0 0 7px var(--ion-color-secondary);
   ion-text {
     color: var(--ion-text-color);
   }
