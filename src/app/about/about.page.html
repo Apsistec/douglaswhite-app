@@ -10,7 +10,7 @@
   (ionScroll)="onScroll($event)"
 >
   <div id="landing">
-    <ng-particles [id]="id" [url]="particlesUrl"></ng-particles>
+    <!-- <ng-particles [id]="id" [url]="particlesUrl"></ng-particles> -->
     <div class="main">
       <div class="display">
         <h1>Douglas White</h1>
@@ -78,11 +78,11 @@
                 size-lg="6"
                 size-xl="6"
               >
-                <div class="nameplate ion-text-center">
+                <div class="nameplate ">
                   <ion-item lines="none" class="nameplate-info">
-                    <ion-label class="step-list-title">
+                    <ion-text class="name elevon">
                       Douglas White
-                    </ion-label>
+                    </ion-text>
                   </ion-item>
                   <ion-item lines="none" class="nameplate-info">
                     <ion-icon
@@ -133,12 +133,12 @@
           <ion-card-header class="ion-text-center">
             <ion-card-title class="title"> About Douglas </ion-card-title>
             <ion-card-subtitle class="sub-heading">
-              <div class="sub-title-div">IT Career & Background</div>
+              IT Career & Background
             </ion-card-subtitle>
           </ion-card-header>
           <ion-card-content class="ion-margin-vertical">
             <ion-card class="slogan ion-text-center">
-              <ion-text>
+              <ion-text class="elevon">
                 Much like a chemist, Douglas develops code by blending together
                 components from a diverse stock of elements in unique & novel
                 ways to synthesize valuable, convenient products.
@@ -147,11 +147,12 @@
             <aw-wizard
               navBarLocation="top"
               navBarLayout="large-filled-symbols"
+              [awNavigationMode]
               navigateForward="allow"
               #wizard
               class="custom-line-css"
             >
-              <ion-card class="wizzardCard ion-margin-vertical ion-padding">
+              <ion-card class="shadow wizzardCard ion-margin-vertical ion-padding">
                 <aw-wizard-step
                   [stepTitle]="'Frontend'"
                   [awOptionalStep]="true"
@@ -170,7 +171,7 @@
                     class="list ion-no-padding ion-margin-vertical"
                   >
                     <ion-list-header class="list-header ion-text-center">
-                      <ion-label class="step-list-title"> Frontend </ion-label>
+                      <ion-title class="step-list-title elevon"> Frontend </ion-title>
                     </ion-list-header>
                     <ion-grid class="ion-no-padding ion-margin-vertical">
                       <ion-row
@@ -178,8 +179,8 @@
                       >
                         <ion-col class="list-col">
                           <ion-item-divider class="divider" color="dark">
-                            <ion-label class="divider-label" color="tertiary"
-                              >NodeJS</ion-label
+                            <ion-text class="divider-label" color="tertiary"
+                              >NodeJS</ion-text
                             >
                           </ion-item-divider>
                           <ion-item-group class="group">
@@ -189,7 +190,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> Ionic </ion-label>
+                              <ion-text> Ionic </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -197,7 +198,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> Angular </ion-label>
+                              <ion-text> Angular </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -205,7 +206,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> Firebase </ion-label>
+                              <ion-text> Firebase </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -213,7 +214,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> Stripe & Paypal</ion-label>
+                              <ion-text> Stripe & Paypal</ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -221,15 +222,15 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> Material & Bootstrap </ion-label>
+                              <ion-text> Material & Bootstrap </ion-text>
                             </ion-item>
                           </ion-item-group>
                         </ion-col>
                         <ion-col class="list-col">
                           <ion-item-divider class="divider" color="dark">
-                            <ion-label class="divider-label" color="tertiary">
+                            <ion-text class="divider-label" color="tertiary">
                               Developer Tools
-                            </ion-label>
+                            </ion-text>
                           </ion-item-divider>
                           <ion-item-group class="group">
                             <ion-item class="list-item"
@@ -238,7 +239,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> VS Code </ion-label>
+                              <ion-text> VS Code </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -246,7 +247,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>Adobe Creative Cloud </ion-label>
+                              <ion-text>Adobe Creative Cloud </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -254,7 +255,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>Figma</ion-label>
+                              <ion-text>Figma</ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -262,15 +263,15 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>Data Studio </ion-label>
+                              <ion-text>Data Studio </ion-text>
                             </ion-item>
                           </ion-item-group>
                         </ion-col>
                         <ion-col class="list-col">
                           <ion-item-divider class="divider" color="dark">
-                            <ion-label class="divider-label" color="tertiary">
+                            <ion-text class="divider-label" color="tertiary">
                               Technologies
-                            </ion-label>
+                            </ion-text>
                           </ion-item-divider>
                           <ion-item-group class="group">
                             <ion-item class="list-item"
@@ -279,7 +280,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>Progressive Web Apps </ion-label>
+                              <ion-text>Progressive Web Apps </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -287,7 +288,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>Cross Platform</ion-label>
+                              <ion-text>Cross Platform</ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -295,7 +296,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>Server Side Rendering </ion-label>
+                              <ion-text>Server Side Rendering </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -303,7 +304,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>Hybrid Native Apps </ion-label>
+                              <ion-text>Hybrid Native Apps </ion-text>
                             </ion-item>
                           </ion-item-group>
                         </ion-col>
@@ -337,15 +338,15 @@
                     class="list ion-no-padding ion-margin-vertical"
                   >
                     <ion-list-header class="list-header ion-text-center">
-                      <ion-label class="step-list-title"> Backend </ion-label>
+                      <ion-title class="step-list-title elevon"> Backend </ion-title>
                     </ion-list-header>
-                    <ion-grid class="ion-margin-vertical">
-                      <ion-row class="ion-justify-content-center">
+                    <ion-grid class="ion-no-padding ion-margin-vertical">
+                      <ion-row class="ion-justify-content-center ion-text-center">
                         <ion-col class="list-col">
                           <ion-item-divider class="divider" color="dark">
-                            <ion-label class="divider-label" color="tertiary"
-                              >Monitor | Analytics | Engage
-                            </ion-label>
+                            <ion-text class="divider-label" color="tertiary"
+                              >Analytics
+                            </ion-text>
                           </ion-item-divider>
                           <ion-item-group class="group">
                             <ion-item class="list-item"
@@ -354,9 +355,9 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>
+                              <ion-text>
                                 user tracking across devices
-                              </ion-label>
+                              </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -364,7 +365,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> automated A/B testing </ion-label>
+                              <ion-text> automated A/B testing </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -372,25 +373,18 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>
+                              <ion-text>
                                 user segment customization
-                              </ion-label>
+                              </ion-text>
                             </ion-item>
-                            <ion-item class="list-item"
-                              ><ion-icon
-                                name="flask-sharp"
-                                class="item-icon"
-                                size="small"
-                              ></ion-icon>
-                              <ion-label> InApp & Cloud Messaging </ion-label>
-                            </ion-item>
+
                           </ion-item-group>
                         </ion-col>
                         <ion-col>
                           <ion-item-divider class="divider" color="dark">
-                            <ion-label class="divider-label" color="tertiary">
-                              Google Cloud Platform
-                            </ion-label>
+                            <ion-text class="divider-label" color="tertiary">
+                              Google Cloud
+                            </ion-text>
                           </ion-item-divider>
                           <ion-item-group class="group">
                             <ion-item class="list-item"
@@ -399,9 +393,17 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>
+                              <ion-text>
                                 automatic resource scaling
-                              </ion-label>
+                              </ion-text>
+                            </ion-item>
+                                      <ion-item class="list-item"
+                              ><ion-icon
+                                name="flask-sharp"
+                                class="item-icon"
+                                size="small"
+                              ></ion-icon>
+                              <ion-text> InApp & Cloud Messaging </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -409,7 +411,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> edge caching </ion-label>
+                              <ion-text> edge caching </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -417,9 +419,9 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label>
+                              <ion-text>
                                 global content delivery network
-                              </ion-label>
+                              </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -427,15 +429,15 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> serverless functions </ion-label>
+                              <ion-text> serverless functions </ion-text>
                             </ion-item>
                           </ion-item-group>
                         </ion-col>
                         <ion-col>
                           <ion-item-divider class="divider" color="dark">
-                            <ion-label class="divider-label" color="tertiary">
-                              3rd Party Automation
-                            </ion-label>
+                            <ion-text class="divider-label" color="tertiary">
+                             Automation
+                            </ion-text>
                           </ion-item-divider>
                           <ion-item-group class="group">
                             <ion-item class="list-item"
@@ -444,7 +446,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> Webhooks </ion-label>
+                              <ion-text> Webhooks </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -452,7 +454,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> continuous integration </ion-label>
+                              <ion-text> continuous integration </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -460,7 +462,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> continuous deployment </ion-label>
+                              <ion-text> continuous deployment </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -468,7 +470,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-label> Github Actions </ion-label>
+                              <ion-text> Github Actions </ion-text>
                             </ion-item>
                           </ion-item-group>
                         </ion-col>
@@ -508,8 +510,8 @@
                     ></ion-icon>
                   </ng-template>
                   <div class="ion-padding ion-text-left">
-                    <ion-title class="step-list-title">Background</ion-title>
-                    <p class="text">
+                    <ion-title class="step-list-title elevon">Background</ion-title>
+                    <p class="text ion-padding-top">
                       Douglas began working in the IT industry at an ISP as a
                       network technician over fifteen years ago. His career path
                       led him to more advanced positions where he found himself
@@ -567,8 +569,8 @@
                     ></ion-icon>
                   </ng-template>
                   <div class="ion-padding ion-text-left">
-                    <ion-title class="step-list-title">Vision</ion-title>
-                    <p class="text">
+                    <ion-title class="step-list-title elevon">Vision</ion-title>
+                    <p class="text ion-padding-top">
                       Douglas has a lifelong commitment to expanding his
                       skillsets. He has recently been working with SVG, D3,
                       TensorFlow & Actions on Google in order to bring

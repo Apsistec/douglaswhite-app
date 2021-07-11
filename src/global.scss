@@ -38,6 +38,11 @@
   color: var(--ion-text-color);
 }
 
+.elevon{
+  font-family: elevon, sans-serif;
+  font-style: normal;
+}
+
 .text {
   // font-family: acumin-pro, sans-serif;
   // font-style: normal;
@@ -75,7 +80,8 @@
 
 /* Card Header Sub-Titles */
 .sub-heading {
-    --color: var(--ion-color-tertiary);
+  color:var(--ion-color-primary-shade);
+  text-shadow: 0 0 8px white;
   font-family: sofachrome, sans-serif;
   font-style: normal;
   font-weight: 400;
