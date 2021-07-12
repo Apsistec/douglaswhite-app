@@ -20,7 +20,7 @@ export class ToggleComponent implements OnInit {
       document.body.classList.toggle('dark', ev.detail.checked);
     });
 
-    this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    this.prefersDark = window.matchMedia('prefers-color-scheme: dark');
     this.prefersDark.addEventListener('change', (e) =>
       this.checkToggle(e.matches)
     );

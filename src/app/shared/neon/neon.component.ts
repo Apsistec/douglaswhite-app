@@ -21,6 +21,8 @@ export class NeonComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // setInterval(this.changeAnimationTime, 1000);
+    setInterval(this.changeAnimationTime, 1000);
   }
+
+
 }

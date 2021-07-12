@@ -1,25 +1,23 @@
 div {
-  --animation-time: 1s;
+  --animation-time: 2s;
+  --box-shadow: inset 0 0 30px white, inset 0 0 10px var(--border-color), 0 0 10px var(--border-color),
+    0 0 20px var(--border-color);
   --border-color: var(--ion-color-secondary-tint);
+  padding: 2px;
   width: fit-content;
   margin: 6px;
-  // background-color: var(--ion-color-dark-shade);
-  // border: 1px solid var(--ion-color-secondary-shade);
+  background-color: var(--ion-color-medium-tint);
   border-radius: 12px;
-  animation: turnOnBorder 0.24s forwards step-end,
-    flickerBorder calc(var(--animation-time) * 16) infinite step-end 7s;
-  --box-shadow: inset 0 0 10px var(--border-color), 0 0 10px var(--border-color),
-    0 0 20px var(--border-color);
+  animation:  0.2s forwards step-end turnOnBorder,
+     2s ease-in-out calc(var(--animation-time) * 5) infinite alternate forwards  both flickerBorder ;
 }
 
+
+
 p {
-  --text-color: var(--ion-color-tertiary);
-  --text-shadow: 0 0 3px var(--text-color), 0 0 6px var(--text-color),
-    0 0 9px var(--text-color);
-  // 0 0 20px var(--text-color),
-  // 0 0 30px var(--text-color),
-  // 0 0 40px var(--text-color),
-  // 0 0 55px var(--text-color);
+  color: var(--ion-color-primary);
+  --text-shadow: 0 0 6px white,
+    0 0 9px white;
   font-family: "Libre Barcode 128 Text";
   font-weight: 500;
   font-size: 2.3rem;
@@ -28,7 +26,7 @@ p {
 
 p span {
   opacity: 0.33;
-  animation: turnOn forwards step-end;
+  animation:  n forwards step-end turnOn;
 }
 
 p span:nth-child(1) {
@@ -41,7 +39,7 @@ p span:nth-child(2) {
 
 p span:nth-child(3) {
   animation-delay: 0.4s;
-  animation: turnOn 0.2s forwards step-end, flicker 10s infinite step-end 4s;
+  animation:  0.2s forwards step-end turnOn,  10s calc(var(--animation-time) * 5) infinite step-end  flicker;
 }
 
 p span:nth-child(4) {
@@ -57,7 +55,7 @@ p span:nth-child(6) {
 }
 
 p span:nth-child(7) {
-  animation: turnOn 1.2s forwards step-end, flicker 0.65s infinite step-end 2s;
+  animation:  1.2s forwards step-end turnOn, 0.65s calc(var(--animation-time) * 5) infinite step-end flicker;
 }
 
 p span:nth-child(8) {
@@ -86,14 +84,15 @@ p span:nth-child(13) {
 
 p span:last-child {
   animation: turnOn 0.27s forwards step-end,
-    flicker var(--animation-time) infinite step-end 1s;
+     1s calc(var(--animation-time) * 5) infinite step-end flicker;
 }
 
 @keyframes turnOnBorder {
-  100% {
+  100%{
     border: 4px solid var(--border-color);
     box-shadow: var(--box-shadow);
     opacity: 1;
+
   }
 }
 
@@ -108,7 +107,7 @@ p span:last-child {
   0% {
     text-shadow: var(--text-shadow);
   }
-  99% {
+  100% {
     text-shadow: none;
     opacity: 0.1;
   }
@@ -116,10 +115,22 @@ p span:last-child {
 
 @keyframes flickerBorder {
   0% {
-    box-shadow: var(--box-shadow);
+    opacity: 0.21;
+
   }
-  99% {
-    box-shadow: none;
+  25%{
+    // opacity: 0.81;
+  --border-color: var(--ion-color-secondary-tint);
+
+  }
+  50% {
+    // opacity: 0.31;
+    --border-color: transparent;
+
+  }
+  100% {
+    opacity: 1;
+  --border-color: var(--ion-color-secondary-tint);
   }
 }
 

@@ -1,5 +1,6 @@
 .items {
   border-radius: 15px !important;
+  box-shadow: 0 0 8px white;
 }
 
 .submitButton {
@@ -24,7 +25,3 @@ ion-grid {
   width: 100%;
   --placeholder-opacity: 0.5;
 }
-
-// .toggle{
-//   float: right;
-// }

@@ -19,12 +19,16 @@ export class AppComponent implements OnInit, AfterViewInit {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private storage: Storage
-  ) {}
+    ) {}
 
-  ngOnInit() {
-    this.initializeApp();
-    this.storage.create();
-  }
+    ngOnInit() {
+      this.initializeApp();
+      this.storage.create();
+      this.darkSetting = window.matchMedia('prefers-color-scheme: dark');
+      if (this.darkSetting.matches === true) {
+        document.body.classList.toggle('dark');
+      }
+    }
 
   initializeApp() {
     this.platform.ready().then((readySource) => {
@@ -49,9 +53,5 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.darkSetting = window.matchMedia('(prefers-color-scheme: dark)');
-    if (this.darkSetting.matches === true) {
-      document.body.classList.toggle('dark');
-    }
   }
 }
