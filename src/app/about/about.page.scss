@@ -197,3 +197,9 @@ aw-wizard.custom-line-css {
   text-indent: 20px;
   padding-bottom: 10px;
 }
+
+ion-item-group{
+  box-shadow: 0 1px 3px black, 0 2px 13px black, 0 3px 18px black,
+    0 0 10px black;
+  z-index: 30;
+}
