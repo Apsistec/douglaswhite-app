@@ -10,7 +10,8 @@
     "build-prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "format": "prettier --write ./src/app"
   },
   "private": true,
   "dependencies": {
@@ -36,7 +37,7 @@
     "cordova-res": "^0.15.3",
     "firebase": "^8.4.3",
     "ng-particles": "^2.10.0",
-    "ngx-extended-pdf-viewer": "^9.0.0-alpha.4",
+    "ngx-extended-pdf-viewer": "^9.0.5",
     "ngx-take-until-destroy": "^5.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -63,8 +63,7 @@
 }
 
 .btn-group {
-  bottom: 0;
-  margin-top: 5px;
+  margin: 5px;
   float: left;
 }
 
@@ -116,7 +115,7 @@ aw-wizard.custom-line-css {
 }
 
 .step-list-title {
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--ion-color-primary);
   text-transform: uppercase;
   text-align: center;
@@ -166,8 +165,9 @@ aw-wizard.custom-line-css {
   // background-color: var(--ion-color-dark-tint);
   // box-shadow: inset 0 0 7px var(--ion-color-secondary),
   //   0 0 10px var(--ion-color-light),  0 0 21px var(--ion-color-light-tint);
-  ion-text {
+  .slogan-text {
     color: var(--ion-text-color);
+    font-size: large;
   }
 }
 
@@ -192,6 +192,8 @@ aw-wizard.custom-line-css {
   // --inner-padding: 5px;
 }
 
-.white-text{
+.white-text {
   color: white;
+  text-indent: 20px;
+  padding-bottom: 10px;
 }

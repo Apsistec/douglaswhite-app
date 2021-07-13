@@ -1,14 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="toolbar">
-    <app-neon routerLink="/tabs/about" class="neon"></app-neon>
-    <!-- <ion-buttons slot="end"> -->
-
-    <app-toggle slot="end" class="toggle"></app-toggle>
-    <!-- </ion-buttons> -->
-  </ion-toolbar>
-</ion-header>
 <ion-content class="content">
-  <ion-grid>
+  <ion-grid class="ion-no-padding ion-margin-vertical">
     <ion-row class="ion-justify-content-center">
       <ion-col
         size-xs="12"
@@ -18,13 +9,7 @@
         size-xl="3"
         class="ion-align-self-center"
       >
-        <ion-card
-          class="
-            card
-            contact-card
-            ion-no-padding ion-margin-vertical ion-text-center
-          "
-        >
+        <ion-card class="card contact-card ion-text-center">
           <ion-card-header class="ion-text-center">
             <ion-card-title class="title"> Contact Douglas </ion-card-title>
             <ion-card-subtitle
@@ -33,10 +18,9 @@
               </ion-text>
             </ion-card-subtitle>
           </ion-card-header>
-          <ion-card-content class="ion-margin-vertical">
-            <!-- <pre> {{ results | json }} </pre> -->
+          <ion-card-content class="ion-padding-bottom">
             <form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
-              <ion-item class="items ion-margin-vertical" lines="none">
+              <ion-item class="items ion-margin-bottom" lines="none">
                 <ion-label class="label-color" position="stacked"
                   >Name</ion-label
                 >
@@ -44,10 +28,6 @@
                   debounce="600"
                   type="text"
                   inputmode="text"
-                  autocomplete="name"
-                  placeholder=""
-                  maxlength="30"
-                  minlength="3"
                   formControlName="name"
                   autocomplete="name"
                   autocapitalize="words"
@@ -85,7 +65,7 @@
                   ></ion-icon>
                 </ion-input>
               </ion-item>
-              <ion-item class="items ion-margin-top" lines="none">
+              <ion-item class="items ion-margin-vertical" lines="none">
                 <ion-label class="label-color" position="stacked"
                   >Message</ion-label
                 >
@@ -93,11 +73,10 @@
                   debounce="600"
                   class="textarea"
                   inputmode="text"
-                  maxlength="3000"
-                  placeholder="Provide info about opportunity and/or phone number"
+                  placeholder="Include opportunity info and/or phone number"
                   auto-grow="true"
                   type="text"
-                  rows="10"
+                  rows="8"
                   spellcheck="true"
                   wrap="hard"
                   formControlName="message"
@@ -108,7 +87,7 @@
                 >
                 </ion-textarea>
               </ion-item>
-              <hr />
+
               <ion-button
                 type="submit"
                 shape="round"

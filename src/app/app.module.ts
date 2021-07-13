@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireFunctionsModule, NEW_ORIGIN_BEHAVIOR, ORIGIN } from '@angular/fire/functions';
+import {
+  AngularFireFunctionsModule,
+  NEW_ORIGIN_BEHAVIOR,
+  ORIGIN,
+} from '@angular/fire/functions';
 import { BrowserModule } from '@angular/platform-browser';
 import {
-    BrowserAnimationsModule, NoopAnimationsModule
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -15,9 +20,10 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NeonComponent } from './neon/neon.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NeonComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

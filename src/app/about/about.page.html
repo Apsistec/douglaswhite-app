@@ -1,16 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <app-neon routerLink="/tabs/about" class="neon"></app-neon>
-    <app-toggle class="toggle" slot="end"></app-toggle>
-  </ion-toolbar>
-</ion-header>
 <ion-content
   class="content"
   [scrollEvents]="true"
   (ionScroll)="onScroll($event)"
 >
   <div id="landing">
-    <!-- <ng-particles [id]="id" [url]="particlesUrl"></ng-particles> -->
     <div class="main">
       <div class="display">
         <h1>Douglas White</h1>
@@ -78,11 +71,9 @@
                 size-lg="6"
                 size-xl="6"
               >
-                <div class="nameplate ">
+                <div class="nameplate">
                   <ion-item lines="none" class="nameplate-info">
-                    <ion-text class="name elevon">
-                      Douglas White
-                    </ion-text>
+                    <ion-text class="name elevon"> Douglas White </ion-text>
                   </ion-item>
                   <ion-item lines="none" class="nameplate-info">
                     <ion-icon
@@ -138,7 +129,7 @@
           </ion-card-header>
           <ion-card-content class="ion-margin-vertical">
             <ion-card class="slogan ion-text-center">
-              <ion-text class="elevon">
+              <ion-text class="slogan-text elevon">
                 Much like a chemist, Douglas develops code by blending together
                 components from a diverse stock of elements in unique & novel
                 ways to synthesize valuable, convenient products.
@@ -152,7 +143,7 @@
               #wizard
               class="custom-line-css"
             >
-              <ion-card class="shadow wizzardCard ion-margin-vertical ion-padding">
+              <ion-card class="shadow wizzardCard ion-no-margin">
                 <aw-wizard-step
                   [stepTitle]="'Frontend'"
                   [awOptionalStep]="true"
@@ -166,12 +157,11 @@
                     ></ion-icon>
                   </ng-template>
 
-                  <ion-list
-                    lines="none"
-                    class="list ion-no-padding ion-margin-vertical"
-                  >
+                  <ion-list lines="none" class="list ion-no-padding ion-margin">
                     <ion-list-header class="list-header ion-text-center">
-                      <ion-title class="step-list-title elevon"> Frontend Skills</ion-title>
+                      <ion-text class="step-list-title elevon">
+                        Frontend Skills</ion-text
+                      >
                     </ion-list-header>
                     <ion-grid class="ion-no-padding ion-margin-vertical">
                       <ion-row
@@ -183,7 +173,12 @@
                               >NodeJS</ion-text
                             >
                           </ion-item-divider>
-                          <ion-item-group class="group">
+                          <ion-item-group
+                            class="
+                              group
+                              ion-padding-vertical ion-margin-vertical
+                            "
+                          >
                             <ion-item class="list-item"
                               ><ion-icon
                                 name="flask-sharp"
@@ -232,7 +227,12 @@
                               Developer Tools
                             </ion-text>
                           </ion-item-divider>
-                          <ion-item-group class="group">
+                          <ion-item-group
+                            class="
+                              group
+                              ion-padding-vertical ion-margin-vertical
+                            "
+                          >
                             <ion-item class="list-item"
                               ><ion-icon
                                 name="flask-sharp"
@@ -273,7 +273,12 @@
                               Technologies
                             </ion-text>
                           </ion-item-divider>
-                          <ion-item-group class="group">
+                          <ion-item-group
+                            class="
+                              group
+                              ion-padding-vertical ion-margin-vertical
+                            "
+                          >
                             <ion-item class="list-item"
                               ><ion-icon
                                 name="flask-sharp"
@@ -333,31 +338,35 @@
                     ></ion-icon>
                   </ng-template>
 
-                  <ion-list
-                    lines="none"
-                    class="list ion-no-padding ion-margin-vertical"
-                  >
+                  <ion-list lines="none" class="list ion-no-padding ion-margin">
                     <ion-list-header class="list-header ion-text-center">
-                      <ion-title class="step-list-title elevon"> Backend Skills</ion-title>
+                      <ion-text class="step-list-title elevon">
+                        Backend Skills</ion-text
+                      >
                     </ion-list-header>
                     <ion-grid class="ion-no-padding ion-margin-vertical">
-                      <ion-row class="ion-justify-content-center ion-text-center">
+                      <ion-row
+                        class="ion-justify-content-center ion-text-center"
+                      >
                         <ion-col class="list-col">
                           <ion-item-divider class="divider" color="dark">
                             <ion-text class="divider-label" color="tertiary"
                               >Analytics
                             </ion-text>
                           </ion-item-divider>
-                          <ion-item-group class="group">
+                          <ion-item-group
+                            class="
+                              group
+                              ion-padding-vertical ion-margin-vertical
+                            "
+                          >
                             <ion-item class="list-item"
                               ><ion-icon
                                 name="flask-sharp"
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-text>
-                                user tracking across devices
-                              </ion-text>
+                              <ion-text> X-Device user tracking </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -365,7 +374,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-text> automated A/B testing </ion-text>
+                              <ion-text> A/B testing </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -373,31 +382,31 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-text>
-                                user segment customization
-                              </ion-text>
+                              <ion-text> user segment customization </ion-text>
                             </ion-item>
-
                           </ion-item-group>
                         </ion-col>
-                        <ion-col>
+                        <ion-col class="list-col">
                           <ion-item-divider class="divider" color="dark">
                             <ion-text class="divider-label" color="tertiary">
                               Google Cloud
                             </ion-text>
                           </ion-item-divider>
-                          <ion-item-group class="group">
+                          <ion-item-group
+                            class="
+                              group
+                              ion-padding-vertical ion-margin-vertical
+                            "
+                          >
                             <ion-item class="list-item"
                               ><ion-icon
                                 name="flask-sharp"
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-text>
-                                automatic resource scaling
-                              </ion-text>
+                              <ion-text> resource scaling </ion-text>
                             </ion-item>
-                                      <ion-item class="list-item"
+                            <ion-item class="list-item"
                               ><ion-icon
                                 name="flask-sharp"
                                 class="item-icon"
@@ -419,9 +428,7 @@
                                 class="item-icon"
                                 size="small"
                               ></ion-icon>
-                              <ion-text>
-                                global content delivery network
-                              </ion-text>
+                              <ion-text> content delivery network </ion-text>
                             </ion-item>
                             <ion-item class="list-item"
                               ><ion-icon
@@ -433,13 +440,18 @@
                             </ion-item>
                           </ion-item-group>
                         </ion-col>
-                        <ion-col>
+                        <ion-col class="list-col">
                           <ion-item-divider class="divider" color="dark">
                             <ion-text class="divider-label" color="tertiary">
-                             Automation
+                              Automation
                             </ion-text>
                           </ion-item-divider>
-                          <ion-item-group class="group">
+                          <ion-item-group
+                            class="
+                              group
+                              ion-padding-vertical ion-margin-vertical
+                            "
+                          >
                             <ion-item class="list-item"
                               ><ion-icon
                                 name="flask-sharp"
@@ -509,9 +521,11 @@
                       color="primary"
                     ></ion-icon>
                   </ng-template>
-                  <div class="ion-padding ion-text-left">
-                    <ion-title class="step-list-title elevon">Background</ion-title>
-                    <p class="white-text ion-padding-top">
+                  <div class="ion-padding-horizontal ion-text-center">
+                    <ion-text class="step-list-title elevon"
+                      >Background</ion-text
+                    >
+                    <p class="white-text ion-padding-top ion-text-left">
                       Douglas began working in the IT industry at an ISP as a
                       network technician over fifteen years ago. His career path
                       led him to more advanced positions where he found himself
@@ -521,7 +535,7 @@
                       them & he knows how to deliver on those expectations.
                     </p>
                   </div>
-                  <div class="ion-padding ion-text-left">
+                  <div class="ion-padding-horizontal ion-text-left">
                     <p class="white-text">
                       Just over 3 years ago, Douglas was presented with a
                       position that provided him the opportunity to learn
@@ -568,9 +582,9 @@
                       color="primary"
                     ></ion-icon>
                   </ng-template>
-                  <div class="ion-padding ion-text-left">
-                    <ion-title class="step-list-title elevon">Vision</ion-title>
-                    <p class="white-text ion-padding-top">
+                  <div class="ion-padding-horizontal ion-text-center">
+                    <ion-text class="step-list-title elevon">Vision</ion-text>
+                    <p class="white-text ion-padding-top ion-text-left">
                       Douglas has a lifelong commitment to expanding his
                       skillsets. He has recently been working with SVG, D3,
                       TensorFlow & Actions on Google in order to bring
@@ -578,7 +592,7 @@
                       interactions under his belt.
                     </p>
                   </div>
-                  <div class="ion-padding ion-text-left">
+                  <div class="ion-padding-horizontal ion-text-left">
                     <p class="white-text">
                       Currently, Douglas White is considering new projects &
                       full time work. He welcomes and appreciates your interest

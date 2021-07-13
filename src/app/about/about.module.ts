@@ -1,5 +1,4 @@
 import { ArchwizardModule } from 'angular-archwizard';
-import { NgParticlesModule } from 'ng-particles';
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -17,7 +16,6 @@ import { AboutPage } from './about.page';
     CommonModule,
     FormsModule,
     AboutPageRoutingModule,
-    NgParticlesModule,
     SharedModule,
     ArchwizardModule,
   ],

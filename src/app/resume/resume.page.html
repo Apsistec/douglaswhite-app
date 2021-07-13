@@ -1,16 +1,10 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="toolbar">
-    <app-neon routerLink="/tabs/about" class="neon"></app-neon>
-
-    <app-toggle slot="end"></app-toggle>
-  </ion-toolbar>
-</ion-header>
 <ion-content class="content">
   <ngx-extended-pdf-viewer
+    class="pdf"
     src="../../assets/04262021_Douglas_White_Resume.pdf"
-    filenameForDownload="04262021_Douglas_White_Resume"
-    height="100vh"
-    [zoom]="'auto'"
+    filenameForDownload="Douglas_White_Resume"
+    height="95vh"
+    zoom="auto"
     backgroundColor="#313131"
     [showPropertiesButton]="false"
     [showOpenFileButton]="false"
@@ -18,6 +12,7 @@
     [showBookmarkButton]="false"
     [showSecondaryToolbarButton]="false"
     [showSidebarButton]="false"
+    [showRotateButton]="false"
   >
   </ngx-extended-pdf-viewer>
   <app-footer class="footer"></app-footer>

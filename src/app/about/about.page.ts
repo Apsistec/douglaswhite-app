@@ -8,8 +8,6 @@ import { IonContent } from '@ionic/angular';
   encapsulation: ViewEncapsulation.None,
 })
 export class AboutPage {
-  particlesUrl: any = '../../assets/particles.json';
-  id: any = 'tsparticles';
   showBackToTopFab = false;
   @ViewChild(IonContent, { static: false }) content: IonContent;
 

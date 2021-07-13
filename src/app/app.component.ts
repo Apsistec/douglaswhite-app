@@ -11,7 +11,10 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  darkSetting;
+  checked: boolean;
+  prefersDark: MediaQueryList;
+  dark: boolean;
+  toggle;
 
   constructor(
     private swUpdate: SwUpdate,
@@ -23,35 +26,57 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
       this.initializeApp();
+
       this.storage.create();
-      this.darkSetting = window.matchMedia('prefers-color-scheme: dark');
-      if (this.darkSetting.matches === true) {
-        document.body.classList.toggle('dark');
-      }
+
     }
 
-  initializeApp() {
-    this.platform.ready().then((readySource) => {
-      const source = readySource;
-      console.log('source: ' + source);
-      if (source === 'capacitor') {
-        this.statusBar.styleDefault();
-        this.splashScreen.hide();
-      } else {
-        return false;
-      }
-    });
-
-    if (this.swUpdate.isEnabled) {
-      this.swUpdate.available.subscribe(() => {
-        if (confirm('New version available. Load New Version?')) {
-          window.location.reload();
+    initializeApp() {
+      this.platform.ready().then((readySource) => {
+        const source = readySource;
+        if (source === 'capacitor') {
+          this.statusBar.styleDefault();
+          this.splashScreen.hide();
+        } else {
+          return false;
         }
-        return;
       });
+
+      this.toggle = document.body.querySelector('#toggle');
+      this.toggle.addEventListener('ionChange', (ev) => {
+        document.body.classList.toggle('dark', ev.detail.checked)
+      });
+
+      this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      this.toggleDarkTheme(this.prefersDark.matches);
+
+      this.prefersDark.addEventListener('change', (e) => {
+        this.checkToggle(e.matches);
+      });
+
+      // this.toggleDarkTheme(e.matches);
+
+      if (this.swUpdate.isEnabled) {
+        this.swUpdate.available.subscribe(() => {
+          if (confirm('New version available. Load New Version?')) {
+            window.location.reload();
+          }
+          return;
+        });
+      }
     }
+
+
+
+    ngAfterViewInit() {
+      this.checkToggle(this.prefersDark.matches);
+    }
+
+    toggleDarkTheme(shouldAdd) {
+    document.body.classList.toggle('dark', shouldAdd);
   }
 
-  ngAfterViewInit() {
+  checkToggle(shouldCheck: boolean) {
+    this.toggle.checked = shouldCheck;
   }
 }
