@@ -87,7 +87,6 @@
         }
 
         div.label {
-          // border-bottom: 2px solid var(--ion-color-primary) !important;
           color: var(--ion-color-secondary) !important;
         }
       }
@@ -147,8 +146,8 @@ aw-wizard.custom-line-css {
 }
 
 .group {
-  box-shadow: inset 0 0 88px white;
-  // box-shadow: inset 0 0 10px rgb(155, 155, 155);
+  box-shadow: inset 0 0 88px white,  0 1px 3px black, 0 2px 13px black, 0 3px 18px black,
+    0 0 10px black;
   background-color: var(--ion-color-dark-tint);
   border-radius: 8px;
   margin-left: 4px;
@@ -157,14 +156,9 @@ aw-wizard.custom-line-css {
 }
 
 .slogan {
-  // box-shadow: inset 0 0 10px var(ion-color-tertiary), inset 0 0 48px var(ion-color-secondary);
   border-radius: 15px;
   background-color: var(--ion-color-dark-tint);
-  // border-radius: 15px;
   padding: 15px;
-  // background-color: var(--ion-color-dark-tint);
-  // box-shadow: inset 0 0 7px var(--ion-color-secondary),
-  //   0 0 10px var(--ion-color-light),  0 0 21px var(--ion-color-light-tint);
   .slogan-text {
     color: white;
     font-size: large;
@@ -173,7 +167,6 @@ aw-wizard.custom-line-css {
 
 .divider-label {
   --color: var(--ion-color-tertiary);
-  // font-family: sofachrome, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3em;
@@ -189,17 +182,10 @@ aw-wizard.custom-line-css {
   background: transparent;
   margin: auto;
   text-align: center;
-  // --inner-padding: 5px;
 }
 
 .white-text {
   color: white;
   text-indent: 20px;
   padding-bottom: 10px;
-}
-
-ion-item-group{
-  box-shadow: 0 1px 3px black, 0 2px 13px black, 0 3px 18px black,
-    0 0 10px black;
-  z-index: 30;
 }
