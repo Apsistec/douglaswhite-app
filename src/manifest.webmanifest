@@ -3,7 +3,7 @@
   "short_name": "douglaswhite",
   "theme_color": "#041DFF",
   "background_color": "#222428",
-  "description": "A web app developer's portfolio for Douglas White",
+  "description": "A web app developer's portfolio showcasing Douglas White's experience and skills.",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

@@ -104,19 +104,6 @@ p.help.is-danger {
   color: var(--ion-color-danger);
 }
 
-/* particles on contact and about pages */
-#tsparticles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-bottom-color: rgba(255, 255, 255, 0.8);
-  border-bottom-width: 25px;
-  border-bottom-style: groove;
-  border-bottom-right-radius: 42px;
-  border-bottom-left-radius: 42px;
-  overflow: hidden;
-}
-
 /* Page transition animation */
 .bounceOutDown {
   animation: 2.5s ease-out infinite bounceoutdown;

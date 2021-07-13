@@ -36,12 +36,10 @@
     "angular-archwizard": "^7.0.0",
     "cordova-res": "^0.15.3",
     "firebase": "^8.4.3",
-    "ng-particles": "^2.10.0",
     "ngx-extended-pdf-viewer": "^9.0.5",
     "ngx-take-until-destroy": "^5.4.0",
     "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "tsparticles": "^1.27.0"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1102.13",
