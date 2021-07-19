@@ -130,9 +130,10 @@
           <ion-card-content class="ion-margin-vertical">
             <ion-card class="slogan ion-text-center">
               <ion-text class="slogan-text elevon">
-                Much like a chemist, Douglas develops code by blending together
-                components from a diverse stock of elements in unique & novel
-                ways to synthesize valuable, convenient products.
+                Developing code is much like chemistry.... Blending elements
+                from a diverse stock of existing constituents with individually
+                formulated components in novel ways synthesizing practical
+                solutions that provide value.
               </ion-text>
             </ion-card>
             <aw-wizard
@@ -144,6 +145,148 @@
               class="custom-line-css"
             >
               <ion-card class="wizzardCard ion-no-margin">
+                              <aw-wizard-step [stepTitle]="'Vision'">
+                  <ng-template awWizardStepSymbol>
+                    <ion-icon
+                      class="stepperIcon"
+                      size="large"
+                      name="trail-sign-sharp"
+                      color="primary"
+                    ></ion-icon>
+                  </ng-template>
+                  <div class="ion-padding-horizontal ion-text-center">
+                    <ion-text class="step-list-title elevon">Vision</ion-text>
+                    <p class="white-text ion-padding-top ion-text-left">
+                      Douglas is a JavaScript Web Application Developer with
+                      around 3 years experience developing from scratch fullstack
+                      mobile first business to consumer progressive web
+                      applications incorporating fully customized features
+                      including: ecommerce, cloud messaging, email & SMS
+                      notifications, user authentication, admin user management,
+                      admin panels, data visualization, data tables, charts,
+                      data import/export, SEO, server side rendering, offline
+                      access, hybrid device interactivity, and more. He develops
+                      the single page applications coding with Ionic, Angular
+                      and Firebase web development SDKs which utilize HTML5,
+                      CSS, and TypeScript a superset of JavaScript. His web apps
+                      incorporate material design principles providing the
+                      latest system for designing easy to use visually appealing
+                      user experiences.
+                    </p>
+                    <p class="white-text ion-padding-top ion-text-left">
+                      With a lifelong dedication to learning and coding, Douglas
+                      has recently added SVG, D3, TensorFlow & Actions on Google
+                      JavaScript libraries to his suite of skills providing him
+                      with the ability to deliver more advanced integrations of
+                      data visualizations, animations, machine learning & voice
+                      interactions into solutions he develops.
+                    </p>
+                  </div>
+                  <div class="ion-padding-horizontal ion-text-left">
+                    <p class="white-text">
+                      Currently, Douglas is available for project work or as a
+                      full time developer. He welcomes the opportunity to
+                      discuss your project, his background, and how he can best
+                      be of service to achieve your desired results. He resides
+                      in Lubbock, TX & will consider local and remote positions.
+                      That said, he has friends and family spread across the
+                      state, so he is also entertaining positions in the DFW
+                      metroplex or Austin.
+                    </p>
+                  </div>
+
+                  <div class="btn-group">
+                    <ion-button
+                      color="secondary"
+                      shape="round"
+                      type="button"
+                      class="btn btn-secondary"
+                      awResetWizard
+                    >
+                      Background
+                    </ion-button>
+                    <ion-button
+                      color="light"
+                      shape="round"
+                      fill="outline"
+                      type="button"
+                      class="btn btn-secondary"
+                      awPreviousStep
+                    >
+                      Back
+                    </ion-button>
+                  </div>
+                </aw-wizard-step>
+                             <aw-wizard-step [stepTitle]="'Background'">
+                  <ng-template awWizardStepSymbol>
+                    <ion-icon
+                      class="stepperIcon"
+                      size="large"
+                      name="time-sharp"
+                      color="primary"
+                    ></ion-icon>
+                  </ng-template>
+                  <div class="ion-padding-horizontal ion-text-center">
+                    <ion-text class="step-list-title elevon"
+                      >Background</ion-text
+                    >
+                    <p class="white-text ion-padding-top ion-text-left">
+                      Douglas' rose up through the IT industry starting at a
+                      well known ISP during the dot com boom as a network
+                      technician over fifteen years ago. His career path led him
+                      to more advanced technical sales positions where he worked
+                      with C-level management and business leaders as a software
+                      sales representative & ultimately as a IT services
+                      consultant. Thus, he readily understands how to
+                      communicate with clients to determine their expectations
+                      and he knows how to deliver on them. Consistently
+                      observing his clients' desire and need for customized
+                      software solutions while also learning about the mass
+                      potential that newer coding paradigms offer, Douglas
+                      realized that his future demanded that he learn to code if
+                      he was going to give clients what they truly needed.
+                    </p>
+                  </div>
+                  <div class="ion-padding-horizontal ion-text-left">
+                    <p class="white-text">
+                      Around three years ago, Douglas was presented with the
+                      opportunity to learn JavaScript while on the job. So, he
+                      jumped at the chance and has never looked back. His
+                      compulsion to understand how all things work ensures that
+                      he remains well versed on technologies at the forefront of
+                      the industry. Douglas works well on his own, but he also
+                      works efficiently as part of a team. Results driven, he is
+                      motivated by feelings of accomplishment such as what is
+                      felt upon successfully implementing software that turns
+                      complex business processes into easy to use, visually
+                      appealing solutions that enable a client to achieve the
+                      desired impact in their market. He has every intention to
+                      continue in that success.
+                    </p>
+                  </div>
+
+                  <div class="btn-group">
+                    <ion-button
+                      color="secondary"
+                      shape="round"
+                      type="button"
+                      class="btn btn-secondary"
+                      awNextStep
+                    >
+                      Frontend Skills
+                    </ion-button>
+                    <ion-button
+                      color="light"
+                      shape="round"
+                      fill="outline"
+                      type="button"
+                      class="btn btn-secondary"
+                      awPreviousStep
+                    >
+                      Back
+                    </ion-button>
+                  </div>
+                </aw-wizard-step>
                 <aw-wizard-step
                   [stepTitle]="'Frontend'"
                   [awOptionalStep]="true"
@@ -324,7 +467,7 @@
                       class="btn btn-secondary"
                       awNextStep
                     >
-                      Continue
+                      Backend Skills
                     </ion-button>
                   </div>
                 </aw-wizard-step>
@@ -512,120 +655,8 @@
                     </ion-button>
                   </div>
                 </aw-wizard-step>
-                <aw-wizard-step [stepTitle]="'Background'">
-                  <ng-template awWizardStepSymbol>
-                    <ion-icon
-                      class="stepperIcon"
-                      size="large"
-                      name="time-sharp"
-                      color="primary"
-                    ></ion-icon>
-                  </ng-template>
-                  <div class="ion-padding-horizontal ion-text-center">
-                    <ion-text class="step-list-title elevon"
-                      >Background</ion-text
-                    >
-                    <p class="white-text ion-padding-top ion-text-left">
-                      Douglas began working in the IT industry at an ISP as a
-                      network technician over fifteen years ago. His career path
-                      led him to more advanced positions where he found himself
-                      working with C-level business leaders as a software sales
-                      representative & IT services consultant. Thus, he
-                      understands their expectations, how to communicate with
-                      them & he knows how to deliver on those expectations.
-                    </p>
-                  </div>
-                  <div class="ion-padding-horizontal ion-text-left">
-                    <p class="white-text">
-                      Just over 3 years ago, Douglas was presented with a
-                      position that provided him the opportunity to learn
-                      JavaScript, a long held desire. So, he jumped at the
-                      chance and has never looked Back. His ingrained desire to
-                      understand how all things work has allowed him to remain
-                      at the forefront of the IT industry. A self-starter, he
-                      enjoys enjoys working with his peers. Results driven, he
-                      truly enjoys the feeling of success such as when when
-                      implementing a complex solution that successfully enables
-                      a client to make an impact in their market; and he has
-                      every intention to continue in that success.
-                    </p>
-                  </div>
 
-                  <div class="btn-group">
-                    <ion-button
-                      color="secondary"
-                      shape="round"
-                      type="button"
-                      class="btn btn-secondary"
-                      awNextStep
-                    >
-                      Continue
-                    </ion-button>
-                    <ion-button
-                      color="light"
-                      shape="round"
-                      fill="outline"
-                      type="button"
-                      class="btn btn-secondary"
-                      awPreviousStep
-                    >
-                      Back
-                    </ion-button>
-                  </div>
-                </aw-wizard-step>
-                <aw-wizard-step [stepTitle]="'Vision'">
-                  <ng-template awWizardStepSymbol>
-                    <ion-icon
-                      class="stepperIcon"
-                      size="large"
-                      name="trail-sign-sharp"
-                      color="primary"
-                    ></ion-icon>
-                  </ng-template>
-                  <div class="ion-padding-horizontal ion-text-center">
-                    <ion-text class="step-list-title elevon">Vision</ion-text>
-                    <p class="white-text ion-padding-top ion-text-left">
-                      Douglas has a lifelong commitment to expanding his
-                      skillsets. He has recently been working with SVG, D3,
-                      TensorFlow & Actions on Google in order to bring
-                      animations, data visualizations, machine learning & voice
-                      interactions under his belt.
-                    </p>
-                  </div>
-                  <div class="ion-padding-horizontal ion-text-left">
-                    <p class="white-text">
-                      Currently, Douglas White is considering new projects &
-                      full time work. He welcomes and appreciates your interest
-                      to discuss current or upcoming projects & his potential
-                      role in helping you achieve results. He resides in
-                      Lubbock, TX & will consider local and remote positions. He
-                      will also readily entertain relocating to metropolitan
-                      areas of Texas.
-                    </p>
-                  </div>
 
-                  <div class="btn-group">
-                    <ion-button
-                      color="secondary"
-                      shape="round"
-                      type="button"
-                      class="btn btn-secondary"
-                      awResetWizard
-                    >
-                      Done
-                    </ion-button>
-                    <ion-button
-                      color="light"
-                      shape="round"
-                      fill="outline"
-                      type="button"
-                      class="btn btn-secondary"
-                      awPreviousStep
-                    >
-                      Back
-                    </ion-button>
-                  </div>
-                </aw-wizard-step>
               </ion-card>
             </aw-wizard>
           </ion-card-content>

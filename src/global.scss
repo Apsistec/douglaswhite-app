@@ -131,10 +131,10 @@ p.help.is-danger {
 
 /* PDF resume page */
 .pdf-viewer {
-  display: flex;
+  display: block;
+  overflow-y: scroll;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(5px 5px 5px #222222);
 }
 
 /* Back background */

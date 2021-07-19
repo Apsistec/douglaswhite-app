@@ -86,7 +86,7 @@ export class ContactPage implements OnInit {
     }).subscribe((res) => {
       this.res = res;
       this.isLoading = false;
-      this.router.navigate(['/tabs/about']).then(async () => {
+      this.router.navigate(['/about']).then(async () => {
         const toaster = await this.toast.create({
           header: this.res.header,
           message: this.res.message,
