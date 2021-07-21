@@ -22,57 +22,54 @@ export class AppComponent implements OnInit, AfterViewInit {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private storage: Storage
-    ) {}
+  ) {}
 
-    ngOnInit() {
-      this.initializeApp();
+  ngOnInit() {
+    this.initializeApp();
 
-      this.storage.create();
+    this.storage.create();
+  }
 
-    }
-
-    initializeApp() {
-      this.platform.ready().then((readySource) => {
-        const source = readySource;
-        if (source === 'capacitor') {
-          this.statusBar.styleDefault();
-          this.splashScreen.hide();
-        } else {
-          return false;
-        }
-      });
-
-      this.toggle = document.body.querySelector('#toggle');
-      this.toggle.addEventListener('ionChange', (ev) => {
-        document.body.classList.toggle('dark', ev.detail.checked)
-      });
-
-      this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-      this.toggleDarkTheme(this.prefersDark.matches);
-
-      this.prefersDark.addEventListener('change', (e) => {
-        this.checkToggle(e.matches);
-      });
-
-      // this.toggleDarkTheme(e.matches);
-
-      if (this.swUpdate.isEnabled) {
-        this.swUpdate.available.subscribe(() => {
-          if (confirm('New version available. Load New Version?')) {
-            window.location.reload();
-          }
-          return;
-        });
+  initializeApp() {
+    this.platform.ready().then((readySource) => {
+      const source = readySource;
+      if (source === 'capacitor') {
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
+      } else {
+        return false;
       }
+    });
+
+    this.toggle = document.body.querySelector('#toggle');
+    this.toggle.addEventListener('ionChange', (ev) => {
+      document.body.classList.toggle('dark', ev.detail.checked);
+    });
+
+    this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    this.toggleDarkTheme(this.prefersDark.matches);
+
+    this.prefersDark.addEventListener('change', (e) => {
+      this.checkToggle(e.matches);
+    });
+
+    // this.toggleDarkTheme(e.matches);
+
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.available.subscribe(() => {
+        if (confirm('New version available. Load New Version?')) {
+          window.location.reload();
+        }
+        return;
+      });
     }
+  }
 
+  ngAfterViewInit() {
+    this.checkToggle(this.prefersDark.matches);
+  }
 
-
-    ngAfterViewInit() {
-      this.checkToggle(this.prefersDark.matches);
-    }
-
-    toggleDarkTheme(shouldAdd) {
+  toggleDarkTheme(shouldAdd) {
     document.body.classList.toggle('dark', shouldAdd);
   }
 

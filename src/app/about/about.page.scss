@@ -67,44 +67,62 @@
   float: left;
 }
 
-.custom-line-css aw-wizard-navigation-bar.horizontal li::after {
+.custom-line-css aw-wizard-navigation-bar li::after {
   height: 4px !important;
 }
 
 .custom-line-css aw-wizard-navigation-bar {
+  width: 100%;
   ul.steps-indicator {
     li {
-      a {
-        div.label {
-          color: #ffffff !important;
-        }
+      div.label {
+        color: var(--ion-color-secondary) !important;
       }
+      div.step-indicator {
+        background-color: var(--ion-color-dark) !important;
+      }
+    }
+    li:after {
+      background-color: var(--ion-color-dark) !important;
+    }
+
+    li:not(.current):not(.done) {
+      div.step-indicator {
+        background-color: var(--ion-color-dark) !important;
+        box-shadow: 0 0 4px white;
+      }
+      div.label {
+        color: lightslategrey !important;
+        text-shadow: 0 0 5px black;
+      }
+    }
+    li:not(.done):after {
+      background-color: var(--ion-color-dark) !important;
+      box-shadow: 0 0 4px white;
     }
     li.current {
-      a {
-        div.step-indicator {
-          background-color: var(--ion-color-medium-shade) !important;
-        }
-
-        div.label {
-          color: var(--ion-color-secondary) !important;
-        }
+      div.label {
+        color: var(--ion-color-tertiary) !important;
+        text-shadow: 0 0 4px black;
+      }
+      div.step-indicator {
+        background-color: var(--ion-color-secondary-tint) !important;
       }
     }
+    // li.current:after {
+    //   background-color: var(--ion-color-secondary-tint) !important;
+    // }
     li.done {
-      a {
-        div.step-indicator {
-          background-color: var(--ion-color-tertiary) !important;
-        }
+      div.step-indicator {
+        background-color: var(--ion-color-secondary-shade) !important;
+      }
+      div.label {
+        color: var(--ion-color-secondary-shade) !important;
+        text-shadow: 0 0 5px black;
       }
     }
-  }
-}
-
-aw-wizard.custom-line-css {
-  aw-wizard-navigation-bar.horizontal ul.steps-indicator {
-    li.done:not(.editing):not(:last-child):after {
-      background-color: var(--ion-color-tertiary) !important;
+    li.done:after {
+      background-color: var(--ion-color-secondary-shade) !important;
     }
   }
 }
@@ -115,10 +133,11 @@ aw-wizard.custom-line-css {
 
 .step-list-title {
   font-size: 1.5em;
-  color: var(--ion-color-primary);
+  color: var(--ion-color-tertiary);
   text-transform: uppercase;
-  text-align: center;
-  text-shadow: 0 0 15px white;
+  display: block;
+  margin: auto;
+  text-shadow: 0 0 15px var(--ion-text-color);
 }
 
 .list {
@@ -134,20 +153,14 @@ aw-wizard.custom-line-css {
   }
 }
 
-.wizzardCard {
-  border-radius: 15px;
-  background-color: var(--ion-color-dark-tint);
-  width: 100%;
-}
-
 .item-icon {
   color: var(--ion-color-dark);
   padding-right: 15px;
 }
 
 .group {
-  box-shadow: inset 0 0 88px white,  0 1px 3px black, 0 2px 13px black, 0 3px 18px black,
-    0 0 10px black;
+  box-shadow: inset 0 0 88px white, 0 1px 3px black, 0 2px 13px black,
+    0 3px 18px black, 0 0 10px black;
   background-color: var(--ion-color-dark-tint);
   border-radius: 8px;
   margin-left: 4px;
@@ -156,13 +169,14 @@ aw-wizard.custom-line-css {
 }
 
 .slogan {
-  border-radius: 15px;
-  background-color: var(--ion-color-dark-tint);
-  padding: 15px;
-  .slogan-text {
-    color: white;
-    font-size: large;
-  }
+  padding-bottom: 55px;
+}
+
+.slogan-text {
+  color: white;
+  font-size: large;
+  font-style: italic;
+  margin: 0 100px 0 100px;
 }
 
 .divider-label {
