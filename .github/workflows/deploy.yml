@@ -16,10 +16,16 @@ jobs:
       - name: Build
         run: npm run build-prod
 
-
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+      
+      - name: Deploy to Firebase Hosting
+        # You may pin to the exact commit or the version.
+        # uses: FirebaseExtended/action-hosting-deploy@276388dd6c2cde23455b30293105cc866c22282d
+        uses: FirebaseExtended/action-hosting-deploy@v0.6-alpha
         with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          # The GITHUB_TOKEN secret
+          repoToken: ${{ secrets.FIREBASE_TOKEN }}
+          # Firebase service account JSON
+        
+          # The project to deploy to. If you leave this blank, make sure you check in a .firebaserc file
+          projectId: default
+          
