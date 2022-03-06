@@ -19,7 +19,7 @@ export class AboutPage {
 
   scrollToId(id) {
     const element = document.getElementById(id);
-    this.content.scrollToPoint(0, element.offsetTop, 750);
+    this.content.scrollToPoint(0, element.offsetTop -45, 750);
   }
 
   scrollToTop() {

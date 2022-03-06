@@ -33,7 +33,7 @@ export const genericEmail = functions.https.onCall(async (data) => {
   } catch (error) {
     return {
       header: "Error",
-      message: error.message,
+      message: error,
     };
   }
 });

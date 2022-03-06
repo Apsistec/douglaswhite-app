@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "douglaswhite-app"
-  }
+    "default": "douglaswhite-app",
+    "staging": "douglaswhite-app"
+  },
+  "targets": {}
 }

@@ -12,30 +12,32 @@
       </div>
       <ion-button
         size="large"
-        shape="round"
-        class="bounceOutDown ion-text-center cta"
+
+        class="ion-text-center ion-margin"
         (click)="scrollToId('about')"
       >
         <ion-icon
-          size="large"
-          color="tertiary"
+          size="small"
+          color="secondary"
           button
           name="chevron-down-sharp"
+          class="flipInX "
         ></ion-icon>
-        Learn More
+        <ion-text class="btn sofa ion-padding"> Check it out </ion-text>
         <ion-icon
-          size="large"
-          color="tertiary"
+          size="small"
+          color="secondary"
           button
           name="chevron-down-sharp"
+          class="flipInX"
         ></ion-icon>
       </ion-button>
     </div>
   </div>
 
-  <ion-grid id="about" class="ion-no-padding ion-margin-vertical">
-    <ion-row
-      class="ion-justify-content-center ion-margin-vertical ion-no-padding"
+  <ion-grid  class="ion-margin-vertical">
+    <ion-row id="about"
+      class="ion-justify-content-center ion-margin-vertical"
     >
       <ion-col
         size-xs="12"
@@ -45,98 +47,100 @@
         size-xl="4"
         class="ion-align-self-center"
       >
-        <ion-card class="image-card">
-          <ion-grid>
-            <ion-row class="ion-justify-content-center ion-text-center">
-              <ion-col
-                size-xs="12"
-                size-sm="12"
-                size-md="6"
-                size-lg="6"
-                size-xl="6"
-                class="ion-align-items-center"
-              >
-                <img
-                  height="300"
-                  width="300"
-                  src="../../assets/me.jpg"
-                  class="myImage"
-                />
-              </ion-col>
-              <ion-col
-                class="ion-align-self-center"
-                size-xs="12"
-                size-sm="12"
-                size-md="6"
-                size-lg="6"
-                size-xl="6"
-              >
-                <div class="nameplate">
+        <ion-card id="about"
+          class="card contact-card"
+        >
+          <ion-card-header class="ion-text-center">
+            <ion-card-title lines="none" class="title nameplate-info">
+              Contact
+            </ion-card-title>
+            <ion-card-subtitle class="sofa">
+              Douglas White
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row class="ion-justify-content-center ion-text-center">
+                <ion-col
+                  size-xs="12"
+                  size-sm="12"
+                  size-md="6"
+                  size-lg="6"
+                  size-xl="6"
+                  class="ion-align-items-center"
+                >
+                  <img
+                    height="200"
+                    width="200"
+                    src="../../assets/me.jpg"
+                    class="myImage"
+                  />
+                </ion-col>
+                <ion-col
+                  class="ion-align-self-center"
+                  size-xs="12"
+                  size-sm="12"
+                  size-md="6"
+                  size-lg="6"
+                  size-xl="6"
+                >
                   <ion-item lines="none" class="nameplate-info">
-                    <ion-text class="name elevon"> Douglas White </ion-text>
+
+                    <ion-icon color="secondary" name="call-sharp"></ion-icon>
+                    &nbsp;
+                    <ion-text class="label">512.293.1045</ion-text>
                   </ion-item>
                   <ion-item lines="none" class="nameplate-info">
-                    <ion-icon
-                      class="nameplate-icon"
-                      name="call-sharp"
-                    ></ion-icon>
 
-                    <ion-label>512.293.1045</ion-label>
-                  </ion-item>
-                  <ion-item lines="none" class="nameplate-info">
-                    <ion-icon
-                      size="small"
-                      name="mail-sharp"
-                      class="nameplate-icon"
-                    ></ion-icon>
-
-                    <ion-label class="ion-text-lowercase"
-                      >email@douglaswhite.app</ion-label
+                    <ion-icon color="secondary" name="mail-sharp"></ion-icon>
+                    &nbsp;
+                    <ion-text class="label ion-text-lowercase"
+                      >doug@douglaswhite.app</ion-text
                     >
                   </ion-item>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
+                  <ion-item lines="none" class="nameplate-info">
+
+                    <ion-icon color="secondary" name="home-sharp"></ion-icon>
+                    &nbsp;
+                    <ion-text class="label"
+                      >6801 19th Street #63<br />
+                      Lubbock TX 79407</ion-text
+                    >
+                  </ion-item>
+                  <ion-button (click)="scrollToId('tech')" color="primary">
+                    <ion-text class="sofa btn">More Info</ion-text>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
 
-    <ion-row
-      class="ion-justify-content-center ion-no-padding ion-margin-vertical"
-    >
+    <ion-row           id="tech"
+    class="ion-justify-content-center">
       <ion-col
         size-xs="12"
         size-sm="12"
         size-md="10"
         size-lg="8"
         size-xl="8"
-        class="ion-align-items-center ion-align-self-center"
+        class="ion-align-self-stretch"
       >
         <ion-card
-          id="about"
-          class="
-            card
-            contact-card
-            ion-no-padding ion-margin-vertical ion-text-center
-          "
+          class="card contact-card ion-no-padding ion-margin-vertical ion-text-center"
         >
           <ion-card-header class="ion-text-center">
-            <ion-card-title class="title"> About Douglas </ion-card-title>
-            <ion-card-subtitle class="sub-heading">
-              IT Career & Background
+            <ion-card-title class="title">
+              Relevent History
+
+            </ion-card-title>
+            <ion-card-subtitle class="sofa">
+              Skills & Tech Stack
             </ion-card-subtitle>
           </ion-card-header>
-          <ion-card-content class="ion-margin-vertical">
-            <!-- <div class="slogan ion-text-center">
-              <ion-text class="slogan-text elevon">
-                  Developing code is much like chemistry.... Both involve
-                  blending components individually formulated from a limited set
-                  of elements together with other components from a diverse
-                  stock of existing components in novel ways to synthesize
-                  practical solutions that provide value.
-              </ion-text>
-            </div> -->
+          <ion-card-content class="ion-no-margin">
             <aw-wizard
               navBarLocation="top"
               navBarLayout="large-filled-symbols"
@@ -145,512 +149,562 @@
               #wizard
               class="custom-line-css"
             >
-              <!-- <ion-card class="wizzardCard ion-padding-top"> -->
-              <aw-wizard-step [stepTitle]="'Current'">
-                <ng-template awWizardStepSymbol>
-                  <ion-icon
-                    class="stepperIcon"
-                    size="large"
-                    name="trail-sign-sharp"
-                    color="primary"
-                  ></ion-icon>
-                </ng-template>
-                <div class="ion-text-center">
-                  <ion-text class="step-list-title elevon">Current</ion-text>
-                  <p class="white-text ion-padding-top ion-text-left">
-                    A JavaScript Web Application Developer with three years
-                    experience developing fullstack mobile first B2C progressive
-                    web apps using Ionic, Angular and Firebase. He can quickly
-                    prototype apps that integrate: eCommerce, messaging,
-                    notifications, authentication, user management, admin
-                    panels, visualizations, animations, SEO, SSR, native
-                    functions, and more. He writes copy, builds wireframes, and
-                    creates icons, 2D & 3D images and animations. His
-                    applications are built using Material Design principles
-                    ensuring easy to use, visually appealing user experiences.
-                  </p>
-                </div>
-                <!-- <div class="ion-text-left">
-                  <p class="white-text ion-padding-top ion-text-left">
-                    With a lifelong dedication to learning and coding, Douglas
-                    has recently added SVG, D3, TensorFlow & Actions on Google
-                    JavaScript libraries to his suite of skills providing him
-                    with the ability to deliver more advanced integrations of
-                    data visualizations, animations, machine learning & voice
-                    interactions into solutions he develops.
-                  </p>
-                </div> -->
-                <div class="ion-text-left">
-                  <p class="white-text">
-                    Currently, Douglas is available for project work or as a
-                    full time developer. He welcomes the opportunity to discuss
-                    your project, his background, and how he can best be of
-                    service to achieve your desired results. He resides in
-                    Lubbock, TX & will consider local and remote positions. That
-                    said, he has friends and family spread across the state, so
-                    he is also entertaining positions in the DFW metroplex or
-                    Austin.
-                  </p>
-                </div>
+              <ion-card class="inner-card ion-no-margin" color="secondary">
+                <ion-card-content>
+                  <aw-wizard-step [stepTitle]="'About'">
+                    <ng-template awWizardStepSymbol>
+                      <ion-icon
+                        class="stepperIcon"
+                        size="large"
+                        name="trail-sign-sharp"
+                        color="primary"
+                      ></ion-icon>
+                    </ng-template>
+                    <div class="ion-text-center">
+                      <ion-text class="step-list-title">About Me</ion-text>
+                      <p class="text ion-padding ion-text-left">
+                        I have been working as a fullstack JavaScript/TypeScript
+                        web application developer for over 5 years now. In that
+                        time I have learned to build mobile first, reactive, and
+                        hybrid native mobile apps using Angular, Ionic & React.
+                        Also, for rapid MVP prototype release I utilize
+                        serverless functions available with Google Cloud
+                        Platform's Firebase & Microsoft Azure. I have worked
+                        with many APIs and I have worked on and with large teams
+                        utilizing Scrum Agile Methodologies. Features I am
+                        capable of rapidly deploying include: form validation,
+                        eCommerce, SMS Push & email notifications, Oauth2 OpenID
+                        and Phone authentication, user dashboards, admin panels,
+                        visualizations, charts, data tables, animations, server
+                        side rendering, hybrid native functionality, and much
+                        more. My web apps are designed and developed using best
+                        in class principles ensuring easy to use, visually
+                        appealing, and quick UI/UX. You can
+                        <a routerLink="/resume">learn more </a> about me, and
+                        then <a routerLink="/contact">contact</a> me at your
+                        convenience. Thank you for stopping by!
+                      </p>
+                    </div>
 
-                <div class="btn-group">
-                  <ion-button
-                    color="secondary"
-                    shape="round"
-                    type="button"
-                    class="btn"
-                    awNextStep
-                    strong
-                  >
-                    <ion-text color="tertiary"> Next </ion-text>
-                  </ion-button>
-                </div>
-              </aw-wizard-step>
-              <aw-wizard-step [stepTitle]="'History'">
-                <ng-template awWizardStepSymbol>
-                  <ion-icon
-                    class="stepperIcon"
-                    size="large"
-                    name="time-sharp"
-                    color="primary"
-                  ></ion-icon>
-                </ng-template>
-                <div class="ion-text-center">
-                  <ion-text class="step-list-title elevon">History</ion-text>
-                  <p class="white-text ion-padding-top ion-text-left">
-                    Starting at a well known ISP during the .com boom as a
-                    network technician in 2000, his career path led to advanced
-                    technical sales positions where he worked with C-level
-                    management at B2B companies as an IT Services Consultant. He
-                    understands how to communicate effectively with client
-                    decision makers to determine expectations, and he knows how
-                    to deliver results.
-                    <!-- Consistently observing his clients' desire and need
-                    for customized software solutions while also learning about
-                    the mass potential that newer coding paradigms offer,
-                    Douglas realized that his future demanded that he learn to
-                    code if he was going to give clients what they truly needed. -->
-                  </p>
-                </div>
-                <div class="ion-text-left">
-                  <p class="white-text">
-                    Around three years ago, Douglas was presented with the
-                    opportunity to learn JavaScript while on the job. So, he
-                    jumped at the chance and has never looked back.
-                    <!-- His
-                    compulsion to understand how all things work ensures that he
-                    remains well versed on technologies at the forefront of the
-                    industry. -->
-                    Douglas is a self starter, but he also works efficiently as
-                    a team player. Results driven, he is motivated by feelings
-                    of accomplishment such as those felt upon successfully
-                    implementing a solution that transforms complex business
-                    processes into a user friendly, visually appealing web
-                    application which surpasses the client's expectations.
-                    Learning is second nature to Douglas, and he will push
-                    forward into continued success with each and every
-                    opportunity.
-                  </p>
-                </div>
+                    <div class="ion-text-left">
+                      <p class="text ion-padding">
+                        I am available for contract, part-time & full time
+                        employment. I welcome the opportunity to discuss your
+                        available positions, my background, and how we may be of
+                        able to work together. I currently reside in Lubbock TX
+                        where I can be near my extended family; thus, I am
+                        considering local or remote opportunities at this time.
+                      </p>
+                    </div>
 
-                <div class="btn-group">
-                  <ion-button
-                    color="secondary"
-                    shape="round"
-                    type="button"
-                    class="btn"
-                    awNextStep
-                    strong
-                  >
-                    <ion-text color="tertiary"> Next </ion-text>
-                  </ion-button>
-                  <ion-button
-                    color="light"
-                    shape="round"
-                    fill="outline"
-                    type="button"
-                    class="btn btn-secondary"
-                    awPreviousStep
-                  >
-                    Back
-                  </ion-button>
-                </div>
-              </aw-wizard-step>
-              <aw-wizard-step [stepTitle]="'Front'">
-                <ng-template awWizardStepSymbol>
-                  <ion-icon
-                    class="stepperIcon"
-                    size="large"
-                    name="person-sharp"
-                    color="primary"
-                  ></ion-icon>
-                </ng-template>
+                      <ion-button
+                        color="primary"
 
-                <ion-list lines="none" class="list ion-no-padding ion-margin">
-                  <ion-list-header class="list-header ion-text-center">
-                    <ion-text class="step-list-title elevon">
-                      Frontend Skills</ion-text
+                        type="button"
+                        class="btn"
+                        awNextStep (click)="scrollToId('tech')"
+                      >
+                        <ion-text class="sofa"> Next </ion-text>
+                      </ion-button>
+                  </aw-wizard-step>
+                  <aw-wizard-step [stepTitle]="'History'">
+                    <ng-template awWizardStepSymbol>
+                      <ion-icon
+                        class="stepperIcon"
+                        size="large"
+                        name="time-sharp"
+                        color="primary"
+                      ></ion-icon>
+                    </ng-template>
+                    <div class="ion-text-center">
+                      <ion-text class="step-list-title">History</ion-text>
+                      <p class=" text ion-padding ion-text-left">
+                        Starting at a well known ISP during the .com boom as a
+                        network technician in 2000, my career path led me into
+                        advanced technical sales positions where I sold &
+                        implemented software and hardware solutions as a IT
+                        Services Consultant. Thus, I understand how to
+                        communicate effectively with clients, decision makers &
+                        owners. I also know how and I strive to consistently
+                        deliver results.
+                        <!-- Consistently observing his clients' desire and need
+                        for customized software solutions while also learning about
+                        the mass potential that newer coding paradigms offer,
+                        Douglas realized that his future demanded that he learn to
+                        code if he was going to give clients what they truly needed. -->
+                      </p>
+                    </div>
+                    <div class="text ion-padding ion-text-left">
+                      <p>
+                        How did I switch to coding? Around three years ago, I
+                        was presented with an opportunity to learn JavaScript
+                        when I moved back to Lubbock to help take care of
+                        family. So, I jumped at the chance and I will never look
+                        back. I love to code, as there is so much to learn and
+                        the industry is always growing.
+                        <!-- His
+                      compulsion to understand how all things work ensures that he
+                      remains well versed on technologies at the forefront of the
+                      industry. -->
+                        As a self starter, I also work efficiently and with
+                        confidence while working with others as a team player.
+                        Results driven, I am motivated by feelings the of
+                        accomplishment such as those felt upon successfully
+                        implementing a solution I have developed which
+                        transforms complex business processes into a user
+                        friendly, visually appealing web applications that
+                        surpass the client's expectations. Learning is second
+                        nature to me, and I will push forward into continued
+                        success with each & every opportunity. I look forward to
+                        hearing from you. Thank you and have a wonderful day!
+                      </p>
+                    </div>
+
+                      <ion-button
+                        color="primary"
+
+                        type="button"
+                        class="btn"
+                        awNextStep (click)="scrollToId('tech')"
+
+                      >
+                        <ion-text class="sofa"> Next </ion-text>
+                      </ion-button>
+                      <ion-button
+                        color="light"
+
+                        fill="outline"
+                        type="button"
+                        class="btn btn-secondary"
+                        awPreviousStep (click)="scrollToId('tech')"
+                      >
+                        <ion-text class="sofa">Back</ion-text>
+                      </ion-button>
+                 </aw-wizard-step>
+                  <aw-wizard-step [stepTitle]="'Frontend'">
+                    <ng-template awWizardStepSymbol>
+                      <ion-icon
+                        class="stepperIcon"
+                        size="large"
+                        name="person-sharp"
+                        color="primary"
+                      ></ion-icon>
+                    </ng-template>
+
+                    <ion-list
+                      lines="none"
+                      class="list ion-no-padding ion-margin"
                     >
-                  </ion-list-header>
-                  <ion-grid class="ion-no-padding ion-margin-vertical">
-                    <ion-row class="ion-justify-content-center ion-text-center">
-                      <ion-col class="list-col">
-                        <ion-item-divider class="divider" color="dark">
-                          <ion-text class="divider-label" color="secondary"
-                            >NodeJS</ion-text
-                          >
-                        </ion-item-divider>
-                        <ion-item-group
-                          class="group ion-padding-vertical ion-margin-vertical"
+                      <div class="list-header ion-text-center">
+                        <ion-text class="step-list-title">
+                          Frontend Skills</ion-text
                         >
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Ionic </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Angular </ion-text>
-                          </ion-item>
+                      </div>
+                      <ion-grid >
+                        <ion-row
+                          class="ion-justify-content-center ion-text-center"
+                        >
+                          <ion-col class="list-col">
+                            <ion-item-group
+                            >
+                              <ion-list-header class="divider">
+                                <ion-text class="divider-label"
+                                  >TypeScript Frameworks</ion-text
+                                >
+                              </ion-list-header>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Ionic </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Angular </ion-text>
+                              </ion-item>
 
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Stripe & Paypal</ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Material & Bootstrap </ion-text>
-                          </ion-item>
-                        </ion-item-group>
-                      </ion-col>
-                      <ion-col class="list-col">
-                        <ion-item-divider class="divider" color="dark">
-                          <ion-text class="divider-label" color="secondary">
-                            Developer Tools
-                          </ion-text>
-                        </ion-item-divider>
-                        <ion-item-group
-                          class="group ion-padding-vertical ion-margin-vertical"
-                        >
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> VS Code </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text>Adobe Creative Cloud </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text>Figma</ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text>Data Studio </ion-text>
-                          </ion-item>
-                        </ion-item-group>
-                      </ion-col>
-                      <ion-col class="list-col">
-                        <ion-item-divider class="divider" color="dark">
-                          <ion-text class="divider-label" color="secondary">
-                            Technologies
-                          </ion-text>
-                        </ion-item-divider>
-                        <ion-item-group
-                          class="group ion-padding-vertical ion-margin-vertical"
-                        >
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text>Progressive Web Apps </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text>Mobile First</ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text>Server Side Rendering </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text>Hybrid Native Functions </ion-text>
-                          </ion-item>
-                        </ion-item-group>
-                      </ion-col>
-                    </ion-row>
-                  </ion-grid>
-                </ion-list>
-                <div class="btn-group">
-                  <ion-button
-                    color="secondary"
-                    shape="round"
-                    type="button"
-                    class="btn"
-                    awNextStep
-                    strong
-                  >
-                    <ion-text color="tertiary"> Next </ion-text>
-                  </ion-button>
-                  <ion-button
-                    color="light"
-                    shape="round"
-                    fill="outline"
-                    type="button"
-                    class="btn btn-secondary"
-                    awPreviousStep
-                  >
-                    Back
-                  </ion-button>
-                </div>
-              </aw-wizard-step>
-              <aw-wizard-step [stepTitle]="'Back'">
-                <ng-template awWizardStepSymbol>
-                  <ion-icon
-                    class="stepperIcon"
-                    size="large"
-                    name="library-sharp"
-                    color="primary"
-                  ></ion-icon>
-                </ng-template>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> React</ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Node</ion-text>
+                              </ion-item>
+                            </ion-item-group>
+                          </ion-col>
+                          <ion-col class="list-col">
+                            <ion-item-group
+                            >
+                              <ion-list-header class="divider">
+                                <ion-text class="divider-label">
+                                  Design Systems
+                                </ion-text>
+                              </ion-list-header>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Material Design </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Ionic Framework </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Bootstrap</ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Akveo </ion-text>
+                              </ion-item>
+                            </ion-item-group>
+                          </ion-col>
+                          <ion-col class="list-col">
+                            <ion-item-group
+                            >
+                              <ion-list-header class="divider" >
+                                <ion-text class="divider-label">
+                                  Features
+                                </ion-text>
+                              </ion-list-header>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Authentication</ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text
+                                  >SMS, Push & Email Notifications</ion-text
+                                >
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Hybrid Native Functionality</ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text
+                                  >Charts, Data Tables, DataViz
+                                </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Camera</ion-text>
+                              </ion-item>
+                            </ion-item-group>
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                    </ion-list>
+                      <ion-button
+                        color="primary"
 
-                <ion-list lines="none" class="list ion-no-padding ion-margin">
-                  <ion-list-header class="list-header ion-text-center">
-                    <ion-text class="step-list-title elevon">
-                      Backend Skills</ion-text
+                        type="button"
+                        class="btn"
+                        awNextStep (click)="scrollToId('tech')"
+
+                      >
+                        <ion-text class="sofa"> Next </ion-text>
+                      </ion-button>
+                      <ion-button
+                        color="light"
+
+                        fill="outline"
+                        type="button"
+                        class="btn btn-secondary"
+                        awPreviousStep (click)="scrollToId('tech')"
+                      >
+                        <ion-text class="sofa">Back</ion-text>
+                      </ion-button>
+                  </aw-wizard-step>
+                  <aw-wizard-step [stepTitle]="'Backend'">
+                    <ng-template awWizardStepSymbol>
+                      <ion-icon
+                        class="stepperIcon"
+                        size="large"
+                        name="library-sharp"
+                        color="primary"
+                      ></ion-icon>
+                    </ng-template>
+
+                    <ion-list
+                      lines="none"
+                      class="list ion-no-padding ion-margin"
                     >
-                  </ion-list-header>
-                  <ion-grid class="ion-no-padding ion-margin-vertical">
-                    <ion-row class="ion-justify-content-center ion-text-center">
-                      <ion-col class="list-col">
-                        <ion-item-divider class="divider" color="dark">
-                          <ion-text class="divider-label" color="secondary">
-                            GCP & Firebase
-                          </ion-text>
-                        </ion-item-divider>
-                        <ion-item-group
-                          class="group ion-padding-vertical ion-margin-vertical"
+                      <div class="list-header ion-text-center">
+                        <ion-text class="step-list-title">
+                          Backend Skills</ion-text
                         >
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> serverless functions </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> NoSQL </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Cloud Messaging </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> edge caching </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> content delivery network </ion-text>
-                          </ion-item>
-                        </ion-item-group>
-                      </ion-col>
-                      <ion-col class="list-col">
-                        <ion-item-divider class="divider" color="dark">
-                          <ion-text class="divider-label" color="secondary">
-                            Automation
-                          </ion-text>
-                        </ion-item-divider>
-                        <ion-item-group
-                          class="group ion-padding-vertical ion-margin-vertical"
+                      </div>
+                      <ion-grid>
+                        <ion-row
+                          class="ion-justify-content-center ion-text-center"
                         >
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Webhooks </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> continuous integration </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> continuous deployment </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Github Actions </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> resource scaling </ion-text>
-                          </ion-item>
-                        </ion-item-group>
-                      </ion-col>
-                      <ion-col class="list-col">
-                        <ion-item-divider class="divider" color="dark">
-                          <ion-text class="divider-label" color="secondary"
-                            >Analytics
-                          </ion-text>
-                        </ion-item-divider>
-                        <ion-item-group
-                          class="group ion-padding-vertical ion-margin-vertical"
-                        >
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> X-Device user tracking </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Realtime </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> Funnels </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> A/B testing </ion-text>
-                          </ion-item>
-                          <ion-item class="list-item"
-                            ><ion-icon
-                              name="flask-sharp"
-                              class="item-icon"
-                              size="small"
-                            ></ion-icon>
-                            <ion-text> user segment customization </ion-text>
-                          </ion-item>
-                        </ion-item-group>
-                      </ion-col>
-                    </ion-row>
-                  </ion-grid>
-                </ion-list>
+                          <ion-col class="list-col">
+                            <ion-item-group
+                            >
+                              <ion-list-header class="divider" >
+                                <ion-text class="divider-label">
+                                  Cloud Services
+                                </ion-text>
+                              </ion-list-header>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Firebase </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> GCP</ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Microsoft Azure </ion-text>
+                              </ion-item>
+                            </ion-item-group>
+                          </ion-col>
+                          <ion-col class="list-col">
+                            <ion-item-group
+                            >
+                              <ion-list-header class="divider" >
+                                <ion-text class="divider-label">
+                                  CI/CD, Automation, Unit Tests
+                                </ion-text>
+                              </ion-list-header>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Azure Pipelines </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Github Actions </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Travis </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Jest </ion-text>
+                              </ion-item>
+                            </ion-item-group>
+                          </ion-col>
+                          <ion-col class="list-col">
+                            <ion-item-group
 
-                <div class="btn-group">
-                  <ion-button
-                    strong
-                    color="secondary"
-                    shape="round"
-                    type="button"
-                    class="btn"
-                    awResetWizard
-                    strong
-                  >
-                    <ion-text color="tertiary"> Done </ion-text>
-                  </ion-button>
+                            >
+                              <ion-list-header class="divider" >
+                                <ion-text class="divider-label"
+                                  >Databases
+                                </ion-text>
+                              </ion-list-header>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Firestore</ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Azure CosmosDB </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Azure SQL </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> MongoDB </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>MySQL</ion-text>
+                              </ion-item>
+                            </ion-item-group>
+                          </ion-col>
+                          <ion-col class="list-col">
+                            <ion-item-group
 
-                  <ion-button
-                    color="light"
-                    shape="round"
-                    fill="outline"
-                    type="button"
-                    class="btn btn-secondary"
-                    awPreviousStep
-                  >
-                    Back
-                  </ion-button>
-                </div>
-              </aw-wizard-step>
-              <!-- </ion-card> -->
+                            >
+                              <ion-list-header class="divider" >
+                                <ion-text class="divider-label">
+                                  Services
+                                </ion-text>
+                              </ion-list-header>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>Serverless Functions</ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Express </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Twilio </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text> Stripe/PayPal </ion-text>
+                              </ion-item>
+                              <ion-item class="list-item"
+                                ><ion-icon
+                                  name="flask-sharp"
+                                  class="item-icon"
+                                  size="small"
+                                ></ion-icon>
+                                <ion-text>MS Graph </ion-text>
+                              </ion-item>
+                            </ion-item-group>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col>
+                            <ion-button class="ion-margin-vertical" routerLink="/resume" color="secondary">
+                              <ion-text class="secondary-button" color="primary">My Resume</ion-text>
+                            </ion-button>
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                    </ion-list>
+
+                      <ion-button
+
+                        color="primary"
+
+                        type="button"
+                        class="btn"
+                        awResetWizard
+                        (click)="scrollToId('tech')"
+
+                      >
+                        <ion-text class="sofa"> Reset </ion-text>
+                      </ion-button>
+
+                      <ion-button
+                        color="light"
+
+                        fill="outline"
+                        type="button"
+                        class="btn btn-secondary"
+                        awPreviousStep (click)="scrollToId('tech')"
+                      >
+                        <ion-text class="sofa">Back</ion-text>
+                      </ion-button>
+                  </aw-wizard-step>
+                </ion-card-content>
+              </ion-card>
             </aw-wizard>
           </ion-card-content>
         </ion-card>
