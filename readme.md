@@ -1,5 +1,8 @@
 <h1 align="center"> Douglas White App</h1>
 
+[![Build and Deploy](https://github.com/Apsistec/douglaswhite-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/Apsistec/douglaswhite-app/actions/workflows/deploy.yml)
+[![CodeQL](https://github.com/Apsistec/douglaswhite-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Apsistec/douglaswhite-app/actions/workflows/codeql-analysis.yml)
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
