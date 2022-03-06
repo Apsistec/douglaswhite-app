@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ModuleWithComponentFactories } from '@angular/core';
 
 @Component({
   selector: 'app-resume',
@@ -8,3 +8,6 @@ import { Component } from '@angular/core';
 export class ResumePage {
   constructor() {}
 }
+
+
+

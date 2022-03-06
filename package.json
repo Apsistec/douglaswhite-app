@@ -36,6 +36,7 @@
     "angular-archwizard": "^7.0.0",
     "cordova-res": "^0.15.3",
     "firebase": "^8.4.3",
+    "fred-api": "^2.0.1",
     "ngx-extended-pdf-viewer": "^9.0.5",
     "ngx-take-until-destroy": "^5.4.0",
     "rxjs": "~6.6.0",

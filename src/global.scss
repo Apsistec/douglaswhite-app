@@ -31,24 +31,11 @@
 /* Fonts */
 /* Text for Paragraph Readability */
 .slogan {
-  font-family: professor, sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.75em;
-  color: var(--ion-text-color);
-}
-
-.elevon {
-  font-family: elevon, sans-serif;
-  font-style: normal;
-}
-
-.text {
-  // font-family: acumin-pro, sans-serif;
-  // font-style: normal;
-  // font-weight: 600;
-  // font-size: 1.2em;
-  color: var(--ion-text-color);
+  // color: var(--ion-text-color);
 }
 
 /* Main Hero display centerpiece Heading */
@@ -75,13 +62,12 @@
   font-style: normal;
   font-size: 1.7em;
   text-transform: capitalize;
-  color: var(--ion-text-color);
+  // color: var(--ion-text-color);
 }
 
 /* Card Header Sub-Titles */
 .sub-heading {
-  color: var(--ion-color-primary-shade);
-  text-shadow: 0 0 8px white;
+  color: var(--ion-color-primary-tint);
   font-family: sofachrome, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -105,17 +91,15 @@ p.help.is-danger {
 }
 
 /* Page transition animation */
-.bounceOutDown {
-  animation: 2.5s ease-out infinite bounceoutdown;
-}
+// .bounceOutDown {
+//   animation: 3s ease-out infinite bounceoutdown;
+// }
 
-/* animations for fab button on landing page going down */
-@keyframes bounceoutdown {
-  50% {
-    transform: translate(0, 4px);
-    opacity: 0.7;
-  }
-}
+// /* animations for fab button on landing page going down */
+// @keyframes bounceoutdown {
+//   transition: translateY(-12px) scale(50%);
+
+// }
 
 /* Header Toolbar Icon*/
 .header-icon {
@@ -162,11 +146,11 @@ p.help.is-danger {
 
 /* Toast CSS */
 .successT {
-  --background: var(--ion-color-dark);
-  --border-color: var(--ion-color-secondary);
+  --background: var(--ion-color-primary-tint);
+  --border-color: var(--ion-color-primary-shade);
   --border-style: solid;
   --border-width: 2px;
-  --color: white;
+  --color: var(--ion-color-secondary-tint);
 }
 
 /* Footer to keep footer at bottom */
@@ -195,4 +179,18 @@ ion-card {
   box-shadow: 0 1px 3px black, 0 2px 13px black, 0 3px 18px black,
     0 0 10px black;
   z-index: 30;
+}
+
+.sofa{
+  font-family: sofachrome, sans-serif;
+  color: var(--ion-color-tertiary);
+}
+.text
+{
+  color: var(--ion-text-color);
+}
+
+.btn
+{
+  font-size: 12pt;
 }
