@@ -12,22 +12,20 @@ import { ContactPageRoutingModule } from './contact-routing.module';
 import { ContactPage } from './contact.page';
 
 @NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    ContactPageRoutingModule,
-    SharedModule,
-  ],
-  entryComponents: [ControlErrorComponent],
-
-  declarations: [
-    ContactPage,
-    ControlErrorsDirective,
-    FormSubmitDirective,
-    ControlErrorContainerDirective,
-    ControlErrorComponent,
-  ],
+    imports: [
+        IonicModule,
+        CommonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        ContactPageRoutingModule,
+        SharedModule,
+    ],
+    declarations: [
+        ContactPage,
+        ControlErrorsDirective,
+        FormSubmitDirective,
+        ControlErrorContainerDirective,
+        ControlErrorComponent,
+    ]
 })
 export class ContactPageModule {}

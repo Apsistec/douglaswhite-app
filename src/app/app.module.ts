@@ -23,37 +23,36 @@ import { AppComponent } from './app.component';
 import { NeonComponent } from './neon/neon.component';
 
 @NgModule({
-  declarations: [AppComponent, NeonComponent],
-  entryComponents: [],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    IonicStorageModule.forRoot(),
-    IonicModule.forRoot(),
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireFunctionsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-    NoopAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-  ],
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    StatusBar,
-    SplashScreen,
-    { provide: NEW_ORIGIN_BEHAVIOR, useValue: true },
-    { provide: ORIGIN, useValue: 'https://douglaswhite.app' },
-  ],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, NeonComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        IonicStorageModule.forRoot(),
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireFunctionsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: environment.production,
+            // Register the ServiceWorker as soon as the app is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000',
+        }),
+        NoopAnimationsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: environment.production,
+            // Register the ServiceWorker as soon as the app is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000',
+        }),
+    ],
+    providers: [
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        StatusBar,
+        SplashScreen,
+        { provide: NEW_ORIGIN_BEHAVIOR, useValue: true },
+        { provide: ORIGIN, useValue: 'https://douglaswhite.app' },
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
