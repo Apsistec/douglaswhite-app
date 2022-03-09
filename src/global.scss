@@ -142,7 +142,7 @@ p.help.is-danger {
 }
 
 /* Ng-archwizard stepper r */
-@import "../node_modules/angular-archwizard/styles/archwizard.scss";
+// @import "../node_modules/angular-archwizard/styles/archwizard.scss";
 
 /* Toast CSS */
 .successT {
@@ -193,4 +193,14 @@ ion-card {
 .btn
 {
   font-size: 12pt;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
 }

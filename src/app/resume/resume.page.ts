@@ -8,6 +8,3 @@ import { Component, ModuleWithComponentFactories } from '@angular/core';
 export class ResumePage {
   constructor() {}
 }
-
-
-

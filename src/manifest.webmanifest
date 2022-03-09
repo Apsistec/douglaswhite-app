@@ -1,13 +1,14 @@
 {
   "name": "douglaswhite-app",
-  "short_name": "douglaswhite",
-  "theme_color": "#041DFF",
+  "short_name": "douglaswhite-app",
+  "theme_color": "#aeb1bd",
   "background_color": "#222428",
-  "description": "A web app developer's portfolio showcasing Douglas White's experience and skills.",
+  "description": "A portfolio for Douglas White presenting some of the functionality available in an Ionic progressive web application.",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
   "icons": [
+
     {
       "src": "assets/icons/icon-32x32.png",
       "sizes": "32x32",
@@ -52,5 +53,6 @@
       "type": "image/png",
       "purpose": "maskable any"
     }
+    
   ]
 }

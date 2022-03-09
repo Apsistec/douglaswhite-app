@@ -119,7 +119,7 @@
       div.label {
         color: var(--ion-color-secondary-tint) !important;
         font-family: sofachrome, sans-serif;
-        font-size:  7pt;
+        font-size: 7pt;
       }
       div.step-indicator {
         background-color: var(--ion-color-secondary-tint) !important;
@@ -152,6 +152,7 @@
   display: block;
   margin-inline: auto;
   border-bottom: 1px solid var(--ion-text-color);
+  padding: 10px;
 }
 
 .list {
@@ -190,7 +191,30 @@
   text-align: left;
 }
 
-.secondary-button{
+.secondary-button {
   font-family: sofachrome, sans-serif;
   font-size: 12pt;
+}
+
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.matButton{
+  color: var(--ion-color-secondary);
+}
+
+.step-button{
+  background-color: var(--ion-color-primary);
+  margin: 5px;
+}
+.step-button-bak{
+  color: var(--ion-text-color);
+  margin: 5px;
+
 }

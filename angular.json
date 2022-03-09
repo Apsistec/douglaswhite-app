@@ -35,10 +35,9 @@
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               },
-              "src/manifest.webmanifest",
               "src/manifest.webmanifest"
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/purple-green.css", "src/theme/variables.scss", "src/global.scss"],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,
@@ -46,9 +45,7 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true,
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -108,7 +105,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "styles": [],
+            "styles": [ "./node_modules/@angular/material/prebuilt-themes/purple-green.css"],
             "scripts": [],
             "assets": [
               {
@@ -126,7 +123,6 @@
                 "input": "src/assets",
                 "output": "/assets"
               },
-              "src/manifest.webmanifest",
               "src/manifest.webmanifest"
             ]
           },
