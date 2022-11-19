@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire/compat';
 import {
   AngularFireFunctionsModule,
   NEW_ORIGIN_BEHAVIOR,
   ORIGIN,
-} from '@angular/fire/functions';
+} from '@angular/fire/compat/functions';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   BrowserAnimationsModule,
