@@ -184,6 +184,16 @@
               "devServerTarget": "app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "app:build:production",
+            "firebaseProject": "douglaswhite-app",
+            "firebaseHostingSite": "douglaswhite-app"
+          }
         }
       }
     }
