@@ -5,9 +5,9 @@ import { Storage } from '@ionic/storage-angular';
   providedIn: 'root',
 })
 export class StorageService {
-  private _storage: Storage | null = null;
+  private storage; //: Storage | null = null;
 
-  constructor(private storage: Storage) {
+  constructor(private _storage: Storage) {
     this.init();
   }
 
@@ -19,7 +19,7 @@ export class StorageService {
 
   // Create and expose methods that users of this service can
   // call, for example:
-  public set(key: string, value: any) {
+  public set(key: string, value: string | number) {
     this._storage?.set(key, value);
   }
 

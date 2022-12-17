@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire/compat';
 import {
   AngularFireFunctionsModule,
   ORIGIN,
-  // NEW_ORIGIN_BEHAVIOR,
 } from '@angular/fire/compat/functions';
+import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
+import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage-angular';
 
@@ -39,12 +37,11 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 @NgModule({
   declarations: [AppComponent, NeonComponent],
   imports: [
+    IonicModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(),
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireFunctionsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -52,7 +49,6 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
-    BrowserAnimationsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
@@ -64,10 +60,9 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
     provideStorage(() => getStorage()),
   ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    StatusBar,
     SplashScreen,
-    // { provide: NEW_ORIGIN_BEHAVIOR, useValue: true },
+    StatusBar,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: ORIGIN, useValue: 'https://douglaswhite.app' },
     ScreenTrackingService,
     UserTrackingService,
