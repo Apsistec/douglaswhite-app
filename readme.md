@@ -1,4 +1,5 @@
-<h1 align="center"> Douglas White App</h1>
+Douglas White App
+=
 
 [![Build and Deploy](https://github.com/Apsistec/douglaswhite-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/Apsistec/douglaswhite-app/actions/workflows/deploy.yml)
 [![CodeQL](https://github.com/Apsistec/douglaswhite-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Apsistec/douglaswhite-app/actions/workflows/codeql-analysis.yml)
@@ -10,207 +11,139 @@
 [![GNU General Public License v3.0][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<p align="center">
-<img src="src/assets/icons/icon-192x192.png" />
-</p>
-<p align="left"><b>What is DouglasWhite.app?</b></p>
-<p>A portfolio app for Douglas White, showing contact info and past work built on
-a progressive web app(PWA), allowing home screen installation, and other
-features that work cross-platform on mobile, desktop, and larger devices that
-have a browser.</p>
-
-[Commit Activity][ca]
-
-[Douglas White App on Github](https://github.com/apsistec/douglaswhite=app)
-
-[Explore the docs](https://github.com/apsistec/expert-fit")
-
-[View Demo](https://github.com/apsistec/expert-fit)
-
-[Report Bug](https://github.com/apsistec/expert-fit/issues)
-
-[Request Feature](https://github.com/apsistec/expert-fit/issues)
-
-## Table of Contents
+Table of Contents
+---
 
 - [Tech Stack](#tech-stack)
 - [About The Project](#about-the-project)
-- [Structure of App](#structure-of-app)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Contributors/People](#contributorspeople)
 - [Support](#support)
 
-## Tech Stack
+Tech Stack
+---
 
 - [Ionic](https://ionicframework.com)
 - [Angular](https://angular.io)
 - [Firebase](https://firebase.com)
 - [Sendgrid](https://sendgrid.com)
 
+About The Project
 ---
 
-## About The Project
+A portfolio for Douglas White presenting some of the functionality available in
+an Ionic progressive web application.
 
-[![product-screenshot][product screenshot]][screenshot]
+Getting Started
+---
 
-The goal has been simple, to develop a web apps capable of enabling clients to
-make a mark in their market.
+  To get a local copy up and running follow these simple example steps.
 
-## Getting Started
+Prerequisites
+---
 
-To get a local copy up and running follow these simple example steps.
+  1. Install
+    [NodeJS](https://www.nodejs.com)
 
-### Prerequisites
+  2. Using npm, install:
 
-    1. Install
-      [NodeJS](https://www.nodejs.com)
+```sh npm install npm@latest -global```
 
-    2. Using npm, install:
+```sh npm install @angular/cli@latest -global```
 
-      ```sh
-      npm install npm@latest -global
-      ```
+```sh npm install @ionic/cli@latest -global```
 
-      ```sh
-      npm install @angular/cli@latest -global
-      ```
+```sh npm install firebase-tools@latest -global```
 
-      ```sh
-      npm install @ionic/cli@latest -global
-      ```
+Acquire Accounts
+---
 
-      ```sh
-      npm install firebase-tools@latest -global
-      ```
+  1. Get a free Stripe Account at [https://dashboard.stripe.com/apikeys](https://dashboard.stripe.com/apikeys)
+  2. Get a free Firebase Account at [https://firebase.com](https://firebase.com)
+  3. Get a free Sendgrid Account at [https://app.sendgrid.com](https://app.sendgrid.com)
 
-### Acquire Accounts
+Installation
+---
 
-    1. Get a free Stripe Account at [https://dashboard.stripe.com/apikeys](https://dashboard.stripe.com/apikeys)
-    2. Get a free Firebase Account at [https://firebase.com](https://firebase.com)
-    3. Get a free Sendgrid Account at [https://app.sendgrid.com](https://app.sendgrid.com)
-
-## Installation
-
-<details open>
-<summary>Installation Steps:</summary>
-<ol>
-    <li>Clone the repo
-
-    ```sh
-    git clone https://github.com/apsistec/expert-fit.git
-    ```
-
-      </li>
-      <li> Install NPM packages
-
-    ```sh
-    npm install
-    ```
-
-    </li>
-
-    <li>Setup Firebase backend
-
-    ```sh
-    firebase init
-    ```
-    </li>
-    <li>Enter your APIs in `environments/environment.ts` and `environments/environment.prod.ts`
+1. Clone the repo
+```sh git clone https://github.com/apsistec/expert-fit.git```
+2. Install NPM packages
+```sh npm install```
+3. Setup Firebase backend
+```sh firebase init```
+4. Enter your APIs in `environments/environment.ts` and `environments/environment.prod.ts`
 
     ```js
-    export const environment = {
-      production: "boolean",
-      firebaseConfig: {
-        apiKey: "...",
-        authDomain: "...",
-        databaseURL: "...",
-        projectId: "...",
-        storageBucket: "...",
-        messagingSenderId: "...",
-        appId: "...",
-        measurementId: "...",
-      },
-      stripePubKey: "pk_test_ API",
-      taxRates: ["enter API"],
-    };
-    ```
-    </li>
+      export const environment = {
+        production: "boolean",
+        firebaseConfig: {
+          apiKey: "...",
+          authDomain: "...",
+          databaseURL: "...",
+          projectId: "...",
+          storageBucket: "...",
+          messagingSenderId: "...",
+          appId: "...",
+          measurementId: "...",
+        },
+        stripePubKey: "pk_test_ API",
+        taxRates: ["enter API"],
+      };```
 
-    <li>Compile the function code
+5. Compile the function code
 
     ```sh
-    cd functions
-    ```
+    cd functions```
 
     ```sh
-    npm install
-    ```
+    npm install```
 
     ```sh
-    ng build
-    ```
+    ng build```
 
     ```sh
-    cd -
-    ```
+    cd -```
 
-    </li>
-
-    <li>Compile the app code -production quality
+6. Compile the app code -production quality
 
     ```sh
-    ionic build --prod
-    ```
+    ionic build --prod```
 
-    </li>
-
-    <li>Work on the app code with hot-reload
+7. Work on the app code with hot-reload
 
     ```sh
-    ionic serve
-    ```
+    ionic serve```
 
-    </li>
-
-    <li>Deploy to Firebase Authentication, Hosting, Database, Serverless and Storage
+8. Deploy to Firebase Authentication, Hosting, Database, Serverless and Storage
 
     ```sh
-    firebase deploy
-    ```
+    firebase deploy```
 
-    </li>
+Contributing
+---
 
-</ol>
-</details>
+  > To get started...
 
-## Contributing
+  **Step 1** Install Repo
 
-    > To get started...
+  *[ ] **Option :one:**
 
-    **Step 1** Install Repo
+  :trident: Fork this repo:
 
-    * [ ] **Option :one:**
+  [DouglasWhite-app Repo](https://github.com/apsistec/douglaswhite-app)
 
-    :trident: Fork this repo:
+- [ ] **Option :two:**
+  Clone this repo to your local machine:
 
-      ```http
-    https://github.com/apsistec/douglaswhite-app
-    ```
-
-    * [ ] **Option :two:**
-
-    Clone this repo to your local machine:
-
-      ```shell
+    ```shell
     git clone https://github.com/apsistec/douglaswhite-app.git
     ```
 
     **Step 2** Code your Code
 
-    * [ ] **Option :one:**
+- [ ] **Option :one:**
 
     Add previously approved **new code**
 
@@ -221,7 +154,7 @@ To get a local copy up and running follow these simple example steps.
 
     -or-
 
-    * [ ] **Option :two:**
+- [ ] **Option :two:**
 
     :mag:Find then :wrench:work on the previously approved **changes** and/or
      **refactoring code**
@@ -233,7 +166,7 @@ To get a local copy up and running follow these simple example steps.
 
     **Step 3** Pull Request
 
-    * [ ] 🔃 **Create a Pull Request at**
+- [ ] 🔃 **Create a Pull Request at**
 
     ```http
     https://github.com/Apsistec/douglaswhite-app/pulls
@@ -241,18 +174,19 @@ To get a local copy up and running follow these simple example steps.
 
     **Step 4** Submit for Review and Acceptance
 
-    * [ ] **Submit!** :beer:
+- [ ] **Submit!** :beer:
 
-## Contributors/People
+Contributors/People
+---
 
-![**Apsistec**](https://avatars0.githubusercontent.com/u/6438623?s=400&u=aaaf57f08f5fff530672ecd3a18f26a53f704850&v=4)
+[![**Apsistec**]](https://avatars0.githubusercontent.com/u/6438623?s=400&u=aaaf57f08f5fff530672ecd3a18f26a53f704850&v=4)
 
-### Support
+Support
+---
 
-> Reach me at any of the following :link:sites:
+> Reach me at any of the following
 
 - [Douglas White App Contact Info](https://DouglasWhite.app)
-- [Twitter Channel](https://twitter.com/rankfsports)
 - [Slack Channnel](https://apsistec.slack.com)
 
 Copyright 2021 © [douglaswhiteapp](https://DouglasWhite.app)
@@ -269,5 +203,3 @@ Copyright 2021 © [douglaswhiteapp](https://DouglasWhite.app)
 [license-url]: https://github.com/apsistec/douglaswhite-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/apsistec
-[ca]: https://github.com/Apsistec/douglaswhite-app/graphs/commit-activity
-[project]: https://github.com/apsistec/douglaswhite-app
