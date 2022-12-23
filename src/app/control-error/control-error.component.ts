@@ -3,7 +3,6 @@ import {
   ChangeDetectorRef,
   Component,
   Input,
-  OnInit,
 } from '@angular/core';
 
 @Component({
@@ -11,11 +10,11 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./control-error.component.scss'],
 })
-export class ControlErrorComponent implements OnInit {
+export class ControlErrorComponent {
   _text;
   _hide = true;
 
-  @Input() set text(value) {
+  @Input() set text(value: string) {
     if (value !== this._text) {
       this._text = value;
       this._hide = !value;
@@ -25,5 +24,4 @@ export class ControlErrorComponent implements OnInit {
 
   constructor(private cdr: ChangeDetectorRef) {}
 
-  ngOnInit() {}
 }

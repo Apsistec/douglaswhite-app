@@ -14,10 +14,8 @@
 <img src="src/assets/icons/icon-192x192.png" />
 </p>
 <p align="left"><b>What is DouglasWhite.app?</b></p>
-<p>A portfolio app for Douglas White, showing contact info and past work built on
-a progressive web app(PWA), allowing home screen installation, and other
-features that work cross-platform on mobile, desktop, and larger devices that
-have a browser.</p>
+<p>A PWA which provides a look at Douglas White's engineering projects, tech stack,
+ skills, background information, and a means to reach him directly.</p>
 
 [Commit Activity][ca]
 
@@ -35,10 +33,8 @@ have a browser.</p>
 
 - [Tech Stack](#tech-stack)
 - [About The Project](#about-the-project)
-- [Structure of App](#structure-of-app)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Contributors/People](#contributorspeople)
 - [Support](#support)
@@ -54,10 +50,10 @@ have a browser.</p>
 
 ## About The Project
 
-[![product-screenshot][product screenshot]][screenshot]
+[!][screenshot]
 
-The goal has been simple, to develop a web apps capable of enabling clients to
-make a mark in their market.
+The goal has been simple, to provide hiring managers with a portfolio offering
+ a quick and accurate view of my engineering background and skills.
 
 ## Getting Started
 
@@ -270,4 +266,4 @@ Copyright 2021 © [douglaswhiteapp](https://DouglasWhite.app)
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/apsistec
 [ca]: https://github.com/Apsistec/douglaswhite-app/graphs/commit-activity
-[project]: https://github.com/apsistec/douglaswhite-app
+[screenshot]: ./src/assets/logo.svg

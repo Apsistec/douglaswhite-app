@@ -22,15 +22,8 @@
   text-align: center;
 }
 
-.card-container {
-  // overflow: hidden;
-  position: relative;
-  border-radius: 15px;
-  border: 2px solid var(--ion-color-tertiary);
-}
-
 .link {
-  color: white;
+  color: var(--ion-color-tertiary);
 }
 
 ion-grid {

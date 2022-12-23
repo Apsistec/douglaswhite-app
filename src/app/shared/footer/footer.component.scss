@@ -5,17 +5,13 @@
 
 .link-icon {
   position: absolute;
-  padding-left: 20px;
+  right: 20px;
   top: 10px;
 }
 
 .icon {
   margin-right: 15px;
   font-size: 36px;
-}
-
-.twitter {
-  color: #1d9bf0;
 }
 
 .github {
@@ -28,7 +24,24 @@
 
 .linkedin {
   margin-right: 5px;
-  color: blue;
+}
+
+/* Logo in toolbars */
+.logo {
+  position: absolute;
+  left: 25px;
+  font-size: 168px;
+  bottom: 10px;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
 }
 
 

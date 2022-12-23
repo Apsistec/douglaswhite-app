@@ -5,7 +5,11 @@ import { Storage } from '@ionic/storage-angular';
   providedIn: 'root',
 })
 export class StorageService {
+<<<<<<< Updated upstream
   private _storage: Storage | null = null;
+=======
+  private storage: Storage | null = null;
+>>>>>>> Stashed changes
 
   constructor(private storage: Storage) {
     this.init();

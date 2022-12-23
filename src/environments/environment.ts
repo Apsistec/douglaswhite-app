@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   firebaseConfig: {
     apiKey: 'AIzaSyCQj3laqd0VNzQ3oYKcBq2spcXf90YoHSU',
+<<<<<<< Updated upstream
     authDomain: 'douglaswhite-app.firebaseapp.com',
     projectId: 'douglaswhite-app',
     storageBucket: 'douglaswhite-app.appspot.com',
@@ -13,6 +14,10 @@ export const environment = {
     appId: '1:904022686145:web:5de0197f1b306f229a1740',
     measurementId: 'G-GWMSVQ8MDM',
   }
+=======
+  },
+  production: false,
+>>>>>>> Stashed changes
 };
 
 /*

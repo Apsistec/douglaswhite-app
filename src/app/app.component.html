@@ -1,7 +1,12 @@
 <ion-app>
   <ion-header [translucent]="true" class="header">
     <ion-toolbar>
-      <app-neon routerLink="/about" class="neon"></app-neon>
+      <ion-buttons>
+        <img src="../../assets/logo.svg" height="32px" style="margin: 15px;">
+        <ion-text>
+          DouglasWhite.app
+        </ion-text>
+      </ion-buttons>
       <ion-buttons slot="end">
         <ion-icon size="large" color="warning" name="sunny"></ion-icon>
         <ion-toggle id="toggle" [checked]="checked"></ion-toggle>
@@ -9,6 +14,7 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
-  <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
 </ion-app>

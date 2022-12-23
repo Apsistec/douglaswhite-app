@@ -1,4 +1,4 @@
-<ion-content class="content">
+<ion-content>
   <ion-grid class="ion-no-padding ion-margin-vertical">
     <ion-row class="ion-justify-content-center">
       <ion-col
@@ -9,7 +9,7 @@
         size-xl="3"
         class="ion-align-self-center"
       >
-        <ion-card class="card contact-card ion-text-center">
+        <ion-card class="card ion-text-center">
           <ion-card-header class="ion-text-center">
             <ion-card-title class="title">
               Have an Opportunity?
@@ -21,10 +21,9 @@
           <ion-card-content class="ion-padding-bottom">
             <form [formGroup]="emailForm" (ngSubmit)="emailFormHandler()">
               <ion-item class="items ion-margin-bottom" lines="none">
-                <ion-label class="label-color" position="stacked"
-                  >Name</ion-label
-                >
-
+                <ion-label class="label-color" position="stacked">
+                  Name
+                </ion-label>
                 <ion-input
                   debounce="600"
                   type="text"
@@ -40,17 +39,17 @@
                 >
                   <ion-icon
                     class="input-icon"
-                    color="tertiary"
+                    color="primary"
                     slot="none"
                     name="person-sharp"
-                  ></ion-icon>
+                  >
+                  </ion-icon>
                 </ion-input>
               </ion-item>
               <ion-item class="items" lines="none">
                 <ion-label class="label-color" position="stacked"
                   >Email</ion-label
                 >
-
                 <ion-input
                   debounce="600"
                   type="email"
@@ -61,16 +60,17 @@
                 >
                   <ion-icon
                     class="input-icon"
-                    color="tertiary"
+                    color="primary"
                     slot="none"
                     name="mail-sharp"
-                  ></ion-icon>
+                  >
+                  </ion-icon>
                 </ion-input>
               </ion-item>
               <ion-item class="items ion-margin-vertical" lines="none">
-                <ion-label class="label-color" position="stacked"
-                  >Message</ion-label
-                >
+                <ion-label class="label-color" position="stacked">
+                  Message
+                </ion-label>
                 <ion-textarea
                   debounce="600"
                   class="textarea"
@@ -89,7 +89,6 @@
                 >
                 </ion-textarea>
               </ion-item>
-
               <ion-button
                 type="submit"
                 shape="round"
@@ -100,10 +99,6 @@
               >
                 <ion-text class="sofa">Submit</ion-text>
               </ion-button>
-              <!-- <ion-card class="card">
-                <meter min="0" max="1" [value]="emailForm.valid"></meter>
-                <output name="out"></output>
-              </ion-card> -->
             </form>
           </ion-card-content>
         </ion-card>

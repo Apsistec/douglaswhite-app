@@ -1,6 +1,7 @@
 {
   "name": "douglaswhite-app",
   "short_name": "douglaswhite-app",
+<<<<<<< Updated upstream
   "theme_color": "#aeb1bd",
   "background_color": "#222428",
   "description": "A portfolio for Douglas White presenting some of the functionality available in an Ionic progressive web application.",
@@ -55,4 +56,13 @@
     }
     
   ]
+=======
+  "theme_color": "#00435e",
+  "background_color": "#323433",
+  "description": "A PWA which provides a look at Douglas White's engineering projects, tech stack, skills, background information, and a means to reach him directly.",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": []
+>>>>>>> Stashed changes
 }

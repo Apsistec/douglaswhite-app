@@ -1,12 +1,22 @@
 import { Alert } from 'selenium-webdriver';
 
 import { Component, OnInit } from '@angular/core';
+<<<<<<< Updated upstream
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+=======
+// import { AngularFireFunctions } from '@angular/fire/compat/functions';
+import { Functions, httpsCallableData } from '@angular/fire/functions';
+
+import {
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
+>>>>>>> Stashed changes
 import {
   AlertController,
-  LoadingController,
   ToastController,
 } from '@ionic/angular';
 
@@ -25,16 +35,20 @@ export class ContactPage implements OnInit {
   name;
   email;
   message;
-  isLoading = false;
   res: Result;
-  // raw;
+
   constructor(
+    private fun: Functions,
     private toast: ToastController,
     private alert: AlertController,
+<<<<<<< Updated upstream
     private fb: FormBuilder,
     private fun: AngularFireFunctions,
     private loadingController: LoadingController,
     private router: Router
+=======
+    private fb: UntypedFormBuilder,
+>>>>>>> Stashed changes
   ) {}
 
   ngOnInit() {
@@ -58,38 +72,18 @@ export class ContactPage implements OnInit {
       ],
     });
 
-    // this.raw = this.emailForm.getRawValue();
   }
-  // ngAfterViewInit() {
-  //   console.log(this.raw, 'raw');
-  // }
 
   get emailFormControl() {
     return this.emailForm.controls;
   }
 
-  // async loadSpinner() {
-  //   const load = await this.loadingController
-  //     .create({
-  //       spinner: 'circles',
-  //     });
-  //     await load.present()
-  //     // .then((a) => {
-  //     //   a.present().then(() => {
-  //     //     // if (!this.isLoading) {
-  //     //     // a.dismiss();
-  //     //     // }
-  //     //   });
-  //     // });
-  // }
-
   async emailFormHandler() {
     this.name = this.emailFormControl.name.value;
     this.email = this.emailFormControl.email.value;
     this.message = this.emailFormControl.message.value;
-    // await this.loadSpinner();
     try {
-      const submitEmailForm = this.fun.httpsCallable('genericEmail');
+      const submitEmailForm = httpsCallableData(this.fun,'genericEmail')
       submitEmailForm({
         name: this.name,
         email: this.email,
@@ -97,7 +91,6 @@ export class ContactPage implements OnInit {
       }).subscribe(async (res: Result) => {
         this.emailForm.reset;
         this.res = res;
-        // console.log(this.res, 'res');
         const toaster = await this.toast.create({
           header: this.res.header,
           message: this.res.message,
@@ -117,8 +110,4 @@ export class ContactPage implements OnInit {
     }
   }
 
-  // updateRaw() {
-  //   console.log(this.raw, 'raw');
-  //   // return this.raw;
-  // }
 }

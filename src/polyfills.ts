@@ -50,3 +50,6 @@ import 'zone.js'; // Included with Angular CLI.
  /***************************************************************************************************
   * APPLICATION IMPORTS
   */
+//  import "core-js/full";
+//  import 'cross-fetch/polyfill';
+//  import 'globalthis';

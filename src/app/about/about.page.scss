@@ -6,21 +6,30 @@
 /* Main section of each page */
 .main {
   text-align: center;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-content: center;
+  position:relative;
+  top: 48px;
 }
 
-/* Centerpiece in main */
 .display {
-  z-index: 30;
-  transform: translateY(-33%);
+  h1,
+  h2 {
+    font-family: "Rock Salt", cursive;
+    text-transform: capitalize;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-weight: 900;
+  }
 }
 
 .display-icon {
-  filter: drop-shadow(0 0 10px var(--ion-text-color));
+  filter: drop-shadow(0 0 5px var(--ion-color-primary));
 }
+
 /* Call to action button */
 .flipInX {
   animation: 2s ease-in-out 2s infinite both flipInX;
@@ -54,7 +63,6 @@
 }
 
 .name {
-  color: var(--ion-color-dark);
   text-transform: uppercase;
 }
 
@@ -98,7 +106,6 @@
     li:after {
       background-color: var(--ion-color-primary) !important;
     }
-
     li:not(.current):not(.done) {
       div.step-indicator {
         background-color: var(--ion-color-secondary) !important;
@@ -130,16 +137,16 @@
     }
     li.done {
       div.step-indicator {
-        background-color: gold !important;
+        background-color: var(--ion-color-tertiary) !important;
       }
       div.label {
-        color: gold !important;
+        color: var(--ion-color-tertiary) !important;
         font-family: sofachrome, sans-serif;
         font-size: 6pt;
       }
     }
     li.done:after {
-      background-color: gold !important;
+      background-color: var(--ion-color-tertiary) !important;
     }
   }
 }
@@ -209,11 +216,20 @@
   color: var(--ion-color-secondary);
 }
 
+<<<<<<< Updated upstream
 .step-button{
   background-color: var(--ion-color-primary);
   margin: 5px;
 }
 .step-button-bak{
+=======
+.step-button {
+  background-color: var(--ion-color-tertiary);
+  margin: 5px;
+}
+
+.step-button-bak {
+>>>>>>> Stashed changes
   color: var(--ion-text-color);
   margin: 5px;
 
