@@ -1,8 +1,10 @@
-import { Alert } from 'selenium-webdriver';
-
 import { Component, OnInit } from '@angular/core';
-import { AngularFireFunctions } from '@angular/fire/functions';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireFunctions } from '@angular/fire/compat/functions';
+import {
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import {
   AlertController,
@@ -21,7 +23,7 @@ interface Result {
   styleUrls: ['contact.page.scss'],
 })
 export class ContactPage implements OnInit {
-  emailForm: FormGroup;
+  emailForm: UntypedFormGroup;
   name;
   email;
   message;
@@ -31,7 +33,7 @@ export class ContactPage implements OnInit {
   constructor(
     private toast: ToastController,
     private alert: AlertController,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private fun: AngularFireFunctions,
     private loadingController: LoadingController,
     private router: Router

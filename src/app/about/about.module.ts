@@ -22,7 +22,6 @@ import { MaterialExampleModule } from '../material.module';
     ArchwizardModule,
     MaterialExampleModule,
     // NoopAnimationsModule
-
   ],
   declarations: [AboutPage, FlaskBakComponent],
 })

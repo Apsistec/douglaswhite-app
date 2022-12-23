@@ -1,7 +1,14 @@
 {
   "projects": {
-    "default": "douglaswhite-app",
-    "staging": "douglaswhite-app"
+    "default": "douglaswhite-app"
   },
-  "targets": {}
+  "targets": {
+    "douglaswhite-app": {
+      "hosting": {
+        "app": [
+          "douglaswhite-app"
+        ]
+      }
+    }
+  }
 }
