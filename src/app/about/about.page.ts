@@ -24,15 +24,6 @@ export class AboutPage implements OnInit {
   }
   async presentToast() {
     const toast = await this.toastController.create({
-<<<<<<< Updated upstream
-      message: 'Thank you for stopping by.... This progressive web app was built with Ionic 6 and Angular 13',
-      duration: 4500,
-      header: "Douglas White's Web App",
-      icon: 'information-circle',
-      position: 'top',
-      color: "primary"
-
-=======
       message:
         'This installable PWA was developed using Ionic 6, Angular 15 and Firebase 7',
       duration: 4500,
@@ -43,7 +34,6 @@ export class AboutPage implements OnInit {
       buttons: [
         'close'
       ]
->>>>>>> Stashed changes
     });
     await toast.present();
   }

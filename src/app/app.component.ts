@@ -1,13 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-<<<<<<< Updated upstream
-import { SwUpdate } from '@angular/service-worker';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-=======
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
 import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
->>>>>>> Stashed changes
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { filter, map } from 'rxjs';
