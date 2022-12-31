@@ -18,9 +18,6 @@
   transform: translateY(-33%);
 }
 
-.display-icon {
-  filter: drop-shadow(0 0 10px var(--ion-text-color));
-}
 /* Call to action button */
 .flipInX {
   animation: 2s ease-in-out 2s infinite both flipInX;
@@ -43,23 +40,19 @@
 .image-card {
   border-radius: 15px;
   border: 3px solid var(--ion-color-primary);
-  background-color: var(--ion-color-medium);
 }
 
 .inner-card {
   border-radius: 15px;
   border: 2px solid var(--ion-color-secondary);
-  background-color: var(--ion-color-dark);
   width: 100%;
 }
 
 .name {
-  color: var(--ion-color-dark);
   text-transform: uppercase;
 }
 
 .nameplate-info {
-  --background: transparent !important;
   width: 100%;
   font-weight: bold;
 }
@@ -80,95 +73,30 @@
   float: left;
 }
 
-.custom-line-css aw-wizard-navigation-bar li::after {
-  height: 4px !important;
-}
-
-.custom-line-css aw-wizard-navigation-bar {
-  width: 100% !important;
-  ul.steps-indicator {
-    li {
-      div.label {
-        color: var(--ion-color-secondary) !important;
-      }
-      div.step-indicator {
-        background-color: var(--ion-color-primary) !important;
-      }
-    }
-    li:after {
-      background-color: var(--ion-color-primary) !important;
-    }
-
-    li:not(.current):not(.done) {
-      div.step-indicator {
-        background-color: var(--ion-color-secondary) !important;
-        filter: opacity(25%);
-      }
-      div.label {
-        color: var(--ion-color-secondary) !important;
-        font-family: sofachrome, sans-serif;
-        font-size: 5pt;
-        filter: opacity(25%);
-      }
-    }
-    li:not(.done):after {
-      background-color: var(--ion-color-secondary-shade) !important;
-      filter: opacity(25%);
-    }
-    li.current {
-      div.label {
-        color: var(--ion-color-secondary-tint) !important;
-        font-family: sofachrome, sans-serif;
-        font-size: 7pt;
-      }
-      div.step-indicator {
-        background-color: var(--ion-color-secondary-tint) !important;
-      }
-    }
-    li.current:after {
-      background-color: var(--ion-color-secondary-tint) !important;
-    }
-    li.done {
-      div.step-indicator {
-        background-color: gold !important;
-      }
-      div.label {
-        color: gold !important;
-        font-family: sofachrome, sans-serif;
-        font-size: 6pt;
-      }
-    }
-    li.done:after {
-      background-color: gold !important;
-    }
-  }
-}
+// .mat-step-text-label {
+//   color: white;
+// }
 
 .step-list-title {
   font-family: sofachrome, sans-serif;
-  font-size: 10pt;
-  color: var(--ion-text-color);
   text-transform: uppercase;
   display: block;
   margin-inline: auto;
-  border-bottom: 1px solid var(--ion-text-color);
   padding: 10px;
 }
 
 .list {
   border-radius: 15px;
-  --background: transparent;
 }
 
 .list-item {
-  --background: transparent;
   ion-text {
     text-transform: capitalize;
   }
 }
 
 .item-icon {
-  color: var(--ion-color-secondary);
+  color: var(--ion-color-tertiary);
   padding-right: 15px;
 }
 
@@ -183,37 +111,10 @@
 }
 
 .divider-label {
-  text-transform: uppercase;
-  color: var(--ion-text-color);
   font-family: "Rock Salt", cursive;
-  font-size: 8pt;
-  font-weight: 500;
   text-align: left;
 }
 
-.secondary-button {
-  font-family: sofachrome, sans-serif;
-  font-size: 12pt;
-}
-
-.mat-stepper-horizontal {
-  margin-top: 8px;
-}
-
-.mat-form-field {
-  margin-top: 16px;
-}
-
-.matButton {
-  color: var(--ion-color-secondary);
-}
-
-.step-button {
-  background-color: var(--ion-color-tertiary);
-  margin: 5px;
-}
-
-.step-button-bak {
-  color: var(--ion-text-color);
-  margin: 5px;
+.up {
+  padding-right: 5px;
 }

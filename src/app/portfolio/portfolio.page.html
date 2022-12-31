@@ -2,7 +2,7 @@
   <ion-grid class="ion-no-padding ion-margin-vertical">
     <ion-row class="ion-justify-content-center">
       <div class="header">
-        <ion-text class="sofa">Portfolio</ion-text>
+        <h2 class="sofa">PORTFOLIO</h2>
       </div>
     </ion-row>
     <ion-row
@@ -16,13 +16,14 @@
       >
         <ion-card
           color="dark"
+          id="xfitness"
           class="card overlay ion-text-center ion-no-padding ion-margin-vertical"
           (click)="toggle('xfitness')"
         >
           <img src="../../assets/xfitness_studio.png" class="projects" />
           <div *ngIf="expand && id==='xfitness'" class="container">
             <a href="https://xfitness.studio" target="_blank" class="link">
-              <ion-title>XFitness Studio</ion-title>
+              <ion-text>XFitness Studio</ion-text>
             </a>
           </div>
         </ion-card>
@@ -46,7 +47,7 @@
               target="_blank"
               class="link"
             >
-              <ion-title>Rank Fantasy Sports</ion-title>
+              <ion-text>Rank Fantasy Sports</ion-text>
             </a>
           </div>
         </ion-card>
@@ -56,11 +57,65 @@
       <ion-col>
         <img
           class="puter"
-          src="../../assets/MyComputer.svg"
+          src="../../assets/MyComputerSVG.svg"
           alt="ApsisTech Engineering Laptop"
         />
       </ion-col>
     </ion-row>
+    <ion-row
+      class="ion-justify-content-around ion-no-padding ion-margin-vertical"
+    >
+      <ion-col
+        size-xs="12"
+        size-sm="12"
+        size-md="4"
+        class="ion-text-center ion-align-self-center ion-margin-vertical"
+      >
+        <ion-card
+          color="dark"
+          id="ncqa"
+          class="card overlay ion-text-center ion-no-padding ion-margin-vertical"
+          (click)="toggle('ncqa')"
+        >
+          <img src="../../assets/ncqa.png" class="projects" />
+          <div *ngIf="expand && id==='ncqa'" class="container">
+            <a
+              href="https://www.ncqa.org/hedis/the-future-of-hedis/"
+              target="_blank"
+              class="link"
+            >
+              <ion-text class="ion-text-wrap"
+                >National Center for Quality Assurance</ion-text
+              >
+            </a>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col
+        size-xs="12"
+        size-sm="12"
+        size-md="4"
+        class="ion-text-center ion-align-self-center ion-no-padding ion-margin-vertical"
+      >
+        <ion-card
+          color="dark"
+          id="klicktrack"
+          class="card overlay ion-text-center ion-no-padding ion-margin-vertical"
+          (click)="toggle('klicktrack')"
+        >
+          <img src="../../assets/klicktrack.png" class="projects" />
+          <div *ngIf="expand && id==='klicktrack'" class="container">
+            <a href="https://www.klicktrack.io" target="_blank" class="link">
+              <ion-text>KlickTrack</ion-text>
+            </a>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-footer class="footer"></app-footer>
+      </ion-col>
+    </ion-row>
   </ion-grid>
-  <app-footer class="footer"></app-footer>
 </ion-content>

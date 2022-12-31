@@ -1,19 +1,20 @@
-<ion-content class="content">
+<ion-content class="content ion-text-center">
+  <h2 class="sofa">RESUME</h2>
   <ngx-extended-pdf-viewer
     class="pdf-viewer"
-    src="../../assets/Resume_Douglas_White.pdf"
-    filenameForDownload="Resume_Douglas_White_Web_App_Dev"
-    height="100vh"
+    [src]="'../../assets/Resume_Douglas_White.pdf'"
+    filenameForDownload="Douglas_White_Resume"
+    height="95vh"
     zoom="auto"
-    backgroundColor="#313131"
-    [showPropertiesButton]="false"
-    [showOpenFileButton]="false"
-    [showPagingButtons]="false"
-    [showBookmarkButton]="false"
+    [showBorders]="true"
+    [showPropertiesButton]="true"
+    [showPagingButtons]="true"
+    [showBookmarkButton]="true"
     [showSecondaryToolbarButton]="false"
     [showSidebarButton]="false"
     [showRotateButton]="false"
-    [textLayer]="true"
+    [useBrowserLocale]="true"
+    [enablePinchOnMobile]="true"
   >
   </ngx-extended-pdf-viewer>
   <app-footer class="footer"></app-footer>

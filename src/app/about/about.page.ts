@@ -1,17 +1,22 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { IonContent } from '@ionic/angular';
-import { ToastController } from '@ionic/angular';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonContent, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-about',
   templateUrl: 'about.page.html',
   styleUrls: ['about.page.scss'],
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { displayDefaultIndicatorType: false },
+    },
+  ],
 })
 export class AboutPage implements OnInit {
   showBackToTopFab = false;
-  @ViewChild(IonContent, { static: false }) content: IonContent;
-
-  stepper;
+  @ViewChild(IonContent, { static: false })
+  content!: IonContent;
 
   constructor(public toastController: ToastController) {}
 
@@ -33,12 +38,12 @@ export class AboutPage implements OnInit {
     await toast.present();
   }
 
-  onScroll(event) {
+  onScroll(event: any) {
     this.showBackToTopFab = event.detail.scrollTop > 200 ? true : false;
   }
 
-  scrollToId(id) {
-    const element = document.getElementById(id);
+  scrollToId(id: any) {
+    const element: any = document.getElementById(id);
     this.content.scrollToPoint(0, element.offsetTop - 45, 750);
   }
 

@@ -1,21 +1,12 @@
-.footer-toolbar {
-  --min-height: 20vh;
-  width: 100%;
-}
-
 .link-icon {
-  position: absolute;
-  padding-left: 20px;
-  top: 10px;
+  float: right;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 .icon {
-  margin-right: 15px;
+  margin-left: 15px;
   font-size: 36px;
-}
-
-.twitter {
-  color: #1d9bf0;
 }
 
 .github {
@@ -27,6 +18,13 @@
 }
 
 .linkedin {
-  margin-right: 5px;
-  color: blue;
+  margin-right: 10px;
+  color: white;
+}
+
+/* Logo in toolbars */
+.logo {
+  padding-left: 50px;
+  padding-bottom: 10px;
+  height: 140px;
 }

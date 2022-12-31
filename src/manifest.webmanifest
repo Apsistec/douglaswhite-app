@@ -1,7 +1,7 @@
 {
   "name": "douglaswhite-app",
   "short_name": "douglaswhite",
-  "theme_color": "#23479E",
+  "theme_color": "#00435e",
   "background_color": "#aeb1bd",
   "description": "A cross-platform PWA which provides background information, skills, and some past projects which was developed using Angular and Ionic by Douglas White, a web application engineer.",
   "display": "standalone",

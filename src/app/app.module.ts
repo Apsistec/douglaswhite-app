@@ -1,17 +1,20 @@
 import { NgModule, isDevMode } from '@angular/core';
+
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { getFunctions, provideFunctions } from '@angular/fire/functions';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireFunctionsModule } from '@angular/fire/compat/functions';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouteReuseStrategy } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
 import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouteReuseStrategy } from '@angular/router';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,16 +23,16 @@ import { RouteReuseStrategy } from '@angular/router';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('serviceWorker', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
+    // ServiceWorkerModule.register('serviceWorker', {     enabled: !isDevMode(),
+    //   registrationStrategy: 'registerWhenStable:30000',
+    // }),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireFunctionsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFunctions(() => getFunctions()),
   ],
   providers: [
     SplashScreen,
