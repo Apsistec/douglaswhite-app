@@ -6,7 +6,11 @@
 	"webDir": "www",
 	"plugins": {
 		"SplashScreen": {
+<<<<<<< Updated upstream
 			"launchShowDuration": 0
+=======
+			"launchShowDuration": 1000
+>>>>>>> Stashed changes
 		}
 	},
 	"cordova": {}

@@ -20,7 +20,6 @@ import { FormSubmitDirective } from './form-submit.directive';
 import { untilDestroyed } from '@ngneat/until-destroy';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: '[formControl], [formControlName]',
 })
 export class ControlErrorsDirective implements OnInit {

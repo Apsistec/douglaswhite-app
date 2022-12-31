@@ -2,6 +2,7 @@
   "projects": {
     "default": "douglaswhite-app"
   },
+<<<<<<< Updated upstream
   "targets": {
     "douglaswhite-app": {
       "hosting": {
@@ -12,3 +13,7 @@
     }
   }
 }
+=======
+  "targets": {}
+}
+>>>>>>> Stashed changes

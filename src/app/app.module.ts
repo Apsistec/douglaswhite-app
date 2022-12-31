@@ -1,4 +1,13 @@
 import { NgModule } from '@angular/core';
+<<<<<<< Updated upstream
+=======
+// import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
+// import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getFunctions, provideFunctions } from '@angular/fire/functions';
+import { BrowserModule } from '@angular/platform-browser';
+>>>>>>> Stashed changes
 import {
   AngularFireFunctionsModule,
   ORIGIN,
@@ -15,6 +24,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< Updated upstream
 import { NeonComponent } from './neon/neon.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import {
@@ -33,6 +43,8 @@ import {
   getRemoteConfig,
 } from '@angular/fire/remote-config';
 import { provideStorage, getStorage } from '@angular/fire/storage';
+=======
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [AppComponent, NeonComponent],
@@ -47,6 +59,10 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
+    ServiceWorkerModule.register('serviceWorker', {
+      enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000',
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),

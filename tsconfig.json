@@ -8,8 +8,8 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
+<<<<<<< Updated upstream
     "target": "ES2022",
     "module": "es2020",
     "lib": [
@@ -17,11 +17,23 @@
       "dom"
     ],
     "useDefineForClassFields": false
+=======
+    "moduleResolution": "node",
+    "target": "es2015",
+    "module": "es2020",
+    "lib": ["esnext", "DOM.Iterable", "dom"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": false
+>>>>>>> Stashed changes
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strict": true,
   }
 }

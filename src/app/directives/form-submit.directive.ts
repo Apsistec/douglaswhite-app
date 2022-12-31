@@ -4,7 +4,6 @@ import { shareReplay, tap } from 'rxjs/operators';
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: 'form',
 })
 export class FormSubmitDirective {

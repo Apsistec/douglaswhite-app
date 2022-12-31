@@ -41,7 +41,11 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
+<<<<<<< Updated upstream
               "@angular/material/prebuilt-themes/purple-green.css",
+=======
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+>>>>>>> Stashed changes
               "src/theme/variables.scss",
               "src/global.scss"
             ],
@@ -111,8 +115,14 @@
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
+<<<<<<< Updated upstream
             "styles": [
               "@angular/material/prebuilt-themes/purple-green.css"
+=======
+            "karmaConfig": "karma.conf.js",
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css"
+>>>>>>> Stashed changes
             ],
             "scripts": [],
             "assets": [
@@ -142,6 +152,18 @@
             }
           }
         },
+<<<<<<< Updated upstream
+=======
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+>>>>>>> Stashed changes
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -156,6 +178,7 @@
               "devServerTarget": "app:serve:ci"
             }
           }
+<<<<<<< Updated upstream
         },
         "deploy": {
           "builder": "@angular/fire:deploy",
@@ -175,16 +198,21 @@
               "src/**/*.html"
             ]
           }
+=======
+>>>>>>> Stashed changes
         }
       }
     }
   },
+<<<<<<< Updated upstream
   "cli": {
     "schematicCollections": [
       "@angular-eslint/schematics",
       "@ionic/angular-toolkit"
     ]
   },
+=======
+>>>>>>> Stashed changes
   "schematics": {
     "@ionic/angular-toolkit:component": {
       "styleext": "scss"
