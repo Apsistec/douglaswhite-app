@@ -12,12 +12,12 @@ import {
 } from '@angular/core';
 import { NgControl } from '@angular/forms';
 
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { FORM_ERRORS } from '../contact/form-errors';
 import { ControlErrorComponent } from '../control-error/control-error.component';
 import { ControlErrorContainerDirective } from './control-error-container.directive';
 import { FormSubmitDirective } from './form-submit.directive';
-import { untilDestroyed } from '@ngneat/until-destroy';
-
+@UntilDestroy()
 @Directive({
   selector: '[formControl], [formControlName]',
 })
