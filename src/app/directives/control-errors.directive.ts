@@ -1,7 +1,6 @@
 import { EMPTY, merge, Observable } from 'rxjs';
 
 import {
-  ComponentFactoryResolver,
   ComponentRef,
   Directive,
   Host,
@@ -23,16 +22,16 @@ import { untilDestroyed } from '@ngneat/until-destroy';
   selector: '[formControl], [formControlName]',
 })
 export class ControlErrorsDirective implements OnInit {
-  ref: ComponentRef<ControlErrorComponent>;
   container: ViewContainerRef;
 
   submit$: Observable<Event>;
-  @Input() customErrors = {};
+  @Input() customErrors: any = {};
 
   constructor(
+    private ref: ComponentRef<ControlErrorComponent>,
     private vcr: ViewContainerRef,
     @Optional() controlErrorContainer: ControlErrorContainerDirective,
-    @Inject(FORM_ERRORS) private errors,
+    @Inject(FORM_ERRORS) private errors: any,
     @Optional() @Host() private form: FormSubmitDirective,
     private controlDir: NgControl
   ) {
@@ -52,12 +51,12 @@ export class ControlErrorsDirective implements OnInit {
             this.customErrors[firstKey] || getError(controlErrors[firstKey]);
           this.setError(text);
         } else if (this.ref) {
-          this.setError(null);
+          this.setError(null as any);
         }
       });
   }
 
-  get control() {
+  get control(): any {
     return this.controlDir.control;
   }
 

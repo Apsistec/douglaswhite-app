@@ -12,10 +12,10 @@ import {
   styleUrls: ['./control-error.component.scss'],
 })
 export class ControlErrorComponent implements OnInit {
-  _text;
+  _text: any;
   _hide = true;
 
-  @Input() set text(value) {
+  @Input() set text(value: any) {
     if (value !== this._text) {
       this._text = value;
       this._hide = !value;

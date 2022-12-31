@@ -7,9 +7,9 @@ export const FORM_ERRORS = new InjectionToken('FORM_ERRORS', {
 
 export const defaultErrors = {
   required: (error: any) => `This field is required`,
-  minlength: ({ requiredLength, actualLength }): string => {
+  minlength: ({ requiredLength, actualLength }: any): string => {
     return `Expect min. ${requiredLength} characters but only got ${actualLength}`;
   },
-  // maxlength: (error: any) => `You have reached limit of 3000 characters`,
+  maxlength: (error: any) => `You have reached limit of 3000 characters`,
   email: (error: any) => `Email format is incorrrect`,
 };

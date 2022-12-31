@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireFunctions } from '@angular/fire/compat/functions';
-import {
-  FormGroup,
-  UntypedFormBuilder,
-  Validators,
-} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
   AlertController,
@@ -23,17 +19,17 @@ interface Result {
   styleUrls: ['contact.page.scss'],
 })
 export class ContactPage implements OnInit {
-  emailForm: UntypedFormGroup;
-  name;
-  email;
-  message;
+  emailForm!: FormGroup;
+  name!: string;
+  email: any;
+  message: any;
   isLoading = false;
-  res: Result;
+  res!: Result;
   // raw;
   constructor(
     private toast: ToastController,
     private alert: AlertController,
-    private fb: UntypedFormBuilder,
+    private fb: FormBuilder,
     private fun: AngularFireFunctions,
     private loadingController: LoadingController,
     private router: Router
@@ -86,9 +82,9 @@ export class ContactPage implements OnInit {
   // }
 
   async emailFormHandler() {
-    this.name = this.emailFormControl.name.value;
-    this.email = this.emailFormControl.email.value;
-    this.message = this.emailFormControl.message.value;
+    this.name = this.emailFormControl['name'].value;
+    this.email = this.emailFormControl['email'].value;
+    this.message = this.emailFormControl['message'].value;
     // await this.loadSpinner();
     try {
       const submitEmailForm = this.fun.httpsCallable('genericEmail');
@@ -110,7 +106,7 @@ export class ContactPage implements OnInit {
         });
         await toaster.present();
       });
-    } catch (error) {
+    } catch (error: any) {
       const alerter = await this.alert.create({
         header: error.header,
         message: error.message,

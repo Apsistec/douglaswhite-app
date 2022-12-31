@@ -4,23 +4,21 @@
   "newProjectRoot": "projects",
   "projects": {
     "app": {
+      "projectType": "application",
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "projectType": "application",
       "prefix": "app",
-      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "localforage"
-            ],
             "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -28,27 +26,23 @@
                 "output": "/assets/"
               },
               {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "assets"
+                "glob": "favicon.ico",
+                "input": "src/assets/icon",
+                "output": "/"
               },
               {
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               },
-              "src/manifest.webmanifest",
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
               "src/manifest.webmanifest"
             ],
-            "styles": [
-<<<<<<< Updated upstream
-              "@angular/material/prebuilt-themes/purple-green.css",
-=======
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
->>>>>>> Stashed changes
-              "src/theme/variables.scss",
-              "src/global.scss"
-            ],
+            "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -61,20 +55,6 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -82,26 +62,44 @@
                   "maximumError": "5mb"
                 }
               ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             },
             "ci": {
               "progress": false
             }
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "app:build"
-          },
           "configurations": {
             "production": {
               "browserTarget": "app:build:production"
             },
-            "ci": {}
-          }
+            "development": {
+              "browserTarget": "app:build:development"
+            },
+            "ci": {
+              "progress": false
+            }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -110,21 +108,13 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-devkit/build-angular:jest",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
-<<<<<<< Updated upstream
-            "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css"
-=======
-            "karmaConfig": "karma.conf.js",
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css"
->>>>>>> Stashed changes
-            ],
-            "scripts": [],
+            "jestConfig": "jest.config.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -133,17 +123,27 @@
               },
               {
                 "glob": "favicon.ico",
-                "input": "src/",
+                "input": "src/assets/icon",
                 "output": "/"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
               },
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets"
+                "output": "assets"
               },
-              "src/manifest.webmanifest",
               "src/manifest.webmanifest"
-            ]
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
+            "scripts": []
           },
           "configurations": {
             "ci": {
@@ -152,67 +152,18 @@
             }
           }
         },
-<<<<<<< Updated upstream
-=======
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
-        },
->>>>>>> Stashed changes
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "app:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "app:serve:production"
-            },
-            "ci": {
-              "devServerTarget": "app:serve:ci"
-            }
-          }
-<<<<<<< Updated upstream
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "app:build:production",
-            "firebaseProject": "douglaswhite-app",
-            "firebaseHostingSite": "douglaswhite-app"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
-          }
-=======
->>>>>>> Stashed changes
         }
       }
     }
   },
-<<<<<<< Updated upstream
   "cli": {
-    "schematicCollections": [
-      "@angular-eslint/schematics",
-      "@ionic/angular-toolkit"
-    ]
+    "schematicCollections": ["@ionic/angular-toolkit"]
   },
-=======
->>>>>>> Stashed changes
   "schematics": {
     "@ionic/angular-toolkit:component": {
       "styleext": "scss"
