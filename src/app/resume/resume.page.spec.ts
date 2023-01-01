@@ -6,5 +6,7 @@ describe('Tab2Page', () => {
     TestBed.configureTestingModule({}).compileComponents();
   }));
 
-  it('should create', () => {});
+  it('should create', () => {
+    return true;
+  });
 });

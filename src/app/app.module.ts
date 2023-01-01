@@ -5,7 +5,6 @@ import { AngularFireModule } from '@angular/fire/compat';
 import {
   AngularFireFunctionsModule,
   ORIGIN,
-  NEW_ORIGIN_BEHAVIOR,
 } from '@angular/fire/compat/functions';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,7 +38,6 @@ import { AppComponent } from './app.component';
     SplashScreen,
     StatusBar,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: NEW_ORIGIN_BEHAVIOR, useValue: true },
     { provide: ORIGIN, useValue: 'https://douglaswhite-app.web.app' },
   ],
   bootstrap: [AppComponent],

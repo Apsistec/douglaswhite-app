@@ -18,9 +18,9 @@ import { debounceTime } from 'rxjs';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  checked: boolean = false;
+  checked = false;
   prefersDark!: MediaQueryList;
-  dark: boolean = false;
+  dark = false;
   toggle!: any;
 
   constructor(
