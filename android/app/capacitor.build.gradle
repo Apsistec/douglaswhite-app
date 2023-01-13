@@ -9,17 +9,9 @@ android {
 
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
-<<<<<<< Updated upstream
     implementation project(':capacitor-app')
     implementation project(':capacitor-haptics')
     implementation project(':capacitor-keyboard')
-    implementation project(':capacitor-splash-screen')
-=======
-    implementation project(':capacitor-community-firebase-analytics')
-    implementation project(':capacitor-app')
-    implementation project(':capacitor-haptics')
-    implementation project(':capacitor-keyboard')
->>>>>>> Stashed changes
     implementation project(':capacitor-status-bar')
 
 }

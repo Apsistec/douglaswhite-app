@@ -1,17 +1,6 @@
 {
-	"appId": "douglaswhite.app",
+	"appId": "app.douglaswhite",
 	"appName": "douglaswhite-app",
 	"bundledWebRuntime": false,
-	"npmClient": "npm",
-	"webDir": "www",
-	"plugins": {
-		"SplashScreen": {
-<<<<<<< Updated upstream
-			"launchShowDuration": 0
-=======
-			"launchShowDuration": 1000
->>>>>>> Stashed changes
-		}
-	},
-	"cordova": {}
+	"webDir": "www"
 }
