@@ -10,21 +10,28 @@
 }
 
 .github {
-  color: snow;
+  color: var(--ion-text-color);
 }
 
 .stack {
-  color: snow;
+  color: var(--ion-text-color);
 }
 
 .linkedin {
   margin-right: 10px;
-  color: white;
+  color: var(--ion-text-color);
 }
 
 /* Logo in toolbars */
 .logo {
+  float: left;
   padding-left: 50px;
   padding-bottom: 10px;
   height: 140px;
+}
+
+.copyright {
+  position: absolute;
+  font-size: x-small;
+  bottom: 5px;
 }
