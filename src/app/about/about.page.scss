@@ -73,16 +73,13 @@
   float: left;
 }
 
-// .mat-step-text-label {
-//   color: white;
-// }
-
 .step-list-title {
-  font-family: sofachrome, sans-serif;
-  text-transform: uppercase;
+  font-family: "Rock Salt", cursive;
   display: block;
+  font-size: larger;
   margin-inline: auto;
   padding: 10px;
+  color: var(--ion-color-tertiary-shade);
 }
 
 .list {
@@ -111,8 +108,8 @@
 }
 
 .divider-label {
-  font-family: "Rock Salt", cursive;
-  text-align: left;
+  text-decoration: underline;
+  font-size: large;
 }
 
 .up {

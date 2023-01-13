@@ -7,3 +7,8 @@ typings/
 
 # Node.js dependency directory
 node_modules/
+.eslintrc.json
+lib/
+env.json
+/lib/index.js
+package-lock.json

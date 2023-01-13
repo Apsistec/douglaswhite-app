@@ -13,12 +13,19 @@
       </ion-buttons>
       <ion-buttons slot="end">
         <ion-icon size="large" color="warning" name="sunny"></ion-icon>
-        <ion-toggle id="toggle" [checked]="checked"></ion-toggle>
+        <ion-toggle
+          id="toggle"
+          color="secondary"
+          [checked]="checked"
+        ></ion-toggle>
         <ion-icon size="large" color="light" name="moon"></ion-icon>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ion-content fullscreen="true">
     <ion-router-outlet></ion-router-outlet>
+    <ion-button *ngIf="pwa.promptEvent" (click)="installPwa()">
+      Install
+    </ion-button>
   </ion-content>
 </ion-app>

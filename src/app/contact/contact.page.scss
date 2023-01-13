@@ -1,14 +1,5 @@
-.items {
-  border-radius: 15px !important;
-  box-shadow: 0 0 8px white;
-}
-
-.submitButton {
-  --background: var(--ion-color-tertiary-tint);
-}
-
-.input-icon {
-  margin-right: 5px;
+ion-item {
+  padding: 5px 0;
 }
 
 ion-grid {
@@ -16,16 +7,7 @@ ion-grid {
   width: 100vw;
 }
 
-/* For Contact card */
-.textarea {
-  margin-top: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  --placeholder-opacity: 0.5;
-}
-
-.label-color {
-  color: var(--ion-color-secondary);
+ion-card-subtitle,
+p {
+  color: var(--ion-text-color);
 }

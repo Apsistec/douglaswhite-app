@@ -43,7 +43,7 @@ $app-theme: mat.define-light-theme(
 :root {
   ion-tab-bar,
   ion-tab-button {
-    background: var(--ion-color-medium-shade);
+    --background: var(--ion-color-medium-shade);
   }
   --ion-background-color: #8b8d95;
   --ion-background-color-rgb: 139, 141, 149;
@@ -117,7 +117,7 @@ $app-theme: mat.define-light-theme(
 body.dark {
   ion-tab-bar,
   ion-tab-button {
-    background: var(--ion-color-dark);
+    --background: var(--ion-color-dark);
   }
   --ion-background-color: #313131;
   --ion-background-color-rgb: 49, 49, 49;

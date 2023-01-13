@@ -1,21 +1,36 @@
-<ion-content class="content ion-text-center">
-  <h2 class="sofa">RESUME</h2>
-  <ngx-extended-pdf-viewer
-    class="pdf-viewer"
-    [src]="'../../assets/Resume_Douglas_White.pdf'"
-    filenameForDownload="Douglas_White_Resume"
-    height="95vh"
-    zoom="auto"
-    [showBorders]="true"
-    [showPropertiesButton]="true"
-    [showPagingButtons]="true"
-    [showBookmarkButton]="true"
-    [showSecondaryToolbarButton]="false"
-    [showSidebarButton]="false"
-    [showRotateButton]="false"
-    [useBrowserLocale]="true"
-    [enablePinchOnMobile]="true"
-  >
-  </ngx-extended-pdf-viewer>
-  <app-footer class="footer"></app-footer>
+<ion-content class="content ion-text-center display">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>RESUME</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ngx-extended-pdf-viewer
+          class="pdf-viewer"
+          [src]="'../../assets/Resume_Douglas_White.pdf'"
+          filenameForDownload="Douglas_White_Resume"
+          height="95vh"
+          zoom="auto"
+          [showBorders]="true"
+          [showPropertiesButton]="true"
+          [showPagingButtons]="true"
+          [showBookmarkButton]="true"
+          [showSecondaryToolbarButton]="false"
+          [showSidebarButton]="false"
+          [showRotateButton]="false"
+          [useBrowserLocale]="true"
+          [enablePinchOnMobile]="true"
+          backgroundColor="#313131"
+        >
+        </ngx-extended-pdf-viewer>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-footer class="footer"></app-footer>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

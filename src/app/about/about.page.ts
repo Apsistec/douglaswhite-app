@@ -1,6 +1,9 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonContent, ToastController } from '@ionic/angular';
+import { Component, OnInit, VERSION, ViewChild } from '@angular/core';
+import { StepperOrientation } from '@angular/material/stepper';
+import { IonApp, IonContent, ToastController } from '@ionic/angular';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-about',
@@ -14,11 +17,21 @@ import { IonContent, ToastController } from '@ionic/angular';
   ],
 })
 export class AboutPage implements OnInit {
+  name = 'Angular' + VERSION.major;
+  ion: string = 'Ionic' + IonApp;
   showBackToTopFab = false;
   @ViewChild(IonContent, { static: false })
   content!: IonContent;
+  stepperOrientation!: Observable<StepperOrientation>;
 
-  constructor(public toastController: ToastController) {}
+  constructor(
+    public toastController: ToastController,
+    public breakpointObserver: BreakpointObserver
+  ) {
+    this.stepperOrientation = breakpointObserver
+      .observe('(min-width: 800px)')
+      .pipe(map(({ matches }) => (matches ? 'horizontal' : 'vertical')));
+  }
 
   ngOnInit() {
     setTimeout(() => {
@@ -28,7 +41,7 @@ export class AboutPage implements OnInit {
   async presentToast() {
     const toast = await this.toastController.create({
       message:
-        'Thank you for stopping by.... This progressive web app was built with Ionic 6 and Angular 13',
+        'Thank you for your consideration.. This progressive web app (PWA) was built with Ionic 6 and ${name}',
       duration: 4500,
       header: "Douglas White's Web App",
       icon: 'information-circle',
@@ -38,8 +51,9 @@ export class AboutPage implements OnInit {
     await toast.present();
   }
 
-  onScroll(event: any) {
-    this.showBackToTopFab = event.detail.scrollTop > 200 ? true : false;
+  onScroll(ev: Event) {
+    this.showBackToTopFab =
+      (<CustomEvent>ev).detail.scrollTop > 200 ? true : false;
   }
 
   scrollToId(id: any) {

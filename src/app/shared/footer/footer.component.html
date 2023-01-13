@@ -29,9 +29,11 @@
         <ion-icon class="icon stack" name="mail-sharp"> </ion-icon>
       </a>
     </ion-buttons>
-    <ion-note class="copyright" color="tertiary">
-      &#9426;{{ yearDate | date : "yyyy" }} www.douglaswhite.app
-    </ion-note>
+    <div class="ion-text-center">
+      <ion-note style="color: var(--ion-text-color)" class="copyright">
+        &#9426;{{ yearDate | date : "yyyy" }} www.douglaswhite.app
+      </ion-note>
+    </div>
     <img src="../../../assets/MyComputerSVG.svg" class="logo" />
   </ion-toolbar>
 </ion-footer>
