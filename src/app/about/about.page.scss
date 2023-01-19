@@ -1,21 +1,19 @@
-#landing {
-  height: 95vh;
-  width: 100vw;
-}
-
-/* Main section of each page */
-.main {
+ion-grid {
   text-align: center;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-content: center;
 }
 
-/* Centerpiece in main */
+/* Main Hero display centerpiece Heading */
 .display {
-  z-index: 30;
-  transform: translateY(-33%);
+  h1,
+  h2 {
+    font-family: "Rock Salt", cursive;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Call to action button */
@@ -37,28 +35,12 @@
   }
 }
 
-.image-card {
-  border-radius: 15px;
-  border: 3px solid var(--ion-color-primary);
-}
-
-.inner-card {
-  border-radius: 15px;
-  border: 2px solid var(--ion-color-secondary);
-  width: 100%;
-}
-
 .name {
   text-transform: uppercase;
 }
 
-.nameplate-info {
-  width: 100%;
-  font-weight: bold;
-}
-
 .myImage {
-  border-radius: 15px;
+  border-radius: 1rem;
 }
 
 .stepperIcon {
@@ -69,21 +51,21 @@
 }
 
 .btn-group {
-  margin: 5px;
+  margin: 1rem;
   float: left;
 }
 
 .step-list-title {
   font-family: "Rock Salt", cursive;
-  display: block;
-  font-size: larger;
-  margin-inline: auto;
-  padding: 10px;
+  font-size: 1.2rem;
   color: var(--ion-color-tertiary-shade);
+  margin: 2rem 0;
 }
 
-.list {
-  border-radius: 15px;
+.list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center space-evenly;
 }
 
 .list-item {
@@ -94,24 +76,15 @@
 
 .item-icon {
   color: var(--ion-color-tertiary);
-  padding-right: 15px;
+  padding-right: 1rem;
 }
 
 .slogan {
-  padding-bottom: 55px;
+  padding-bottom: 4rem;
 }
 
 .slogan-text {
   font-size: large;
   font-style: italic;
-  margin: 0 100px 0 100px;
-}
-
-.divider-label {
-  text-decoration: underline;
-  font-size: large;
-}
-
-.up {
-  padding-right: 5px;
+  margin: 0 6rem 0 6rem;
 }

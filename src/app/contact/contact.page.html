@@ -1,122 +1,132 @@
 <ion-content class="content">
-  <ion-grid class="ion-no-padding ion-margin-vertical">
-    <ion-row class="ion-justify-content-center">
-      <ion-col size-xs="12" size-sm="12" size-md="6" size-lg="4" size-xl="3">
-        <ion-card class="card">
-          <ion-card-header>
-            <ion-card-subtitle> Have an opportunity? </ion-card-subtitle>
-            <ion-card-title class="title"> Contact Douglas</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Note: I will not sell or use your email improperly.</p>
-            <form [formGroup]="emailForm" novalidate (ngSubmit)="onSubmit()">
-              <ion-item fill="outline">
-                <ion-label position="floating">Name</ion-label>
-                <ion-input
-                  autocapitalize="on"
-                  type="text"
-                  [autofocus]="true"
-                  autocomplete="name"
-                  formControlName="name"
-                  inputmode="text"
-                  minlength="3"
-                  maxlength="50"
-                  required
-                >
-                </ion-input>
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls?.['name']?.errors?.['required']"
-                  slot="error"
-                  >Name required</ion-note
-                >
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls?.['name']?.errors?.['minlength']"
-                  slot="error"
-                  >Name incomplete</ion-note
-                >
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls?.['name']?.errors?.['maxlength']"
-                  slot="error"
-                  >Too many characters</ion-note
-                >
-              </ion-item>
-              <ion-item fill="outline">
-                <ion-label position="floating">Email</ion-label>
-                <ion-input
-                  type="email"
-                  formControlName="email"
-                  autocomplete="email"
-                  minlength="6"
-                  maxlength="50"
-                  inputmode="email"
-                  required="true"
-                >
-                </ion-input>
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['required']"
-                  slot="error"
-                  >Email required</ion-note
-                >
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['email']"
-                  slot="error"
-                  >Invalid email format</ion-note
-                >
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['maxlength']"
-                  slot="error"
-                  >Too many characters</ion-note
-                >
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['pattern']"
-                  slot="error"
-                  >Invalid email</ion-note
-                >
-              </ion-item>
-              <ion-item fill="outline" counter="true">
-                <ion-label position="floating">Message</ion-label>
-                <ion-textarea
-                  autocapitalize="on"
-                  autocorrect="on"
-                  autoGrow="true"
-                  wrap="soft"
-                  formControlName="message"
-                  minlength="7"
-                  maxlength="1000"
-                >
-                </ion-textarea>
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls['message'].errors?.['required']"
-                  slot="error"
-                  >Message Required</ion-note
-                >
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls['message'].errors?.['minlength']"
-                  slot="error"
-                  >Incomplete message</ion-note
-                >
-                <ion-note
-                  *ngIf="emailForm.touched && !emailForm.pristine && errorControls['message'].errors?.['maxlength']"
-                  slot="error"
-                  >Too many characters</ion-note
-                >
-              </ion-item>
-              <div class="ion-text-center">
-                <ion-button
-                  type="submit"
-                  shape="round"
-                  [disabled]="emailForm.invalid"
-                  color="primary"
-                  strong
-                >
-                  Submit
-                </ion-button>
-              </div>
-            </form>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="section">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="auto" class="ion-align-self-center">
+          <ion-card class="card ion-padding">
+            <ion-card-header>
+              <ion-card-subtitle> Have an opportunity? </ion-card-subtitle>
+              <ion-card-title class="rock-salt">
+                Contact Douglas</ion-card-title
+              >
+            </ion-card-header>
+            <ion-card-content>
+              <p>Note: I will not sell or use your email improperly.</p>
+              <form [formGroup]="emailForm" novalidate (ngSubmit)="onSubmit()">
+                <ion-item fill="outline">
+                  <ion-label color="tertiary" position="floating"
+                    >Name</ion-label
+                  >
+                  <ion-input
+                    autocapitalize="on"
+                    type="text"
+                    [autofocus]="true"
+                    autocomplete="name"
+                    formControlName="name"
+                    inputmode="text"
+                    minlength="3"
+                    maxlength="50"
+                    required
+                  >
+                  </ion-input>
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls?.['name']?.errors?.['required']"
+                    slot="error"
+                    >Name required</ion-note
+                  >
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls?.['name']?.errors?.['minlength']"
+                    slot="error"
+                    >Name incomplete</ion-note
+                  >
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls?.['name']?.errors?.['maxlength']"
+                    slot="error"
+                    >Too many characters</ion-note
+                  >
+                </ion-item>
+                <ion-item fill="outline">
+                  <ion-label color="tertiary" position="floating"
+                    >Email</ion-label
+                  >
+                  <ion-input
+                    type="email"
+                    formControlName="email"
+                    autocomplete="email"
+                    minlength="6"
+                    maxlength="50"
+                    inputmode="email"
+                    required="true"
+                  >
+                  </ion-input>
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['required']"
+                    slot="error"
+                    >Email required</ion-note
+                  >
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['email']"
+                    slot="error"
+                    >Invalid email format</ion-note
+                  >
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['maxlength']"
+                    slot="error"
+                    >Too many characters</ion-note
+                  >
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls['email'].errors?.['pattern']"
+                    slot="error"
+                    >Invalid email</ion-note
+                  >
+                </ion-item>
+                <ion-item fill="outline" counter="true">
+                  <ion-label color="tertiary" position="floating"
+                    >Message</ion-label
+                  >
+                  <ion-textarea
+                    autocapitalize="on"
+                    autocorrect="on"
+                    autoGrow="true"
+                    wrap="soft"
+                    formControlName="message"
+                    minlength="7"
+                    maxlength="1000"
+                  >
+                  </ion-textarea>
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls['message'].errors?.['required']"
+                    slot="error"
+                    >Message Required</ion-note
+                  >
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls['message'].errors?.['minlength']"
+                    slot="error"
+                    >Incomplete message</ion-note
+                  >
+                  <ion-note
+                    *ngIf="emailForm.touched && !emailForm.pristine && errorControls['message'].errors?.['maxlength']"
+                    slot="error"
+                    >Too many characters</ion-note
+                  >
+                </ion-item>
+                <div class="ion-text-center">
+                  <ion-button
+                    type="submit"
+                    shape="round"
+                    [disabled]="emailForm.invalid"
+                    color="primary"
+                    strong
+                  >
+                    Submit
+                  </ion-button>
+                </div>
+              </form>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
   <app-footer class="footer"></app-footer>
 </ion-content>

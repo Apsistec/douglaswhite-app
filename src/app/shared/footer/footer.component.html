@@ -23,16 +23,26 @@
       </a>
       <a
         rel="noreferrer"
-        href="mailto:doug@apsistec.app?subject=Coding Opportunity"
+        href="mailto:doug@douglaswhite.app?subject=App Dev Opportunity"
         target="_blank"
       >
         <ion-icon class="icon stack" name="mail-sharp"> </ion-icon>
       </a>
     </ion-buttons>
-    <div class="ion-text-center">
+    <div class="copyright-container">
       <ion-note style="color: var(--ion-text-color)" class="copyright">
         &#9426;{{ yearDate | date : "yyyy" }} www.douglaswhite.app
       </ion-note>
+    </div>
+    <div class="ion-text-center">
+      <ion-button
+        fill="clear"
+        size="small"
+        color="tertiary"
+        (click)="showCredits()"
+        class="credits"
+        >Credits</ion-button
+      >
     </div>
     <img src="../../../assets/MyComputerSVG.svg" class="logo" />
   </ion-toolbar>

@@ -1,3 +1,4 @@
+import { CreditsComponent } from './credits/credits.component';
 import { StorageComponent } from './storage/storage.component';
 import { MessagingComponent } from './messaging/messaging.component';
 import { AuthComponent } from './auth/auth.component';
@@ -41,6 +42,10 @@ import {
 import { getMessaging } from 'firebase/messaging';
 import { getRemoteConfig } from 'firebase/remote-config';
 import { connectAuthEmulatorInDevMode } from './emulators';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
+import { providePerformance,getPerformance } from '@angular/fire/performance';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -49,6 +54,7 @@ import { connectAuthEmulatorInDevMode } from './emulators';
     AuthComponent,
     MessagingComponent,
     StorageComponent,
+    CreditsComponent,
   ],
   imports: [
     IonicModule.forRoot(),
@@ -77,6 +83,10 @@ import { connectAuthEmulatorInDevMode } from './emulators';
       connectAuthEmulatorInDevMode(auth);
       return auth;
     }),
+    provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions()),
+    providePerformance(() => getPerformance()),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     SplashScreen,

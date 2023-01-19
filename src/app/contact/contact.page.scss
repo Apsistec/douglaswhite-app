@@ -1,5 +1,5 @@
 ion-item {
-  padding: 5px 0;
+  padding: 5 0;
 }
 
 ion-grid {
@@ -10,4 +10,14 @@ ion-grid {
 ion-card-subtitle,
 p {
   color: var(--ion-text-color);
+}
+
+.center {
+  height: 100% !important;
+  place-content: center;
+  display: flex;
+}
+
+ion-label {
+  color: var(--ion-color-warning);
 }

@@ -1,6 +1,6 @@
 ion-tab-button {
   --color: var(--ion-text-color);
-  --color-selected: #346172;
-  --color-focused: var(--ion-color-primary);
-  --ripple-color: var(--ion-color-primary);
+  --color-selected: var(--ion-color-tertiary);
+  --color-focused: var(--ion-color-tertiary-tint);
+  --ripple-color: var(--ion-color-tertiary-shade);
 }

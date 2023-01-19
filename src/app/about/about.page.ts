@@ -17,7 +17,7 @@ import { Observable, map } from 'rxjs';
   ],
 })
 export class AboutPage implements OnInit {
-  name = 'Angular' + VERSION.major;
+  name = 'Angular ' + VERSION.major;
   ion: string = 'Ionic' + IonApp;
   showBackToTopFab = false;
   @ViewChild(IonContent, { static: false })
@@ -40,10 +40,9 @@ export class AboutPage implements OnInit {
   }
   async presentToast() {
     const toast = await this.toastController.create({
-      message:
-        'Thank you for your consideration.. This progressive web app (PWA) was built with Ionic 6 and ${name}',
+      message: `This progressive web app (PWA) was built with Ionic 6 and ${this.name}`,
       duration: 4500,
-      header: "Douglas White's Web App",
+      header: "Douglas White's Porfolio App",
       icon: 'information-circle',
       position: 'top',
       color: 'primary',

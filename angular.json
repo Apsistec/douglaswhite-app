@@ -13,7 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": ["localforage"],
+            "allowedCommonJsDependencies": [
+              "localforage"
+            ],
             "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -40,7 +42,10 @@
               "src/manifest.webmanifest",
               "src/firebase-messaging-sw.js"
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -98,7 +103,6 @@
               "browserTarget": "app:build:development"
             }
           },
-
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -134,7 +138,10 @@
               "src/manifest.webmanifest",
               "src/firebase-messaging-sw.js"
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -147,14 +154,29 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "app:build:production",
+            "firebaseProject": "douglaswhite-app",
+            "firebaseHostingSite": "douglaswhite-app"
           }
         }
       }
     }
   },
   "cli": {
-    "schematicCollections": ["@ionic/angular-toolkit"]
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ]
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

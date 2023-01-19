@@ -1,31 +1,22 @@
-.header {
-  text-align: center;
-  font-size: 20pt;
-}
-
 .puter {
   display: block;
   margin: auto;
-  height: 300px;
-  width: 300px;
+  height: 20rem;
+  width: 20rem;
 }
 
 .projects {
   display: block;
   margin: auto;
-  border-radius: 13px;
+  border-radius: 0.9rem;
 }
 
 .container {
   margin: auto;
-  padding: 5px;
+  padding: 0.3rem;
   text-align: center;
 }
 
 .link {
   color: white;
-}
-
-ion-grid {
-  height: 100vh;
 }
