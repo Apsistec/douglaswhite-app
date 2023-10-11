@@ -75,7 +75,7 @@
     "@awesome-cordova-plugins/status-bar": "^6.3.0",
     "@capacitor/cli": "^4.0.0",
     "@ionic/angular-toolkit": "7.0.0",
-    "@ionic/cli": "6.20.6",
+    "@ionic/cli": "^6.18.0",
     "@types/jest": "^29.2.5",
     "@types/node": "^18.11.17",
     "@typescript-eslint/eslint-plugin": "5.48.0",
