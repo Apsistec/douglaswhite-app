@@ -24,7 +24,6 @@
     "@angular/material": "^16.2.8",
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
-    "@angular/pwa": "^16.2.6",
     "@angular/router": "^16.0.0",
     "@angular/service-worker": "^16.2.9",
     "@capacitor/app": "5.0.6",
