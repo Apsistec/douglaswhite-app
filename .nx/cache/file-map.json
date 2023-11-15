@@ -1,0 +1,834 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.2",
+  "deps": {
+    "@angular/animations": "^17.0.3",
+    "@angular/cdk": "^17.0.0",
+    "@angular/common": "^17.0.3",
+    "@angular/compiler": "^17.0.3",
+    "@angular/core": "^17.0.3",
+    "@angular/fire": "^16.0.0",
+    "@angular/forms": "^17.0.3",
+    "@angular/material": "^17.0.0",
+    "@angular/platform-browser": "^17.0.3",
+    "@angular/platform-browser-dynamic": "^17.0.3",
+    "@angular/router": "^17.0.3",
+    "@angular/service-worker": "^17.0.3",
+    "@capacitor/app": "5.0.6",
+    "@capacitor/core": "5.5.0",
+    "@capacitor/haptics": "5.0.6",
+    "@capacitor/keyboard": "5.0.6",
+    "@capacitor/status-bar": "5.0.6",
+    "@ionic/angular": "^7.0.0",
+    "firebase": "^10.4.0",
+    "ionicons": "^7.0.0",
+    "ngx-extended-pdf-viewer": "^18.0.2",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2",
+    "@angular-devkit/build-angular": "^17.0.1",
+    "@angular-eslint/builder": "^17.1.0",
+    "@angular-eslint/eslint-plugin": "^17.1.0",
+    "@angular-eslint/eslint-plugin-template": "^17.1.0",
+    "@angular-eslint/schematics": "^17.1.0",
+    "@angular-eslint/template-parser": "^17.1.0",
+    "@angular/cli": "^17.0.1",
+    "@angular/compiler-cli": "^17.0.3",
+    "@angular/language-service": "^17.0.3",
+    "@capacitor/cli": "5.5.0",
+    "@ionic/angular-toolkit": "^9.0.0",
+    "@types/jasmine": "~4.3.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsdoc": "30.7.6",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "jasmine-core": "~4.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "ts-node": "^8.3.0",
+    "typescript": "~5.2.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".browserslistrc",
+        "hash": "12259343401696347839"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18170566935764343088"
+      },
+      {
+        "file": ".firebaserc",
+        "hash": "10352605833475663487"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "487954278598670499"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "8329981077259499345"
+      },
+      {
+        "file": "angular.json",
+        "hash": "12555092893287737325"
+      },
+      {
+        "file": "capacitor.config.ts",
+        "hash": "9045838924222788505"
+      },
+      {
+        "file": "firebase.json",
+        "hash": "212193235609441501"
+      },
+      {
+        "file": "firestore.indexes.json",
+        "hash": "2048261650710551311"
+      },
+      {
+        "file": "firestore.rules",
+        "hash": "16474483727980079886"
+      },
+      {
+        "file": "functions/.gitignore",
+        "hash": "1273693681315206089"
+      },
+      {
+        "file": "functions/package.json",
+        "hash": "1885876145713050930"
+      },
+      {
+        "file": "functions/src/index.ts",
+        "hash": "16094253894132253549"
+      },
+      {
+        "file": "functions/tsconfig.dev.json",
+        "hash": "8422248825409795798"
+      },
+      {
+        "file": "functions/tsconfig.json",
+        "hash": "15320153656829258325"
+      },
+      {
+        "file": "ionic.config.json",
+        "hash": "15756515068741283403"
+      },
+      {
+        "file": "jest.config.js",
+        "hash": "3130603096033053907"
+      },
+      {
+        "file": "ngsw-config.json",
+        "hash": "10250009806747527166"
+      },
+      {
+        "file": "package.json",
+        "hash": "11896932670231660934"
+      },
+      {
+        "file": "readme.md",
+        "hash": "1782472694046737919"
+      },
+      {
+        "file": "resources/android/icon/drawable-hdpi-icon.png",
+        "hash": "17510985728745944327"
+      },
+      {
+        "file": "resources/android/icon/drawable-ldpi-icon.png",
+        "hash": "10796161545199635924"
+      },
+      {
+        "file": "resources/android/icon/drawable-mdpi-icon.png",
+        "hash": "11700753088973035000"
+      },
+      {
+        "file": "resources/android/icon/drawable-xhdpi-icon.png",
+        "hash": "14360292678746914900"
+      },
+      {
+        "file": "resources/android/icon/drawable-xxhdpi-icon.png",
+        "hash": "17133564637377809357"
+      },
+      {
+        "file": "resources/android/icon/drawable-xxxhdpi-icon.png",
+        "hash": "13954454453563516059"
+      },
+      {
+        "file": "resources/android/icon/hdpi-background.png",
+        "hash": "4688393699882252057"
+      },
+      {
+        "file": "resources/android/icon/hdpi-foreground.png",
+        "hash": "4688393699882252057"
+      },
+      {
+        "file": "resources/android/icon/ldpi-background.png",
+        "hash": "14625579849933491306"
+      },
+      {
+        "file": "resources/android/icon/ldpi-foreground.png",
+        "hash": "14625579849933491306"
+      },
+      {
+        "file": "resources/android/icon/mdpi-background.png",
+        "hash": "7434180392774804802"
+      },
+      {
+        "file": "resources/android/icon/mdpi-foreground.png",
+        "hash": "7434180392774804802"
+      },
+      {
+        "file": "resources/android/icon/xhdpi-background.png",
+        "hash": "15721324995969416169"
+      },
+      {
+        "file": "resources/android/icon/xhdpi-foreground.png",
+        "hash": "15721324995969416169"
+      },
+      {
+        "file": "resources/android/icon/xxhdpi-background.png",
+        "hash": "1964705339679235829"
+      },
+      {
+        "file": "resources/android/icon/xxhdpi-foreground.png",
+        "hash": "1964705339679235829"
+      },
+      {
+        "file": "resources/android/icon/xxxhdpi-background.png",
+        "hash": "2541933547582011932"
+      },
+      {
+        "file": "resources/android/icon/xxxhdpi-foreground.png",
+        "hash": "2541933547582011932"
+      },
+      {
+        "file": "resources/android/icon-background.png",
+        "hash": "7420999335778029832"
+      },
+      {
+        "file": "resources/android/icon-foreground.png",
+        "hash": "7420999335778029832"
+      },
+      {
+        "file": "resources/android/icon.png",
+        "hash": "7420999335778029832"
+      },
+      {
+        "file": "resources/android/splash/drawable-land-hdpi-screen.png",
+        "hash": "14823442659829742428"
+      },
+      {
+        "file": "resources/android/splash/drawable-land-ldpi-screen.png",
+        "hash": "1169487704873268101"
+      },
+      {
+        "file": "resources/android/splash/drawable-land-mdpi-screen.png",
+        "hash": "8718669600012855612"
+      },
+      {
+        "file": "resources/android/splash/drawable-land-xhdpi-screen.png",
+        "hash": "14208443738763916095"
+      },
+      {
+        "file": "resources/android/splash/drawable-land-xxhdpi-screen.png",
+        "hash": "801227237655275032"
+      },
+      {
+        "file": "resources/android/splash/drawable-land-xxxhdpi-screen.png",
+        "hash": "9602808286755199882"
+      },
+      {
+        "file": "resources/android/splash/drawable-port-hdpi-screen.png",
+        "hash": "953944058935862989"
+      },
+      {
+        "file": "resources/android/splash/drawable-port-ldpi-screen.png",
+        "hash": "16361168415774274726"
+      },
+      {
+        "file": "resources/android/splash/drawable-port-mdpi-screen.png",
+        "hash": "4144901144466932397"
+      },
+      {
+        "file": "resources/android/splash/drawable-port-xhdpi-screen.png",
+        "hash": "653720642727595911"
+      },
+      {
+        "file": "resources/android/splash/drawable-port-xxhdpi-screen.png",
+        "hash": "234065110140157211"
+      },
+      {
+        "file": "resources/android/splash/drawable-port-xxxhdpi-screen.png",
+        "hash": "9658867479647745225"
+      },
+      {
+        "file": "resources/icon.png",
+        "hash": "6933703344677432632"
+      },
+      {
+        "file": "resources/ios/icon/icon-1024.png",
+        "hash": "2958931270590669626"
+      },
+      {
+        "file": "resources/ios/icon/icon-108@2x.png",
+        "hash": "2579892690763234465"
+      },
+      {
+        "file": "resources/ios/icon/icon-20.png",
+        "hash": "6136734446022824083"
+      },
+      {
+        "file": "resources/ios/icon/icon-20@2x.png",
+        "hash": "11772481141994559890"
+      },
+      {
+        "file": "resources/ios/icon/icon-20@3x.png",
+        "hash": "3515797275508544818"
+      },
+      {
+        "file": "resources/ios/icon/icon-24@2x.png",
+        "hash": "3213646699230087291"
+      },
+      {
+        "file": "resources/ios/icon/icon-27.5@2x.png",
+        "hash": "14102452009273403915"
+      },
+      {
+        "file": "resources/ios/icon/icon-29.png",
+        "hash": "11999053987240955013"
+      },
+      {
+        "file": "resources/ios/icon/icon-29@2x.png",
+        "hash": "1338663035877806496"
+      },
+      {
+        "file": "resources/ios/icon/icon-29@3x.png",
+        "hash": "16360636586899559110"
+      },
+      {
+        "file": "resources/ios/icon/icon-40.png",
+        "hash": "11772481141994559890"
+      },
+      {
+        "file": "resources/ios/icon/icon-40@2x.png",
+        "hash": "281883365559135497"
+      },
+      {
+        "file": "resources/ios/icon/icon-40@3x.png",
+        "hash": "11349110815939581132"
+      },
+      {
+        "file": "resources/ios/icon/icon-44@2x.png",
+        "hash": "8871357356459055127"
+      },
+      {
+        "file": "resources/ios/icon/icon-50.png",
+        "hash": "17122272346514393144"
+      },
+      {
+        "file": "resources/ios/icon/icon-50@2x.png",
+        "hash": "14485761061945497173"
+      },
+      {
+        "file": "resources/ios/icon/icon-60.png",
+        "hash": "3515797275508544818"
+      },
+      {
+        "file": "resources/ios/icon/icon-60@2x.png",
+        "hash": "11349110815939581132"
+      },
+      {
+        "file": "resources/ios/icon/icon-60@3x.png",
+        "hash": "1231564532797746783"
+      },
+      {
+        "file": "resources/ios/icon/icon-72.png",
+        "hash": "17233687404176065275"
+      },
+      {
+        "file": "resources/ios/icon/icon-72@2x.png",
+        "hash": "10579101468084281556"
+      },
+      {
+        "file": "resources/ios/icon/icon-76.png",
+        "hash": "9354981801159685900"
+      },
+      {
+        "file": "resources/ios/icon/icon-76@2x.png",
+        "hash": "2025999654400068510"
+      },
+      {
+        "file": "resources/ios/icon/icon-83.5@2x.png",
+        "hash": "6626235530466070805"
+      },
+      {
+        "file": "resources/ios/icon/icon-86@2x.png",
+        "hash": "1733965740172446846"
+      },
+      {
+        "file": "resources/ios/icon/icon-98@2x.png",
+        "hash": "3757525444490222678"
+      },
+      {
+        "file": "resources/ios/icon/icon.png",
+        "hash": "2817194973806256858"
+      },
+      {
+        "file": "resources/ios/icon/icon@2x.png",
+        "hash": "12427333650090116544"
+      },
+      {
+        "file": "resources/ios/icon.png",
+        "hash": "9272352201806140573"
+      },
+      {
+        "file": "resources/ios/splash/Default-1792h~iphone.png",
+        "hash": "10522247948371573617"
+      },
+      {
+        "file": "resources/ios/splash/Default-2436h.png",
+        "hash": "4661425473342375006"
+      },
+      {
+        "file": "resources/ios/splash/Default-2688h~iphone.png",
+        "hash": "15425091494627535937"
+      },
+      {
+        "file": "resources/ios/splash/Default-568h@2x~iphone.png",
+        "hash": "14371695559640511609"
+      },
+      {
+        "file": "resources/ios/splash/Default-667h.png",
+        "hash": "8341276530086487857"
+      },
+      {
+        "file": "resources/ios/splash/Default-736h.png",
+        "hash": "18362431020873055728"
+      },
+      {
+        "file": "resources/ios/splash/Default-Landscape-1792h~iphone.png",
+        "hash": "18433112217475372279"
+      },
+      {
+        "file": "resources/ios/splash/Default-Landscape-2436h.png",
+        "hash": "11991770763100379083"
+      },
+      {
+        "file": "resources/ios/splash/Default-Landscape-2688h~iphone.png",
+        "hash": "18093193323650752244"
+      },
+      {
+        "file": "resources/ios/splash/Default-Landscape-736h.png",
+        "hash": "17640013814356809639"
+      },
+      {
+        "file": "resources/ios/splash/Default-Landscape@2x~ipad.png",
+        "hash": "15292622974909667278"
+      },
+      {
+        "file": "resources/ios/splash/Default-Landscape@~ipadpro.png",
+        "hash": "16129406409965344737"
+      },
+      {
+        "file": "resources/ios/splash/Default-Landscape~ipad.png",
+        "hash": "9245919872777838210"
+      },
+      {
+        "file": "resources/ios/splash/Default-Portrait@2x~ipad.png",
+        "hash": "900244246252747889"
+      },
+      {
+        "file": "resources/ios/splash/Default-Portrait@~ipadpro.png",
+        "hash": "2046330766016518554"
+      },
+      {
+        "file": "resources/ios/splash/Default-Portrait~ipad.png",
+        "hash": "6064203027476378355"
+      },
+      {
+        "file": "resources/ios/splash/Default@2x~iphone.png",
+        "hash": "3530296273414324975"
+      },
+      {
+        "file": "resources/ios/splash/Default@2x~universal~anyany.png",
+        "hash": "14430666186280909436"
+      },
+      {
+        "file": "resources/ios/splash/Default~iphone.png",
+        "hash": "4144901144466932397"
+      },
+      {
+        "file": "resources/splash.png",
+        "hash": "1505299252384862377"
+      },
+      {
+        "file": "src/app/about/about-routing.module.ts",
+        "hash": "3447168220661122438"
+      },
+      {
+        "file": "src/app/about/about.module.ts",
+        "hash": "5830248678071003666"
+      },
+      {
+        "file": "src/app/about/about.page.html",
+        "hash": "4857366902986228512"
+      },
+      {
+        "file": "src/app/about/about.page.scss",
+        "hash": "870925254095639692"
+      },
+      {
+        "file": "src/app/about/about.page.ts",
+        "hash": "1533167812813492184"
+      },
+      {
+        "file": "src/app/app-routing.module.ts",
+        "hash": "8439375495830301944"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "8030960148141129428"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "1347623554951372134"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "15165418485272087034"
+      },
+      {
+        "file": "src/app/app.module.ts",
+        "hash": "4352225392489552981"
+      },
+      {
+        "file": "src/app/contact/contact-routing.module.ts",
+        "hash": "6367468863924605939"
+      },
+      {
+        "file": "src/app/contact/contact.module.ts",
+        "hash": "12348545175284839517"
+      },
+      {
+        "file": "src/app/contact/contact.page.html",
+        "hash": "2167881825416666183"
+      },
+      {
+        "file": "src/app/contact/contact.page.scss",
+        "hash": "2948246517969360348"
+      },
+      {
+        "file": "src/app/contact/contact.page.ts",
+        "hash": "1254040586445902554"
+      },
+      {
+        "file": "src/app/flask-bak/flask-bak.component.html",
+        "hash": "10133046547645685213"
+      },
+      {
+        "file": "src/app/flask-bak/flask-bak.component.scss",
+        "hash": "4397946043460393852"
+      },
+      {
+        "file": "src/app/flask-bak/flask-bak.component.spec.ts",
+        "hash": "11630443733309383959"
+      },
+      {
+        "file": "src/app/flask-bak/flask-bak.component.ts",
+        "hash": "4188706147090531015"
+      },
+      {
+        "file": "src/app/portfolio/portfolio-routing.module.ts",
+        "hash": "3610670791608096128"
+      },
+      {
+        "file": "src/app/portfolio/portfolio.module.ts",
+        "hash": "16735995840905844706"
+      },
+      {
+        "file": "src/app/portfolio/portfolio.page.html",
+        "hash": "13360854974135687790"
+      },
+      {
+        "file": "src/app/portfolio/portfolio.page.scss",
+        "hash": "5562784508628185487"
+      },
+      {
+        "file": "src/app/portfolio/portfolio.page.spec.ts",
+        "hash": "13636908072861582357"
+      },
+      {
+        "file": "src/app/portfolio/portfolio.page.ts",
+        "hash": "5087842404107866616"
+      },
+      {
+        "file": "src/app/resume/resume-routing.module.ts",
+        "hash": "10396236835037444208"
+      },
+      {
+        "file": "src/app/resume/resume.module.ts",
+        "hash": "12149928950986120905"
+      },
+      {
+        "file": "src/app/resume/resume.page.html",
+        "hash": "9842700201697962024"
+      },
+      {
+        "file": "src/app/resume/resume.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/resume/resume.page.ts",
+        "hash": "12071218835750594786"
+      },
+      {
+        "file": "src/app/services/pwa.service.spec.ts",
+        "hash": "6819168921610168436"
+      },
+      {
+        "file": "src/app/services/pwa.service.ts",
+        "hash": "3162958290150593927"
+      },
+      {
+        "file": "src/app/shared/footer/footer.component.html",
+        "hash": "14777686629833301219"
+      },
+      {
+        "file": "src/app/shared/footer/footer.component.scss",
+        "hash": "10204132942571248414"
+      },
+      {
+        "file": "src/app/shared/footer/footer.component.spec.ts",
+        "hash": "9296078309358527218"
+      },
+      {
+        "file": "src/app/shared/footer/footer.component.ts",
+        "hash": "10762642055272787739"
+      },
+      {
+        "file": "src/app/shared/shared.module.ts",
+        "hash": "10227823056088373493"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.html",
+        "hash": "6809304633884473439"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.spec.ts",
+        "hash": "1767927079192588806"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.ts",
+        "hash": "4389602227698497174"
+      },
+      {
+        "file": "src/app/stepper-content/stepper-content.component.html",
+        "hash": "17711343719378029236"
+      },
+      {
+        "file": "src/app/stepper-content/stepper-content.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/stepper-content/stepper-content.component.spec.ts",
+        "hash": "17807632962872802856"
+      },
+      {
+        "file": "src/app/stepper-content/stepper-content.component.ts",
+        "hash": "234323506940602609"
+      },
+      {
+        "file": "src/app/tabs/tabs-routing.module.ts",
+        "hash": "11712665795773928527"
+      },
+      {
+        "file": "src/app/tabs/tabs.module.ts",
+        "hash": "1371196761761487680"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.html",
+        "hash": "15005663095621394007"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.scss",
+        "hash": "15133343662243394837"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.spec.ts",
+        "hash": "9208961410081142433"
+      },
+      {
+        "file": "src/app/tabs/tabs.page.ts",
+        "hash": "10996662229243328017"
+      },
+      {
+        "file": "src/assets/MyComputerSVG.svg",
+        "hash": "10513309007266006124"
+      },
+      {
+        "file": "src/assets/Resume_Douglas_White.pdf",
+        "hash": "17818403348672600541"
+      },
+      {
+        "file": "src/assets/apple-touch-icon.png",
+        "hash": "11321784586947782414"
+      },
+      {
+        "file": "src/assets/favicon-16x16.png",
+        "hash": "4404996774238453594"
+      },
+      {
+        "file": "src/assets/favicon-32x32.png",
+        "hash": "7146322034728003893"
+      },
+      {
+        "file": "src/assets/favicon.ico",
+        "hash": "8336045621853517056"
+      },
+      {
+        "file": "src/assets/icon/icon-128.png",
+        "hash": "2360609835456150799"
+      },
+      {
+        "file": "src/assets/icon/icon-16.png",
+        "hash": "9863401034027121566"
+      },
+      {
+        "file": "src/assets/icon/icon-32.png",
+        "hash": "6676476405828589858"
+      },
+      {
+        "file": "src/assets/icon/icon-44.png",
+        "hash": "17805600712914337547"
+      },
+      {
+        "file": "src/assets/icon/icon-512.png",
+        "hash": "6933703344677432632"
+      },
+      {
+        "file": "src/assets/icon/icon-64.png",
+        "hash": "735369084033477362"
+      },
+      {
+        "file": "src/assets/klicktrack.png",
+        "hash": "3639333376837002714"
+      },
+      {
+        "file": "src/assets/logo.svg",
+        "hash": "3014958844237265028"
+      },
+      {
+        "file": "src/assets/me.jpg",
+        "hash": "5295042276206586620"
+      },
+      {
+        "file": "src/assets/ncqa.png",
+        "hash": "5589834874947371639"
+      },
+      {
+        "file": "src/assets/rankfantasysports.png",
+        "hash": "13903820857370728789"
+      },
+      {
+        "file": "src/assets/xfitness_studio.png",
+        "hash": "17992020268817373579"
+      },
+      {
+        "file": "src/global.scss",
+        "hash": "11721666773233942915"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "14316321419491872681"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "6842910265937371130"
+      },
+      {
+        "file": "src/manifest.webmanifest",
+        "hash": "17042589963524591948"
+      },
+      {
+        "file": "src/polyfills.ts",
+        "hash": "13952578668946952738"
+      },
+      {
+        "file": "src/test.ts",
+        "hash": "14692099664341395011"
+      },
+      {
+        "file": "src/theme/variables.scss",
+        "hash": "10468000499337831228"
+      },
+      {
+        "file": "src/zone-flags.ts",
+        "hash": "12024351736225895724"
+      },
+      {
+        "file": "staging/.eslintrc.js",
+        "hash": "5796444923375035304"
+      },
+      {
+        "file": "staging/.gitignore",
+        "hash": "7080444811012829751"
+      },
+      {
+        "file": "staging/package.json",
+        "hash": "2575012844869785569"
+      },
+      {
+        "file": "staging/src/index.ts",
+        "hash": "13368166479861615281"
+      },
+      {
+        "file": "staging/tsconfig.dev.json",
+        "hash": "1817712665177004581"
+      },
+      {
+        "file": "staging/tsconfig.json",
+        "hash": "1065957615995710747"
+      },
+      {
+        "file": "test.ts",
+        "hash": "3887065533662712678"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "14856952588948760755"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "4678670442505518978"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "12456655225309484906"
+      }
+    ]
+  }
+}

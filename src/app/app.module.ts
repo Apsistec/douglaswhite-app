@@ -30,6 +30,12 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
       registrationStrategy: 'registerWhenStable:30000',
     }),
     AngularFireFunctionsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
   ],
   providers: [

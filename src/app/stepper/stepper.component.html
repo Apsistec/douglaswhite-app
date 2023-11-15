@@ -7,7 +7,7 @@
     CdkStepperPrevious
     size="large"
   ></ion-icon>
-  <div *ngFor="let step of steps; index as i; trackBy: step">
+  <div *ngFor="let step of steps; index as i">
     <ion-button
       class="example-step"
       (click)="selectStepByIndex(i)"
