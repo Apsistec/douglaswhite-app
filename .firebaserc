@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "douglaswhite-app"
+    "default": "douglaswhite-app",
+    "production": "douglaswhite-app"
   },
   "targets": {
     "douglaswhite-app": {
@@ -10,5 +11,6 @@
         ]
       }
     }
-  }
+  },
+  "etags": {}
 }

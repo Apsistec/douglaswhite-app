@@ -1,10 +1,9 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit, VERSION, ViewChild } from '@angular/core';
 import { StepperOrientation } from '@angular/material/stepper';
 import { IonApp, IonContent, ToastController } from '@ionic/angular';
 import { Observable, map } from 'rxjs';
-
 @Component({
   selector: 'app-about',
   templateUrl: 'about.page.html',
@@ -12,7 +11,7 @@ import { Observable, map } from 'rxjs';
   providers: [
     {
       provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: { displayDefaultIndicatorType: false },
+      useValue: { displayDefaultIndicatorType: false, showError: true },
     },
   ],
 })
@@ -20,6 +19,8 @@ export class AboutPage implements OnInit {
   name = 'Angular' + VERSION.major;
   ion: string = 'Ionic' + IonApp;
   showBackToTopFab = false;
+  // @ViewChild('stepper') stepper!: CdkStepper;
+
   @ViewChild(IonContent, { static: false })
   content!: IonContent;
   stepperOrientation!: Observable<StepperOrientation>;
@@ -43,12 +44,16 @@ export class AboutPage implements OnInit {
       message:
         'Thank you for your consideration.. This progressive web app (PWA) was built with Ionic 6 and ${name}',
       duration: 4500,
-      header: "Douglas White's Web App",
+      header: "Portfolio of Douglas White",
       icon: 'information-circle',
       position: 'top',
       color: 'primary',
     });
     await toast.present();
+  }
+
+  ngAfterViewInit(): void {
+    // this.stepper.next();
   }
 
   onScroll(ev: Event) {
