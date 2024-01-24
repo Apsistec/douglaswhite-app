@@ -7,6 +7,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class PwaService {
   promptEvent: any;
+  deferredPrompt: any;
 
   constructor(private swUpdate: SwUpdate, public toast: ToastController) {}
 
@@ -52,19 +53,19 @@ export class PwaService {
     }
   }
 
-  // add_to_home(e: any) {
-  //   // debugger;
-  //   // hide our user interface that shows our button
-  //   // Show the prompt
-  //   this.deferredPrompt.prompt();
-  //   // Wait for the user to respond to the prompt
-  //   this.deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
-  //     if (choiceResult.outcome === 'accepted') {
-  //       alert('User accepted the prompt');
-  //     } else {
-  //       alert('User dismissed the prompt');
-  //     }
-  //     this.deferredPrompt = null;
-  //   });
-  // }
+  add_to_home(e: any) {
+    debugger;
+    // hide our user interface that shows our button
+    // Show the prompt
+    this.deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    this.deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
+      if (choiceResult.outcome === 'accepted') {
+        alert('User accepted the prompt');
+      } else {
+        alert('User dismissed the prompt');
+      }
+      this.deferredPrompt = null;
+    });
+  }
 }

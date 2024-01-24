@@ -1,5 +1,5 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit, VERSION, ViewChild } from '@angular/core';
 import { StepperOrientation } from '@angular/material/stepper';
 import { IonApp, IonContent, ToastController } from '@ionic/angular';
@@ -50,10 +50,6 @@ export class AboutPage implements OnInit {
       color: 'primary',
     });
     await toast.present();
-  }
-
-  ngAfterViewInit(): void {
-    // this.stepper.next();
   }
 
   onScroll(ev: Event) {

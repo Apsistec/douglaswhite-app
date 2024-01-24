@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   toggle!: HTMLInputElement;
 
   constructor(
-    // public firebaseApp: FirebaseApp,
+    public firebaseApp: FirebaseApp,
     public appRef: ApplicationRef,
     public pwa: PwaService
   ) {}

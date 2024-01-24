@@ -1,13 +1,14 @@
 {
   "version": "6.0",
-  "nxVersion": "17.1.2",
+  "nxVersion": "17.2.8",
   "deps": {
+    "@angular-devkit/build-angular": "^17.1.0",
     "@angular/animations": "^17.0.3",
     "@angular/cdk": "^17.0.0",
     "@angular/common": "^17.0.3",
     "@angular/compiler": "^17.0.3",
     "@angular/core": "^17.0.3",
-    "@angular/fire": "^16.0.0",
+    "@angular/fire": "^17.0.1",
     "@angular/forms": "^17.0.3",
     "@angular/material": "^17.0.0",
     "@angular/platform-browser": "^17.0.3",
@@ -15,18 +16,20 @@
     "@angular/router": "^17.0.3",
     "@angular/service-worker": "^17.0.3",
     "@capacitor/app": "5.0.6",
-    "@capacitor/core": "5.5.0",
+    "@capacitor/core": "5.6.0",
     "@capacitor/haptics": "5.0.6",
-    "@capacitor/keyboard": "5.0.6",
+    "@capacitor/keyboard": "5.0.7",
+    "@capacitor/splash-screen": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
-    "@ionic/angular": "^7.0.0",
-    "firebase": "^10.4.0",
+    "@ionic/angular": "^7.5.5",
+    "@ionic/angular-server": "^7.5.5",
+    "@ionic/core": "^7.5.5",
+    "firebase": "^10.7.1",
     "ionicons": "^7.0.0",
-    "ngx-extended-pdf-viewer": "^18.0.2",
-    "rxjs": "~7.8.0",
+    "ngx-extended-pdf-viewer": "19.0.6",
+    "rxjs": "^7.8.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2",
-    "@angular-devkit/build-angular": "^17.0.1",
     "@angular-eslint/builder": "^17.1.0",
     "@angular-eslint/eslint-plugin": "^17.1.0",
     "@angular-eslint/eslint-plugin-template": "^17.1.0",
@@ -35,26 +38,24 @@
     "@angular/cli": "^17.0.1",
     "@angular/compiler-cli": "^17.0.3",
     "@angular/language-service": "^17.0.3",
-    "@capacitor/cli": "5.5.0",
-    "@ionic/angular-toolkit": "^9.0.0",
-    "@types/jasmine": "~4.3.0",
-    "@types/node": "^12.11.1",
+    "@capacitor/cli": "5.6.0",
+    "@ionic/angular-toolkit": "11.0.0",
+    "@types/jasmine": "5.1.4",
+    "@types/node": "20.11.5",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
-    "eslint": "^8.53.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsdoc": "30.7.6",
-    "eslint-plugin-prefer-arrow": "1.2.2",
-    "jasmine-core": "~4.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "jasmine-core": "5.1.1",
+    "jasmine-spec-reporter": "7.0.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
-    "ts-node": "^8.3.0",
-    "typescript": "~5.2.2"
+    "karma-jasmine-html-reporter": "2.1.0",
+    "ts-node": "10.9.2",
+    "typescript": "^5.3.3"
   },
   "pathMappings": {},
   "nxJsonPlugins": [],
@@ -87,11 +88,11 @@
       },
       {
         "file": "angular.json",
-        "hash": "12555092893287737325"
+        "hash": "7107955449535171552"
       },
       {
         "file": "capacitor.config.ts",
-        "hash": "9045838924222788505"
+        "hash": "15339481384681325624"
       },
       {
         "file": "firebase.json",
@@ -111,7 +112,7 @@
       },
       {
         "file": "functions/package.json",
-        "hash": "1885876145713050930"
+        "hash": "14632710528081744831"
       },
       {
         "file": "functions/src/index.ts",
@@ -135,15 +136,27 @@
       },
       {
         "file": "ngsw-config.json",
-        "hash": "10250009806747527166"
+        "hash": "12579492061924086660"
       },
       {
         "file": "package.json",
-        "hash": "11896932670231660934"
+        "hash": "3524569404448630505"
       },
       {
         "file": "readme.md",
         "hash": "1782472694046737919"
+      },
+      {
+        "file": "resources/android/icon-background.png",
+        "hash": "7420999335778029832"
+      },
+      {
+        "file": "resources/android/icon-foreground.png",
+        "hash": "7420999335778029832"
+      },
+      {
+        "file": "resources/android/icon.png",
+        "hash": "7420999335778029832"
       },
       {
         "file": "resources/android/icon/drawable-hdpi-icon.png",
@@ -218,18 +231,6 @@
         "hash": "2541933547582011932"
       },
       {
-        "file": "resources/android/icon-background.png",
-        "hash": "7420999335778029832"
-      },
-      {
-        "file": "resources/android/icon-foreground.png",
-        "hash": "7420999335778029832"
-      },
-      {
-        "file": "resources/android/icon.png",
-        "hash": "7420999335778029832"
-      },
-      {
         "file": "resources/android/splash/drawable-land-hdpi-screen.png",
         "hash": "14823442659829742428"
       },
@@ -280,6 +281,10 @@
       {
         "file": "resources/icon.png",
         "hash": "6933703344677432632"
+      },
+      {
+        "file": "resources/ios/icon.png",
+        "hash": "9272352201806140573"
       },
       {
         "file": "resources/ios/icon/icon-1024.png",
@@ -394,10 +399,6 @@
         "hash": "12427333650090116544"
       },
       {
-        "file": "resources/ios/icon.png",
-        "hash": "9272352201806140573"
-      },
-      {
         "file": "resources/ios/splash/Default-1792h~iphone.png",
         "hash": "10522247948371573617"
       },
@@ -487,7 +488,7 @@
       },
       {
         "file": "src/app/about/about.page.html",
-        "hash": "4857366902986228512"
+        "hash": "4849243835964088288"
       },
       {
         "file": "src/app/about/about.page.scss",
@@ -495,7 +496,7 @@
       },
       {
         "file": "src/app/about/about.page.ts",
-        "hash": "1533167812813492184"
+        "hash": "3987604230051700021"
       },
       {
         "file": "src/app/app-routing.module.ts",
@@ -515,11 +516,11 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "15165418485272087034"
+        "hash": "2791911925135316050"
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "4352225392489552981"
+        "hash": "13719696625891902402"
       },
       {
         "file": "src/app/contact/contact-routing.module.ts",
@@ -591,7 +592,7 @@
       },
       {
         "file": "src/app/resume/resume.page.html",
-        "hash": "9842700201697962024"
+        "hash": "7300662459425172683"
       },
       {
         "file": "src/app/resume/resume.page.scss",
@@ -607,7 +608,7 @@
       },
       {
         "file": "src/app/services/pwa.service.ts",
-        "hash": "3162958290150593927"
+        "hash": "4730560041780516025"
       },
       {
         "file": "src/app/shared/footer/footer.component.html",
@@ -630,22 +631,6 @@
         "hash": "10227823056088373493"
       },
       {
-        "file": "src/app/stepper/stepper.component.html",
-        "hash": "6809304633884473439"
-      },
-      {
-        "file": "src/app/stepper/stepper.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/stepper/stepper.component.spec.ts",
-        "hash": "1767927079192588806"
-      },
-      {
-        "file": "src/app/stepper/stepper.component.ts",
-        "hash": "4389602227698497174"
-      },
-      {
         "file": "src/app/stepper-content/stepper-content.component.html",
         "hash": "17711343719378029236"
       },
@@ -659,7 +644,23 @@
       },
       {
         "file": "src/app/stepper-content/stepper-content.component.ts",
-        "hash": "234323506940602609"
+        "hash": "11828287325272962091"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.html",
+        "hash": "7767138211380371888"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.spec.ts",
+        "hash": "1767927079192588806"
+      },
+      {
+        "file": "src/app/stepper/stepper.component.ts",
+        "hash": "10346861505645628583"
       },
       {
         "file": "src/app/tabs/tabs-routing.module.ts",
@@ -734,6 +735,38 @@
         "hash": "735369084033477362"
       },
       {
+        "file": "src/assets/icons/icon-128x128.png",
+        "hash": "16119513566521364320"
+      },
+      {
+        "file": "src/assets/icons/icon-144x144.png",
+        "hash": "7918264055681161054"
+      },
+      {
+        "file": "src/assets/icons/icon-152x152.png",
+        "hash": "15801439294603939434"
+      },
+      {
+        "file": "src/assets/icons/icon-192x192.png",
+        "hash": "5426725225393538606"
+      },
+      {
+        "file": "src/assets/icons/icon-384x384.png",
+        "hash": "14349113523743396697"
+      },
+      {
+        "file": "src/assets/icons/icon-512x512.png",
+        "hash": "15496412176428542718"
+      },
+      {
+        "file": "src/assets/icons/icon-72x72.png",
+        "hash": "8211841038932698272"
+      },
+      {
+        "file": "src/assets/icons/icon-96x96.png",
+        "hash": "17857169027528193372"
+      },
+      {
         "file": "src/assets/klicktrack.png",
         "hash": "3639333376837002714"
       },
@@ -759,19 +792,19 @@
       },
       {
         "file": "src/global.scss",
-        "hash": "11721666773233942915"
+        "hash": "12291104577906221638"
       },
       {
         "file": "src/index.html",
-        "hash": "14316321419491872681"
+        "hash": "9686830183951477932"
       },
       {
         "file": "src/main.ts",
-        "hash": "6842910265937371130"
+        "hash": "17921985577026685694"
       },
       {
         "file": "src/manifest.webmanifest",
-        "hash": "17042589963524591948"
+        "hash": "10078094709780095471"
       },
       {
         "file": "src/polyfills.ts",
@@ -787,7 +820,7 @@
       },
       {
         "file": "src/zone-flags.ts",
-        "hash": "12024351736225895724"
+        "hash": "3323586086306676158"
       },
       {
         "file": "staging/.eslintrc.js",
@@ -828,6 +861,10 @@
       {
         "file": "tsconfig.spec.json",
         "hash": "12456655225309484906"
+      },
+      {
+        "file": "typings/cordova-typings.d.ts",
+        "hash": "16743621387774313276"
       }
     ]
   }

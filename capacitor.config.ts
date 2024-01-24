@@ -4,7 +4,7 @@ const config: CapacitorConfig = {
   appId: 'app.douglaswhite',
   appName: 'douglaswhite-app',
   bundledWebRuntime: false,
-  webDir: 'www',
+  webDir: 'www/browser',
 };
 
 export default config;
